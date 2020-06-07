@@ -32,6 +32,11 @@
 		38E9AF8B248D31920064FE19 /* ObjectDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF8A248D31920064FE19 /* ObjectDecoder.swift */; };
 		38E9AF92248D32630064FE19 /* ArrayDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF91248D32630064FE19 /* ArrayDecoder.swift */; };
 		38E9AF94248D328C0064FE19 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF93248D328C0064FE19 /* APIClient.swift */; };
+		38E9AFAE248D43C10064FE19 /* BitbucketRepositoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFAD248D43C10064FE19 /* BitbucketRepositoryDTO.swift */; };
+		38E9AFB4248D46DF0064FE19 /* BitbucketPageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB3248D46DF0064FE19 /* BitbucketPageDTO.swift */; };
+		38E9AFB8248D47E40064FE19 /* BitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB7248D47E40064FE19 /* BitbucketRepository.swift */; };
+		38E9AFBA248D48040064FE19 /* BitbucketRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB9248D48040064FE19 /* BitbucketRepositoriesRequest.swift */; };
+		38E9AFBE248D59390064FE19 /* BitbucketDateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFBD248D59390064FE19 /* BitbucketDateMapper.swift */; };
 		E231A31E4E17475CC93810B0 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513A73594E03DBDE6A91DA00 /* Pods_Data.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +82,11 @@
 		38E9AF8A248D31920064FE19 /* ObjectDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDecoder.swift; sourceTree = "<group>"; };
 		38E9AF91248D32630064FE19 /* ArrayDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDecoder.swift; sourceTree = "<group>"; };
 		38E9AF93248D328C0064FE19 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		38E9AFAD248D43C10064FE19 /* BitbucketRepositoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepositoryDTO.swift; sourceTree = "<group>"; };
+		38E9AFB3248D46DF0064FE19 /* BitbucketPageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketPageDTO.swift; sourceTree = "<group>"; };
+		38E9AFB7248D47E40064FE19 /* BitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepository.swift; sourceTree = "<group>"; };
+		38E9AFB9248D48040064FE19 /* BitbucketRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepositoriesRequest.swift; sourceTree = "<group>"; };
+		38E9AFBD248D59390064FE19 /* BitbucketDateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketDateMapper.swift; sourceTree = "<group>"; };
 		513A73594E03DBDE6A91DA00 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00AAB42E5FDFD621CCEDB58 /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +179,7 @@
 			children = (
 				38E9AF7B248D18850064FE19 /* GithubRepositoriesRequest.swift */,
 				38E9AF93248D328C0064FE19 /* APIClient.swift */,
+				38E9AFB9248D48040064FE19 /* BitbucketRepositoriesRequest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				38E9AF7E248D1A9B0064FE19 /* GithubRepository.swift */,
+				38E9AFB7248D47E40064FE19 /* BitbucketRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -185,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				38E9AF81248D1ACC0064FE19 /* GithubRepositoryDTO.swift */,
+				38E9AFAD248D43C10064FE19 /* BitbucketRepositoryDTO.swift */,
+				38E9AFB3248D46DF0064FE19 /* BitbucketPageDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +209,7 @@
 				38E9AF86248D30F10064FE19 /* JSONMapper.swift */,
 				38E9AF8A248D31920064FE19 /* ObjectDecoder.swift */,
 				38E9AF91248D32630064FE19 /* ArrayDecoder.swift */,
+				38E9AFBD248D59390064FE19 /* BitbucketDateMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -330,11 +345,13 @@
 				38E9AF69248C862B0064FE19 /* HTTPClient.swift in Sources */,
 				38E9AF8B248D31920064FE19 /* ObjectDecoder.swift in Sources */,
 				38E9AF6A248C862B0064FE19 /* HTTPHeader.swift in Sources */,
+				38E9AFBA248D48040064FE19 /* BitbucketRepositoriesRequest.swift in Sources */,
 				38E9AF94248D328C0064FE19 /* APIClient.swift in Sources */,
 				38E9AF6D248C86410064FE19 /* Response.swift in Sources */,
 				38E9AF92248D32630064FE19 /* ArrayDecoder.swift in Sources */,
 				38E9AF6B248C862B0064FE19 /* QueryType.swift in Sources */,
 				38E9AF1E248C7A780064FE19 /* DataModule.swift in Sources */,
+				38E9AFB4248D46DF0064FE19 /* BitbucketPageDTO.swift in Sources */,
 				38E9AF66248C862B0064FE19 /* EndpointType.swift in Sources */,
 				38E9AF7F248D1A9B0064FE19 /* GithubRepository.swift in Sources */,
 				38E9AF5B248C85F70064FE19 /* EncodableRequestType.swift in Sources */,
@@ -343,10 +360,13 @@
 				38E9AF58248C85F70064FE19 /* Request.swift in Sources */,
 				38E9AF20248C7A970064FE19 /* MockDataModule.swift in Sources */,
 				38E9AF59248C85F70064FE19 /* JSONEncodableRequestType.swift in Sources */,
+				38E9AFAE248D43C10064FE19 /* BitbucketRepositoryDTO.swift in Sources */,
 				38E9AF87248D30F10064FE19 /* JSONMapper.swift in Sources */,
 				38E9AF67248C862B0064FE19 /* HTTPMethod.swift in Sources */,
 				38E9AF7C248D18850064FE19 /* GithubRepositoriesRequest.swift in Sources */,
 				38E9AF5A248C85F70064FE19 /* RequestType.swift in Sources */,
+				38E9AFB8248D47E40064FE19 /* BitbucketRepository.swift in Sources */,
+				38E9AFBE248D59390064FE19 /* BitbucketDateMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

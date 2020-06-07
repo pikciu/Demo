@@ -11,7 +11,7 @@ public final class PublicRepositoriesPresenter {
     public init(view: PublicRepositoriesView) {
         self.view = view
         
-        GetRepositories()
+        GetRepositories(since: nil, after: nil)
             .execute()
             .subscribe(with: self, onNext: { (context, repositories) in
                 log.debug(repositories)

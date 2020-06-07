@@ -29,6 +29,10 @@
 		38E9AFA3248D36210064FE19 /* PublicRepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFA1248D36210064FE19 /* PublicRepositoriesPresenter.swift */; };
 		38E9AFA4248D36210064FE19 /* PublicRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFA2248D36210064FE19 /* PublicRepositoriesView.swift */; };
 		38E9AFA6248D366C0064FE19 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */; };
+		38E9AFB0248D43FD0064FE19 /* DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFAF248D43FD0064FE19 /* DateTimeFormatter.swift */; };
+		38E9AFB2248D446C0064FE19 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB1248D446C0064FE19 /* DateExtensions.swift */; };
+		38E9AFB6248D47B90064FE19 /* BitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB5248D47B90064FE19 /* BitbucketRepository.swift */; };
+		38E9AFBC248D59220064FE19 /* TwoWayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFBB248D59210064FE19 /* TwoWayMapper.swift */; };
 		A33EA7EC36F789099C9BC5F4 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,10 @@
 		38E9AFA1248D36210064FE19 /* PublicRepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepositoriesPresenter.swift; sourceTree = "<group>"; };
 		38E9AFA2248D36210064FE19 /* PublicRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepositoriesView.swift; sourceTree = "<group>"; };
 		38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		38E9AFAF248D43FD0064FE19 /* DateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormatter.swift; sourceTree = "<group>"; };
+		38E9AFB1248D446C0064FE19 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		38E9AFB5248D47B90064FE19 /* BitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepository.swift; sourceTree = "<group>"; };
+		38E9AFBB248D59210064FE19 /* TwoWayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayMapper.swift; sourceTree = "<group>"; };
 		55E680600442D7035FB15E7D /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,6 +137,8 @@
 				38E9AF8C248D31BC0064FE19 /* Transformer.swift */,
 				38E9AF96248D334A0064FE19 /* UseCase.swift */,
 				38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */,
+				38E9AFAF248D43FD0064FE19 /* DateTimeFormatter.swift */,
+				38E9AFBB248D59210064FE19 /* TwoWayMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				38E9AF75248D16C10064FE19 /* GithubRepository.swift */,
+				38E9AFB5248D47B90064FE19 /* BitbucketRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				38E9AF8F248D31EC0064FE19 /* ObservableExtensions.swift */,
+				38E9AFB1248D446C0064FE19 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,13 +330,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E9AFB2248D446C0064FE19 /* DateExtensions.swift in Sources */,
 				38E9AF76248D16C10064FE19 /* GithubRepository.swift in Sources */,
+				38E9AFB0248D43FD0064FE19 /* DateTimeFormatter.swift in Sources */,
 				38E9AFA4248D36210064FE19 /* PublicRepositoriesView.swift in Sources */,
 				38E9AF2E248C7CAC0064FE19 /* AppConfig.swift in Sources */,
 				38E9AF4E248C840E0064FE19 /* ConsoleLogDestination.swift in Sources */,
 				38E9AFA6248D366C0064FE19 /* ActivityIndicator.swift in Sources */,
 				38E9AF6F248C88580064FE19 /* Settings.swift in Sources */,
 				38E9AF71248C88C40064FE19 /* DecodableWrapper.swift in Sources */,
+				38E9AFB6248D47B90064FE19 /* BitbucketRepository.swift in Sources */,
 				38E9AF1A248C7A240064FE19 /* Container.swift in Sources */,
 				38E9AF89248D311B0064FE19 /* AppError.swift in Sources */,
 				38E9AF97248D334A0064FE19 /* UseCase.swift in Sources */,
@@ -334,6 +349,7 @@
 				38E9AF90248D31EC0064FE19 /* ObservableExtensions.swift in Sources */,
 				38E9AF1C248C7A380064FE19 /* Module.swift in Sources */,
 				38E9AFA3248D36210064FE19 /* PublicRepositoriesPresenter.swift in Sources */,
+				38E9AFBC248D59220064FE19 /* TwoWayMapper.swift in Sources */,
 				38E9AF4A248C83D30064FE19 /* Logger.swift in Sources */,
 				38E9AF73248C88D10064FE19 /* EncodableWrapper.swift in Sources */,
 				38E9AF8D248D31BC0064FE19 /* Transformer.swift in Sources */,
