@@ -24,14 +24,13 @@ struct GithubRepositoryMapper: Mapper {
 
     func map(from object: GithubRepositoryDTO) throws -> Repository {
         Repository(
-            id: object.id,
             name: object.name,
             description: object.description ?? "",
             owner: Repository.Owner(
                 name: object.owner.login,
                 avatarURL: object.owner.avatarURL
             ),
-            source: .github,
+            source: .github(object.id),
             url: object.url
         )
     }

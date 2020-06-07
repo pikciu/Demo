@@ -8,5 +8,6 @@ public struct DataModule: Module {
             .inObjectScope(.container)
         
         container.register(Domain.GithubRepository.self) { _ in GithubRepository() }
+        container.register(Domain.BitbucketRepository.self) { _ in BitbucketRepository() }
     }
 }

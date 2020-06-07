@@ -2,8 +2,8 @@ import Foundation
 
 public struct Repository {
     public enum Source {
-        case github
-        case bitbucket
+        case github(Int)
+        case bitbucket(Date)
     }
     
     public struct Owner {
@@ -16,7 +16,6 @@ public struct Repository {
         }
     }
     
-    let id: Int
     let name: String
     let description: String
     let owner: Owner
@@ -24,14 +23,12 @@ public struct Repository {
     let url: URL
     
     public init(
-        id: Int,
         name: String,
         description: String,
         owner: Owner,
         source: Source,
         url: URL
     ) {
-        self.id = id
         self.name = name
         self.description = description
         self.owner = owner
