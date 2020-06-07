@@ -16,6 +16,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         Container.register(modules: AppModule.self, DataModule.self)
 #endif
         
+#if DEBUG
+        log.logLevel = .verbose
+#endif
+        
         return true
     }
 
