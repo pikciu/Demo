@@ -18,6 +18,9 @@
 		38E9AF36248C7EDF0064FE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E9AF35248C7EDF0064FE19 /* LaunchScreen.storyboard */; };
 		38E9AF39248C7EF30064FE19 /* Hub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E9AF38248C7EF30064FE19 /* Hub.storyboard */; };
 		38E9AF3B248C7F0B0064FE19 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF3A248C7F0B0064FE19 /* HubViewController.swift */; };
+		38E9AF3F248C804E0064FE19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E9AF41248C804E0064FE19 /* Localizable.strings */; };
+		38E9AF45248C81420064FE19 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF43248C81410064FE19 /* LocalizedStrings.swift */; };
+		38E9AF46248C81420064FE19 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF44248C81410064FE19 /* Assets.swift */; };
 		5C3918F6183FB4B0E1F2793B /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B657BFCEFF6770FAC370C0D6 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		38E9AF35248C7EDF0064FE19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38E9AF38248C7EF30064FE19 /* Hub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hub.storyboard; sourceTree = "<group>"; };
 		38E9AF3A248C7F0B0064FE19 /* HubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
+		38E9AF40248C804E0064FE19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38E9AF43248C81410064FE19 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		38E9AF44248C81410064FE19 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		AE95AA880F64DADF4CAB2399 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		B657BFCEFF6770FAC370C0D6 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,10 +102,10 @@
 		3858F8F3248C773700F944AA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AF3C248C80010064FE19 /* Resources */,
 				38E9AF34248C7E950064FE19 /* Views */,
 				38E9AF21248C7B360064FE19 /* Configuration */,
 				3858F8F4248C773700F944AA /* AppDelegate.swift */,
-				3858F8FD248C773700F944AA /* Assets.xcassets */,
 				3858F902248C773700F944AA /* Info.plist */,
 				38E9AF31248C7DC70064FE19 /* AppModule.swift */,
 			);
@@ -156,6 +162,17 @@
 			path = Hub;
 			sourceTree = "<group>";
 		};
+		38E9AF3C248C80010064FE19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AF44248C81410064FE19 /* Assets.swift */,
+				38E9AF43248C81410064FE19 /* LocalizedStrings.swift */,
+				3858F8FD248C773700F944AA /* Assets.xcassets */,
+				38E9AF41248C804E0064FE19 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8663BB1B8438D2B862196334 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +201,7 @@
 			buildConfigurationList = 3858F905248C773800F944AA /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				6934D1F41E0F04BB0D6B0D1A /* [CP] Check Pods Manifest.lock */,
+				38E9AF42248C81020064FE19 /* swiftgen */,
 				3858F8ED248C773700F944AA /* Sources */,
 				3858F8EE248C773700F944AA /* Frameworks */,
 				3858F8EF248C773700F944AA /* Resources */,
@@ -238,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3858F8FE248C773700F944AA /* Assets.xcassets in Resources */,
+				38E9AF3F248C804E0064FE19 /* Localizable.strings in Resources */,
 				38E9AF36248C7EDF0064FE19 /* LaunchScreen.storyboard in Resources */,
 				38E9AF39248C7EF30064FE19 /* Hub.storyboard in Resources */,
 			);
@@ -246,6 +265,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		38E9AF42248C81020064FE19 /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\n    swiftgen config run\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
 		39111F9B27BE6A7F22112340 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,12 +331,25 @@
 			files = (
 				38E9AF30248C7D2A0064FE19 /* AppConfig.swift in Sources */,
 				38E9AF3B248C7F0B0064FE19 /* HubViewController.swift in Sources */,
+				38E9AF46248C81420064FE19 /* Assets.swift in Sources */,
 				38E9AF32248C7DC70064FE19 /* AppModule.swift in Sources */,
 				3858F8F5248C773700F944AA /* AppDelegate.swift in Sources */,
+				38E9AF45248C81420064FE19 /* LocalizedStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38E9AF41248C804E0064FE19 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E9AF40248C804E0064FE19 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3858F903248C773800F944AA /* Debug */ = {

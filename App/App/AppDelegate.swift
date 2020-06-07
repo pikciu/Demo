@@ -10,10 +10,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 #if MOCK
-        Container.register(modules: MockDataModule.self)
+        Container.register(modules: AppModule.self, MockDataModule.self)
 #else
         
-        Container.register(modules: DataModule.self)
+        Container.register(modules: AppModule.self, DataModule.self)
 #endif
         
         return true
