@@ -468,7 +468,7 @@
 		};
 		3858F906248C773800F944AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38E9AF2B248C7C4C0064FE19 /* Mock-Debug.xcconfig */;
+			baseConfigurationReference = 38E9AF29248C7C1C0064FE19 /* Production-Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

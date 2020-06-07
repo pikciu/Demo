@@ -10,7 +10,7 @@ final class HTTPClient {
         }
         
         let observable: Observable<Response> = Observable.create { observer in
-            let session: URLSession = Container.resolve()
+            let session = Container.resolve(URLSession.self)
             let task = session.dataTask(with: urlRequest) { (data, urlResponse, error) in
                 
                 log.verbose(request.resource)
