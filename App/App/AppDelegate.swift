@@ -17,7 +17,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 #endif
         
 #if DEBUG
-        log.logLevel = .verbose
+        log.logLevel = .debug
 #endif
         
         return true

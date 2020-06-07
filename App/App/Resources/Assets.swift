@@ -18,6 +18,9 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let bitbucket = ImageAsset(name: "bitbucket")
+  internal static let git = ImageAsset(name: "git")
+  internal static let github = ImageAsset(name: "github")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

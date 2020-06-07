@@ -7,20 +7,26 @@ public final class PublicRepositoriesPresenter {
     private let activityIndicator = ActivityIndicator()
 
     public unowned let view: PublicRepositoriesView
+    
+    private let repositories = BehaviorRelay(value: [Repository]())
 
     public init(view: PublicRepositoriesView) {
         self.view = view
         
         GetRepositories(since: nil, after: nil)
             .execute()
+            .trackActivity(activityIndicator)
             .subscribe(with: self, onNext: { (context, repositories) in
-                log.debug(repositories)
-            }, onError: { (context, error) in
-                log.warning(error)
-            }, onCompleted: { _ in
-                log.verbose("complted")
-            }, onDisposed: { _ in
-                log.verbose("disposed")
-            }).disposed(by: disposeBag)
+                context.append(repositories: repositories)
+            })
+            .disposed(by: disposeBag)
+        
+        repositories.map({ $0.sorted() })
+            .bind(to: view.repositories)
+            .disposed(by: disposeBag)
+    }
+    
+    private func append(repositories newRepositories: [Repository]) {
+        repositories.accept(repositories.value + newRepositories)
     }
 }

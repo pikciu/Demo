@@ -30,15 +30,4 @@ class View: UIView {
     func setupActionHandlers() {
         
     }
-    
-    func attach(to viewController: UIViewController) {
-        viewController.view.add(subviews: self)
-        
-        activate(
-            topAnchor.constraint(equalTo: viewController.view.topAnchor),
-            bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor),
-            leadingAnchor.constraint(equalTo: viewController.view.leadingAnchor),
-            trailingAnchor.constraint(equalTo: viewController.view.trailingAnchor)
-        )
-    }
 }

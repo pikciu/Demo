@@ -33,6 +33,10 @@
 		38E9AFB2248D446C0064FE19 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB1248D446C0064FE19 /* DateExtensions.swift */; };
 		38E9AFB6248D47B90064FE19 /* BitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB5248D47B90064FE19 /* BitbucketRepository.swift */; };
 		38E9AFBC248D59220064FE19 /* TwoWayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFBB248D59210064FE19 /* TwoWayMapper.swift */; };
+		38E9AFC2248D5D780064FE19 /* MyRepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFC0248D5D780064FE19 /* MyRepositoriesPresenter.swift */; };
+		38E9AFC3248D5D780064FE19 /* MyRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFC1248D5D780064FE19 /* MyRepositoriesView.swift */; };
+		38E9AFD8248D61B20064FE19 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFD7248D61B10064FE19 /* Decorator.swift */; };
+		38E9AFDA248D61C50064FE19 /* Decorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFD9248D61C50064FE19 /* Decorable.swift */; };
 		A33EA7EC36F789099C9BC5F4 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		38E9AFB1248D446C0064FE19 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		38E9AFB5248D47B90064FE19 /* BitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepository.swift; sourceTree = "<group>"; };
 		38E9AFBB248D59210064FE19 /* TwoWayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayMapper.swift; sourceTree = "<group>"; };
+		38E9AFC0248D5D780064FE19 /* MyRepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesPresenter.swift; sourceTree = "<group>"; };
+		38E9AFC1248D5D780064FE19 /* MyRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesView.swift; sourceTree = "<group>"; };
+		38E9AFD7248D61B10064FE19 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
+		38E9AFD9248D61C50064FE19 /* Decorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorable.swift; sourceTree = "<group>"; };
 		55E680600442D7035FB15E7D /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,6 +147,8 @@
 				38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */,
 				38E9AFAF248D43FD0064FE19 /* DateTimeFormatter.swift */,
 				38E9AFBB248D59210064FE19 /* TwoWayMapper.swift */,
+				38E9AFD7248D61B10064FE19 /* Decorator.swift */,
+				38E9AFD9248D61C50064FE19 /* Decorable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,6 +202,7 @@
 		38E9AF9F248D36110064FE19 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AFBF248D5D650064FE19 /* MyRepositories */,
 				38E9AFA0248D36190064FE19 /* PublicRepositories */,
 			);
 			path = Views;
@@ -204,6 +215,15 @@
 				38E9AFA2248D36210064FE19 /* PublicRepositoriesView.swift */,
 			);
 			path = PublicRepositories;
+			sourceTree = "<group>";
+		};
+		38E9AFBF248D5D650064FE19 /* MyRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AFC0248D5D780064FE19 /* MyRepositoriesPresenter.swift */,
+				38E9AFC1248D5D780064FE19 /* MyRepositoriesView.swift */,
+			);
+			path = MyRepositories;
 			sourceTree = "<group>";
 		};
 		660F4A9BDFAFC4D837FCE3F0 /* Pods */ = {
@@ -333,6 +353,8 @@
 				38E9AFB2248D446C0064FE19 /* DateExtensions.swift in Sources */,
 				38E9AF76248D16C10064FE19 /* GithubRepository.swift in Sources */,
 				38E9AFB0248D43FD0064FE19 /* DateTimeFormatter.swift in Sources */,
+				38E9AFC3248D5D780064FE19 /* MyRepositoriesView.swift in Sources */,
+				38E9AFDA248D61C50064FE19 /* Decorable.swift in Sources */,
 				38E9AFA4248D36210064FE19 /* PublicRepositoriesView.swift in Sources */,
 				38E9AF2E248C7CAC0064FE19 /* AppConfig.swift in Sources */,
 				38E9AF4E248C840E0064FE19 /* ConsoleLogDestination.swift in Sources */,
@@ -342,6 +364,7 @@
 				38E9AFB6248D47B90064FE19 /* BitbucketRepository.swift in Sources */,
 				38E9AF1A248C7A240064FE19 /* Container.swift in Sources */,
 				38E9AF89248D311B0064FE19 /* AppError.swift in Sources */,
+				38E9AFD8248D61B20064FE19 /* Decorator.swift in Sources */,
 				38E9AF97248D334A0064FE19 /* UseCase.swift in Sources */,
 				38E9AF84248D1AEC0064FE19 /* Mapper.swift in Sources */,
 				38E9AF4C248C83F40064FE19 /* LogDestination.swift in Sources */,
@@ -354,6 +377,7 @@
 				38E9AF73248C88D10064FE19 /* EncodableWrapper.swift in Sources */,
 				38E9AF8D248D31BC0064FE19 /* Transformer.swift in Sources */,
 				38E9AF99248D33700064FE19 /* GetRepositories.swift in Sources */,
+				38E9AFC2248D5D780064FE19 /* MyRepositoriesPresenter.swift in Sources */,
 				38E9AF79248D16D40064FE19 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
