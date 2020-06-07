@@ -26,6 +26,9 @@
 		38E9AF90248D31EC0064FE19 /* ObservableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF8F248D31EC0064FE19 /* ObservableExtensions.swift */; };
 		38E9AF97248D334A0064FE19 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF96248D334A0064FE19 /* UseCase.swift */; };
 		38E9AF99248D33700064FE19 /* GetRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF98248D33700064FE19 /* GetRepositories.swift */; };
+		38E9AFA3248D36210064FE19 /* PublicRepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFA1248D36210064FE19 /* PublicRepositoriesPresenter.swift */; };
+		38E9AFA4248D36210064FE19 /* PublicRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFA2248D36210064FE19 /* PublicRepositoriesView.swift */; };
+		38E9AFA6248D366C0064FE19 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */; };
 		A33EA7EC36F789099C9BC5F4 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		38E9AF8F248D31EC0064FE19 /* ObservableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtensions.swift; sourceTree = "<group>"; };
 		38E9AF96248D334A0064FE19 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		38E9AF98248D33700064FE19 /* GetRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositories.swift; sourceTree = "<group>"; };
+		38E9AFA1248D36210064FE19 /* PublicRepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepositoriesPresenter.swift; sourceTree = "<group>"; };
+		38E9AFA2248D36210064FE19 /* PublicRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepositoriesView.swift; sourceTree = "<group>"; };
+		38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		55E680600442D7035FB15E7D /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +95,7 @@
 		3858F914248C778300F944AA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AF9F248D36110064FE19 /* Views */,
 				38E9AF95248D332A0064FE19 /* UseCases */,
 				38E9AF8E248D31E20064FE19 /* Extensions */,
 				38E9AF77248D16C40064FE19 /* Models */,
@@ -121,6 +128,7 @@
 				38E9AF83248D1AEC0064FE19 /* Mapper.swift */,
 				38E9AF8C248D31BC0064FE19 /* Transformer.swift */,
 				38E9AF96248D334A0064FE19 /* UseCase.swift */,
+				38E9AFA5248D366C0064FE19 /* ActivityIndicator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -167,6 +175,23 @@
 				38E9AF98248D33700064FE19 /* GetRepositories.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		38E9AF9F248D36110064FE19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AFA0248D36190064FE19 /* PublicRepositories */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38E9AFA0248D36190064FE19 /* PublicRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AFA1248D36210064FE19 /* PublicRepositoriesPresenter.swift */,
+				38E9AFA2248D36210064FE19 /* PublicRepositoriesView.swift */,
+			);
+			path = PublicRepositories;
 			sourceTree = "<group>";
 		};
 		660F4A9BDFAFC4D837FCE3F0 /* Pods */ = {
@@ -294,8 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E9AF76248D16C10064FE19 /* GithubRepository.swift in Sources */,
+				38E9AFA4248D36210064FE19 /* PublicRepositoriesView.swift in Sources */,
 				38E9AF2E248C7CAC0064FE19 /* AppConfig.swift in Sources */,
 				38E9AF4E248C840E0064FE19 /* ConsoleLogDestination.swift in Sources */,
+				38E9AFA6248D366C0064FE19 /* ActivityIndicator.swift in Sources */,
 				38E9AF6F248C88580064FE19 /* Settings.swift in Sources */,
 				38E9AF71248C88C40064FE19 /* DecodableWrapper.swift in Sources */,
 				38E9AF1A248C7A240064FE19 /* Container.swift in Sources */,
@@ -306,6 +333,7 @@
 				38E9AF50248C84240064FE19 /* LogLevel.swift in Sources */,
 				38E9AF90248D31EC0064FE19 /* ObservableExtensions.swift in Sources */,
 				38E9AF1C248C7A380064FE19 /* Module.swift in Sources */,
+				38E9AFA3248D36210064FE19 /* PublicRepositoriesPresenter.swift in Sources */,
 				38E9AF4A248C83D30064FE19 /* Logger.swift in Sources */,
 				38E9AF73248C88D10064FE19 /* EncodableWrapper.swift in Sources */,
 				38E9AF8D248D31BC0064FE19 /* Transformer.swift in Sources */,
