@@ -2,6 +2,8 @@ PODS:
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
   - Reusable (4.1.1):
     - Reusable/Storyboard (= 4.1.1)
     - Reusable/View (= 4.1.1)
@@ -32,6 +34,7 @@ PODS:
 
 DEPENDENCIES:
   - Kingfisher
+  - "NSObject+Rx"
   - RxCells
   - RxCocoa
   - RxOptional
@@ -42,6 +45,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - "NSObject+Rx"
     - Reusable
     - RxCells
     - RxCocoa
@@ -53,6 +57,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   RxCells: bdf6673a05f8ee58b3dd7b28c3e236da7b5e0e98
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -62,6 +67,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 1e17a5b2955e37fba56345a86d968d86fc3cf570
+PODFILE CHECKSUM: 0fc19cf8ed62323877f3847ed1303eeab888816c
 
 COCOAPODS: 1.9.1

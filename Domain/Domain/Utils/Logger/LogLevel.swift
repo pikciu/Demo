@@ -9,19 +9,6 @@ public enum LogLevel: Int {
     case error
     
     var label: String {
-        switch self {
-        case .off:
-            return "🤷‍♂️"
-        case .verbose:
-            return "💙"
-        case .debug:
-            return "💚"
-        case .info:
-            return "💜"
-        case .warning:
-            return "💛"
-        case .error:
-            return "❤️"
-        }
+        "\(self)".uppercased()
     }
 }

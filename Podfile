@@ -21,6 +21,7 @@ target 'App' do
 
 	pod 'RxCells'
 	pod 'Kingfisher'
+	pod 'NSObject+Rx'
 end
 
 target 'Domain' do
