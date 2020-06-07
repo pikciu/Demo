@@ -4,7 +4,6 @@ final class PublicRepositoriesUI: View {
     let tableView = UITableView()
     
     override func setupAppearance() {
-        tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 92
     }
     

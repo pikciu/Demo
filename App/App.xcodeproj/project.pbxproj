@@ -37,6 +37,7 @@
 		38E9AFE4248D64260064FE19 /* RootUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFE3248D64260064FE19 /* RootUI.swift */; };
 		38E9AFE6248D6B9A0064FE19 /* RepositorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFE5248D6B9A0064FE19 /* RepositorySource.swift */; };
 		38E9AFE8248D776A0064FE19 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFE7248D776A0064FE19 /* NSLayoutConstraintExtensions.swift */; };
+		38E9AFEA248D78F70064FE19 /* IncrementalLoadingDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFE9248D78F70064FE19 /* IncrementalLoadingDecorator.swift */; };
 		5C3918F6183FB4B0E1F2793B /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B657BFCEFF6770FAC370C0D6 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		38E9AFE3248D64260064FE19 /* RootUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootUI.swift; sourceTree = "<group>"; };
 		38E9AFE5248D6B9A0064FE19 /* RepositorySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySource.swift; sourceTree = "<group>"; };
 		38E9AFE7248D776A0064FE19 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
+		38E9AFE9248D78F70064FE19 /* IncrementalLoadingDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingDecorator.swift; sourceTree = "<group>"; };
 		AE95AA880F64DADF4CAB2399 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		B657BFCEFF6770FAC370C0D6 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -273,6 +275,7 @@
 				38E9AFDD248D621C0064FE19 /* RoundCorners.swift */,
 				38E9AFDF248D62320064FE19 /* Shadow.swift */,
 				38E9AFE1248D62680064FE19 /* AvatarDecorator.swift */,
+				38E9AFE9248D78F70064FE19 /* IncrementalLoadingDecorator.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				3858F8F5248C773700F944AA /* AppDelegate.swift in Sources */,
 				38E9AFE6248D6B9A0064FE19 /* RepositorySource.swift in Sources */,
 				38E9AF45248C81420064FE19 /* LocalizedStrings.swift in Sources */,
+				38E9AFEA248D78F70064FE19 /* IncrementalLoadingDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +592,7 @@
 		};
 		3858F906248C773800F944AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38E9AF29248C7C1C0064FE19 /* Production-Debug.xcconfig */;
+			baseConfigurationReference = 38E9AF2B248C7C4C0064FE19 /* Mock-Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

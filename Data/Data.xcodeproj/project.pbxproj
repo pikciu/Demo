@@ -37,6 +37,12 @@
 		38E9AFB8248D47E40064FE19 /* BitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB7248D47E40064FE19 /* BitbucketRepository.swift */; };
 		38E9AFBA248D48040064FE19 /* BitbucketRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFB9248D48040064FE19 /* BitbucketRepositoriesRequest.swift */; };
 		38E9AFBE248D59390064FE19 /* BitbucketDateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFBD248D59390064FE19 /* BitbucketDateMapper.swift */; };
+		38E9AFED248D7C890064FE19 /* bitbucket.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E9AFEC248D7C890064FE19 /* bitbucket.json */; };
+		38E9AFEF248D7C910064FE19 /* github.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E9AFEE248D7C910064FE19 /* github.json */; };
+		38E9AFF1248D7CFD0064FE19 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFF0248D7CFD0064FE19 /* Mock.swift */; };
+		38E9AFF4248D7E360064FE19 /* MockGithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFF3248D7E360064FE19 /* MockGithubRepository.swift */; };
+		38E9AFF6248D7E730064FE19 /* ArrayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFF5248D7E730064FE19 /* ArrayMapper.swift */; };
+		38E9AFF8248D7F470064FE19 /* MockBitbucketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AFF7248D7F470064FE19 /* MockBitbucketRepository.swift */; };
 		E231A31E4E17475CC93810B0 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513A73594E03DBDE6A91DA00 /* Pods_Data.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +93,12 @@
 		38E9AFB7248D47E40064FE19 /* BitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepository.swift; sourceTree = "<group>"; };
 		38E9AFB9248D48040064FE19 /* BitbucketRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketRepositoriesRequest.swift; sourceTree = "<group>"; };
 		38E9AFBD248D59390064FE19 /* BitbucketDateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketDateMapper.swift; sourceTree = "<group>"; };
+		38E9AFEC248D7C890064FE19 /* bitbucket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bitbucket.json; path = ../../../../../Downloads/bitbucket.json; sourceTree = "<group>"; };
+		38E9AFEE248D7C910064FE19 /* github.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = github.json; path = ../../../../../Downloads/github.json; sourceTree = "<group>"; };
+		38E9AFF0248D7CFD0064FE19 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		38E9AFF3248D7E360064FE19 /* MockGithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubRepository.swift; sourceTree = "<group>"; };
+		38E9AFF5248D7E730064FE19 /* ArrayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMapper.swift; sourceTree = "<group>"; };
+		38E9AFF7248D7F470064FE19 /* MockBitbucketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBitbucketRepository.swift; sourceTree = "<group>"; };
 		513A73594E03DBDE6A91DA00 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00AAB42E5FDFD621CCEDB58 /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +137,7 @@
 		3858F929248C77A800F944AA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AFEB248D7C740064FE19 /* Mock */,
 				38E9AF85248D30E60064FE19 /* Utils */,
 				38E9AF80248D1AB30064FE19 /* Models */,
 				38E9AF7D248D1A8F0064FE19 /* Repositories */,
@@ -187,6 +200,7 @@
 		38E9AF7D248D1A8F0064FE19 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AFF2248D7E230064FE19 /* Mock */,
 				38E9AF7E248D1A9B0064FE19 /* GithubRepository.swift */,
 				38E9AFB7248D47E40064FE19 /* BitbucketRepository.swift */,
 			);
@@ -210,8 +224,28 @@
 				38E9AF8A248D31920064FE19 /* ObjectDecoder.swift */,
 				38E9AF91248D32630064FE19 /* ArrayDecoder.swift */,
 				38E9AFBD248D59390064FE19 /* BitbucketDateMapper.swift */,
+				38E9AFF5248D7E730064FE19 /* ArrayMapper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		38E9AFEB248D7C740064FE19 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AFEC248D7C890064FE19 /* bitbucket.json */,
+				38E9AFEE248D7C910064FE19 /* github.json */,
+				38E9AFF0248D7CFD0064FE19 /* Mock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		38E9AFF2248D7E230064FE19 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AFF3248D7E360064FE19 /* MockGithubRepository.swift */,
+				38E9AFF7248D7F470064FE19 /* MockBitbucketRepository.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		C6B20646321D4741A67C220A /* Pods */ = {
@@ -305,6 +339,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E9AFEF248D7C910064FE19 /* github.json in Resources */,
+				38E9AFED248D7C890064FE19 /* bitbucket.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +379,16 @@
 				38E9AF5F248C861D0064FE19 /* Encoder.swift in Sources */,
 				38E9AF68248C862B0064FE19 /* HTTPError.swift in Sources */,
 				38E9AF69248C862B0064FE19 /* HTTPClient.swift in Sources */,
+				38E9AFF1248D7CFD0064FE19 /* Mock.swift in Sources */,
 				38E9AF8B248D31920064FE19 /* ObjectDecoder.swift in Sources */,
 				38E9AF6A248C862B0064FE19 /* HTTPHeader.swift in Sources */,
 				38E9AFBA248D48040064FE19 /* BitbucketRepositoriesRequest.swift in Sources */,
 				38E9AF94248D328C0064FE19 /* APIClient.swift in Sources */,
 				38E9AF6D248C86410064FE19 /* Response.swift in Sources */,
+				38E9AFF4248D7E360064FE19 /* MockGithubRepository.swift in Sources */,
 				38E9AF92248D32630064FE19 /* ArrayDecoder.swift in Sources */,
 				38E9AF6B248C862B0064FE19 /* QueryType.swift in Sources */,
+				38E9AFF6248D7E730064FE19 /* ArrayMapper.swift in Sources */,
 				38E9AF1E248C7A780064FE19 /* DataModule.swift in Sources */,
 				38E9AFB4248D46DF0064FE19 /* BitbucketPageDTO.swift in Sources */,
 				38E9AF66248C862B0064FE19 /* EndpointType.swift in Sources */,
@@ -359,6 +398,7 @@
 				38E9AF5E248C861C0064FE19 /* JSONEncoder.swift in Sources */,
 				38E9AF58248C85F70064FE19 /* Request.swift in Sources */,
 				38E9AF20248C7A970064FE19 /* MockDataModule.swift in Sources */,
+				38E9AFF8248D7F470064FE19 /* MockBitbucketRepository.swift in Sources */,
 				38E9AF59248C85F70064FE19 /* JSONEncodableRequestType.swift in Sources */,
 				38E9AFAE248D43C10064FE19 /* BitbucketRepositoryDTO.swift in Sources */,
 				38E9AF87248D30F10064FE19 /* JSONMapper.swift in Sources */,

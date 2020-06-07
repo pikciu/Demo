@@ -13,6 +13,10 @@ final class PublicRepositoriesViewController: UIViewController, PublicRepositori
     var repositories: AnyObserver<[Repository]> {
         ui.tableView.rx.cells(type: RepositoryCell.self).disposed(by: disposeBag)
     }
+    
+    var isBusy: AnyObserver<Bool> {
+        ui.tableView.apply(IncrementalLoadingDecorator()).asObserver()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

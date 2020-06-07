@@ -11,6 +11,6 @@ struct GetRepositories: UseCase {
     func execute() -> Observable<[Repository]> {
         let github = githubRepository.repositories(since: since)
         let bitbucket = bitbucketRepository.repositories(after: after)
-        return Observable.merge(github, bitbucket)
+        return Observable.merge(github, bitbucket).delay(.seconds(1), scheduler: MainScheduler.asyncInstance)
     }
 }

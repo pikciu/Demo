@@ -13,6 +13,8 @@ public final class PublicRepositoriesPresenter {
     public init(view: PublicRepositoriesView) {
         self.view = view
         
+        activityIndicator.drive(view.isBusy).disposed(by: disposeBag)
+        
         GetRepositories(since: nil, after: nil)
             .execute()
             .trackActivity(activityIndicator)
