@@ -1,0 +1,4 @@
+#include "../Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"
+
+OTHER_SWIFT_FLAGS = $(inherited) -DDEBUG
+
