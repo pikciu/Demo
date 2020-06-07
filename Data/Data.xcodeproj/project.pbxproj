@@ -10,6 +10,8 @@
 		3858F92C248C77A800F944AA /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 3858F92A248C77A800F944AA /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E9AF0E248C78E60064FE19 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9AF0D248C78E60064FE19 /* Domain.framework */; };
 		38E9AF0F248C78E60064FE19 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9AF0D248C78E60064FE19 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38E9AF1E248C7A780064FE19 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF1D248C7A780064FE19 /* DataModule.swift */; };
+		38E9AF20248C7A970064FE19 /* MockDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF1F248C7A970064FE19 /* MockDataModule.swift */; };
 		E231A31E4E17475CC93810B0 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513A73594E03DBDE6A91DA00 /* Pods_Data.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		3858F92A248C77A800F944AA /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		3858F92B248C77A800F944AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E9AF0D248C78E60064FE19 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E9AF1D248C7A780064FE19 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
+		38E9AF1F248C7A970064FE19 /* MockDataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModule.swift; sourceTree = "<group>"; };
 		513A73594E03DBDE6A91DA00 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00AAB42E5FDFD621CCEDB58 /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +77,8 @@
 			children = (
 				3858F92A248C77A800F944AA /* Data.h */,
 				3858F92B248C77A800F944AA /* Info.plist */,
+				38E9AF1D248C7A780064FE19 /* DataModule.swift */,
+				38E9AF1F248C7A970064FE19 /* MockDataModule.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 				TargetAttributes = {
 					3858F926248C77A800F944AA = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -202,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E9AF1E248C7A780064FE19 /* DataModule.swift in Sources */,
+				38E9AF20248C7A970064FE19 /* MockDataModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CB7C392360CA7A3CDD99220 /* Pods-Data.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 99R4D8SSEQ;
@@ -348,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pikciu.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -357,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A00AAB42E5FDFD621CCEDB58 /* Pods-Data.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 99R4D8SSEQ;

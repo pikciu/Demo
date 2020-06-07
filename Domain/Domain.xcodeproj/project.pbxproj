@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3858F917248C778300F944AA /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3858F915248C778300F944AA /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38E9AF1A248C7A240064FE19 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF19248C7A240064FE19 /* Container.swift */; };
+		38E9AF1C248C7A380064FE19 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF1B248C7A380064FE19 /* Module.swift */; };
+		38E9AF2E248C7CAC0064FE19 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF2D248C7CAC0064FE19 /* AppConfig.swift */; };
 		A33EA7EC36F789099C9BC5F4 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,6 +19,9 @@
 		3858F912248C778300F944AA /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858F915248C778300F944AA /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3858F916248C778300F944AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E9AF19248C7A240064FE19 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		38E9AF1B248C7A380064FE19 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		38E9AF2D248C7CAC0064FE19 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		55E680600442D7035FB15E7D /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		B64C1AB6806CACABEBA54EB4 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -53,10 +59,21 @@
 		3858F914248C778300F944AA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AF18248C7A130064FE19 /* DI */,
 				3858F915248C778300F944AA /* Domain.h */,
 				3858F916248C778300F944AA /* Info.plist */,
+				38E9AF2D248C7CAC0064FE19 /* AppConfig.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		38E9AF18248C7A130064FE19 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AF19248C7A240064FE19 /* Container.swift */,
+				38E9AF1B248C7A380064FE19 /* Module.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		660F4A9BDFAFC4D837FCE3F0 /* Pods */ = {
@@ -121,6 +138,7 @@
 				TargetAttributes = {
 					3858F911248C778300F944AA = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -182,6 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E9AF2E248C7CAC0064FE19 /* AppConfig.swift in Sources */,
+				38E9AF1A248C7A240064FE19 /* Container.swift in Sources */,
+				38E9AF1C248C7A380064FE19 /* Module.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55E680600442D7035FB15E7D /* Pods-Domain.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 99R4D8SSEQ;
@@ -328,6 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pikciu.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17ABE7EA7C9AD37737BFAE0A /* Pods-Domain.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 99R4D8SSEQ;

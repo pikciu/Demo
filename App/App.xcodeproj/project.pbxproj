@@ -16,6 +16,8 @@
 		38E9AF14248C78F50064FE19 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9AF11248C78F50064FE19 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38E9AF15248C78F50064FE19 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9AF12248C78F50064FE19 /* Domain.framework */; };
 		38E9AF16248C78F50064FE19 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9AF12248C78F50064FE19 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38E9AF30248C7D2A0064FE19 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF2F248C7D2A0064FE19 /* AppConfig.swift */; };
+		38E9AF32248C7DC70064FE19 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9AF31248C7DC70064FE19 /* AppModule.swift */; };
 		5C3918F6183FB4B0E1F2793B /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B657BFCEFF6770FAC370C0D6 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,16 @@
 		3858F902248C773700F944AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E9AF11248C78F50064FE19 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E9AF12248C78F50064FE19 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E9AF23248C7B590064FE19 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		38E9AF24248C7B710064FE19 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		38E9AF27248C7B940064FE19 /* Mock.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Mock.xcconfig; sourceTree = "<group>"; };
+		38E9AF28248C7BB80064FE19 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		38E9AF29248C7C1C0064FE19 /* Production-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Production-Debug.xcconfig"; sourceTree = "<group>"; };
+		38E9AF2A248C7C380064FE19 /* Production-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Production-Release.xcconfig"; sourceTree = "<group>"; };
+		38E9AF2B248C7C4C0064FE19 /* Mock-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mock-Debug.xcconfig"; sourceTree = "<group>"; };
+		38E9AF2C248C7C570064FE19 /* Mock-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mock-Release.xcconfig"; sourceTree = "<group>"; };
+		38E9AF2F248C7D2A0064FE19 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		38E9AF31248C7DC70064FE19 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		AE95AA880F64DADF4CAB2399 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		B657BFCEFF6770FAC370C0D6 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,14 +96,48 @@
 		3858F8F3248C773700F944AA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				38E9AF21248C7B360064FE19 /* Configuration */,
 				3858F8F4248C773700F944AA /* AppDelegate.swift */,
 				3858F8F8248C773700F944AA /* ViewController.swift */,
 				3858F8FA248C773700F944AA /* Main.storyboard */,
 				3858F8FD248C773700F944AA /* Assets.xcassets */,
 				3858F8FF248C773700F944AA /* LaunchScreen.storyboard */,
 				3858F902248C773700F944AA /* Info.plist */,
+				38E9AF31248C7DC70064FE19 /* AppModule.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		38E9AF21248C7B360064FE19 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AF26248C7B8D0064FE19 /* Environment */,
+				38E9AF22248C7B460064FE19 /* Build */,
+				38E9AF29248C7C1C0064FE19 /* Production-Debug.xcconfig */,
+				38E9AF2A248C7C380064FE19 /* Production-Release.xcconfig */,
+				38E9AF2B248C7C4C0064FE19 /* Mock-Debug.xcconfig */,
+				38E9AF2C248C7C570064FE19 /* Mock-Release.xcconfig */,
+				38E9AF2F248C7D2A0064FE19 /* AppConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		38E9AF22248C7B460064FE19 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AF23248C7B590064FE19 /* Debug.xcconfig */,
+				38E9AF24248C7B710064FE19 /* Release.xcconfig */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		38E9AF26248C7B8D0064FE19 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				38E9AF27248C7B940064FE19 /* Mock.xcconfig */,
+				38E9AF28248C7BB80064FE19 /* Production.xcconfig */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		8663BB1B8438D2B862196334 /* Frameworks */ = {
@@ -230,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E9AF30248C7D2A0064FE19 /* AppConfig.swift in Sources */,
+				38E9AF32248C7DC70064FE19 /* AppModule.swift in Sources */,
 				3858F8F9248C773700F944AA /* ViewController.swift in Sources */,
 				3858F8F5248C773700F944AA /* AppDelegate.swift in Sources */,
 			);
@@ -373,7 +421,7 @@
 		};
 		3858F906248C773800F944AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B280F25C47CF7270B853BBC /* Pods-App.debug.xcconfig */;
+			baseConfigurationReference = 38E9AF2B248C7C4C0064FE19 /* Mock-Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,7 +440,7 @@
 		};
 		3858F907248C773800F944AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE95AA880F64DADF4CAB2399 /* Pods-App.release.xcconfig */;
+			baseConfigurationReference = 38E9AF2C248C7C570064FE19 /* Mock-Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
