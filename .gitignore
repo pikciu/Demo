@@ -68,7 +68,7 @@ fastlane/test_output
 *.orig
 
 .idea
-*.xcworkspace
+*.xcworkspace/*
 
 Generated/
 

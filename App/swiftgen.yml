@@ -1,0 +1,11 @@
+strings:
+  inputs: App/Resources/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: App/Resources/LocalizedStrings.swift
+xcassets:
+  inputs:
+   - App/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: App/Resources/Assets.swift
