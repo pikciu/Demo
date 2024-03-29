@@ -2,8 +2,7 @@
 //  Domain.h
 //  Domain
 //
-//  Created by Tomasz Pikć on 07/06/2020.
-//  Copyright © 2020 pikciu. All rights reserved.
+//  Created by Tomasz Pikć on 29/03/2024.
 //
 
 #import <Foundation/Foundation.h>
