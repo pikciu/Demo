@@ -15,6 +15,7 @@
 		8F763CB02BB6EA7C00B48DB4 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CAF2BB6EA7C00B48DB4 /* AppTests.swift */; };
 		8F763CBA2BB6EA7C00B48DB4 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CB92BB6EA7C00B48DB4 /* AppUITests.swift */; };
 		8F763CBC2BB6EA7C00B48DB4 /* AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CBB2BB6EA7C00B48DB4 /* AppUITestsLaunchTests.swift */; };
+		8F763D3B2BB6EEEC00B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8F763CB52BB6EA7C00B48DB4 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CB92BB6EA7C00B48DB4 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		8F763CBB2BB6EA7C00B48DB4 /* AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		8F763C8C2BB6EA7A00B48DB4 = {
 			isa = PBXGroup;
 			children = (
+				8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */,
 				8F763C972BB6EA7B00B48DB4 /* App */,
 				8F763CAE2BB6EA7C00B48DB4 /* AppTests */,
 				8F763CB82BB6EA7C00B48DB4 /* AppUITests */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F763CA22BB6EA7B00B48DB4 /* Assets.xcassets in Resources */,
+				8F763D3B2BB6EEEC00B48DB4 /* Config.xcconfig in Resources */,
 				8F763CA52BB6EA7B00B48DB4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +310,7 @@
 /* Begin XCBuildConfiguration section */
 		8F763CBD2BB6EA7C00B48DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -369,6 +374,7 @@
 		};
 		8F763CBE2BB6EA7C00B48DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

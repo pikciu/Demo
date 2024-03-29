@@ -11,6 +11,7 @@
 		8F763CDD2BB6EAFE00B48DB4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F763CD22BB6EAFE00B48DB4 /* Domain.framework */; };
 		8F763CE22BB6EAFE00B48DB4 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */; };
 		8F763CE32BB6EAFE00B48DB4 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CD52BB6EAFE00B48DB4 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F763D372BB6EED900B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D362BB6EED900B48DB4 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8F763CD62BB6EAFE00B48DB4 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		8F763CDC2BB6EAFE00B48DB4 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		8F763D362BB6EED900B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		8F763CC82BB6EAFE00B48DB4 = {
 			isa = PBXGroup;
 			children = (
+				8F763D362BB6EED900B48DB4 /* Config.xcconfig */,
 				8F763CD42BB6EAFE00B48DB4 /* Domain */,
 				8F763CE02BB6EAFE00B48DB4 /* DomainTests */,
 				8F763CD32BB6EAFE00B48DB4 /* Products */,
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F763D372BB6EED900B48DB4 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +223,7 @@
 /* Begin XCBuildConfiguration section */
 		8F763CE42BB6EAFE00B48DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F763D362BB6EED900B48DB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -285,6 +290,7 @@
 		};
 		8F763CE52BB6EAFE00B48DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F763D362BB6EED900B48DB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

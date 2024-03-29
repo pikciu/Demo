@@ -11,6 +11,7 @@
 		8F763D252BB6EB2800B48DB4 /* HTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F763D1A2BB6EB2800B48DB4 /* HTTP.framework */; };
 		8F763D2A2BB6EB2800B48DB4 /* HTTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763D292BB6EB2800B48DB4 /* HTTPTests.swift */; };
 		8F763D2B2BB6EB2800B48DB4 /* HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763D1D2BB6EB2800B48DB4 /* HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F763D392BB6EEE500B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D382BB6EEE500B48DB4 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8F763D1E2BB6EB2800B48DB4 /* HTTP.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HTTP.docc; sourceTree = "<group>"; };
 		8F763D242BB6EB2800B48DB4 /* HTTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763D292BB6EB2800B48DB4 /* HTTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTests.swift; sourceTree = "<group>"; };
+		8F763D382BB6EEE500B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		8F763D102BB6EB2800B48DB4 = {
 			isa = PBXGroup;
 			children = (
+				8F763D382BB6EEE500B48DB4 /* Config.xcconfig */,
 				8F763D1C2BB6EB2800B48DB4 /* HTTP */,
 				8F763D282BB6EB2800B48DB4 /* HTTPTests */,
 				8F763D1B2BB6EB2800B48DB4 /* Products */,
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F763D392BB6EEE500B48DB4 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +223,7 @@
 /* Begin XCBuildConfiguration section */
 		8F763D2C2BB6EB2800B48DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F763D382BB6EEE500B48DB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -285,6 +290,7 @@
 		};
 		8F763D2D2BB6EB2800B48DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F763D382BB6EEE500B48DB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
