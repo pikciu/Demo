@@ -12,6 +12,12 @@
 		8F763D2A2BB6EB2800B48DB4 /* HTTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763D292BB6EB2800B48DB4 /* HTTPTests.swift */; };
 		8F763D2B2BB6EB2800B48DB4 /* HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763D1D2BB6EB2800B48DB4 /* HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F763D392BB6EEE500B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D382BB6EEE500B48DB4 /* Config.xcconfig */; };
+		8F8BB31B2BBD7BE20003E1ED /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BB31A2BBD7BE20003E1ED /* Request.swift */; };
+		8F8BB31D2BBD7C250003E1ED /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BB31C2BBD7C250003E1ED /* Response.swift */; };
+		8F8BB31F2BBD7C660003E1ED /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BB31E2BBD7C660003E1ED /* HTTPClient.swift */; };
+		8F8BB3212BBD7CF90003E1ED /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BB3202BBD7CF90003E1ED /* HTTPError.swift */; };
+		8F8BB3232BBD7E8E0003E1ED /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BB3222BBD7E8E0003E1ED /* ResponseMapper.swift */; };
+		8F8BB3252BBD836C0003E1ED /* URLSession+HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8BB3242BBD836C0003E1ED /* URLSession+HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +37,12 @@
 		8F763D242BB6EB2800B48DB4 /* HTTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763D292BB6EB2800B48DB4 /* HTTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTests.swift; sourceTree = "<group>"; };
 		8F763D382BB6EEE500B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
+		8F8BB31A2BBD7BE20003E1ED /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8F8BB31C2BBD7C250003E1ED /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8F8BB31E2BBD7C660003E1ED /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		8F8BB3202BBD7CF90003E1ED /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		8F8BB3222BBD7E8E0003E1ED /* ResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
+		8F8BB3242BBD836C0003E1ED /* URLSession+HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+HTTPClient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +86,14 @@
 		8F763D1C2BB6EB2800B48DB4 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
-				8F763D1D2BB6EB2800B48DB4 /* HTTP.h */,
 				8F763D1E2BB6EB2800B48DB4 /* HTTP.docc */,
+				8F763D1D2BB6EB2800B48DB4 /* HTTP.h */,
+				8F8BB31E2BBD7C660003E1ED /* HTTPClient.swift */,
+				8F8BB3202BBD7CF90003E1ED /* HTTPError.swift */,
+				8F8BB31A2BBD7BE20003E1ED /* Request.swift */,
+				8F8BB31C2BBD7C250003E1ED /* Response.swift */,
+				8F8BB3222BBD7E8E0003E1ED /* ResponseMapper.swift */,
+				8F8BB3242BBD836C0003E1ED /* URLSession+HTTPClient.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -199,6 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F763D1F2BB6EB2800B48DB4 /* HTTP.docc in Sources */,
+				8F8BB31D2BBD7C250003E1ED /* Response.swift in Sources */,
+				8F8BB31F2BBD7C660003E1ED /* HTTPClient.swift in Sources */,
+				8F8BB3232BBD7E8E0003E1ED /* ResponseMapper.swift in Sources */,
+				8F8BB3212BBD7CF90003E1ED /* HTTPError.swift in Sources */,
+				8F8BB3252BBD836C0003E1ED /* URLSession+HTTPClient.swift in Sources */,
+				8F8BB31B2BBD7BE20003E1ED /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +433,7 @@
 		8F763D322BB6EB2800B48DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -422,6 +447,7 @@
 		8F763D332BB6EB2800B48DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
