@@ -7,11 +7,11 @@ public protocol HTTPClient: AnyObject {
 
 extension HTTPClient {
     
-    func execute(request: Request) async throws -> Response {
+    public func execute(request: Request) async throws -> Response {
         try await execute(request: request.urlRequest())
     }
     
-    func execute(request: Request) -> AnyPublisher<Response, HTTPError> {
+    public func execute(request: Request) -> AnyPublisher<Response, HTTPError> {
         do {
             let urlRequest = try request.urlRequest()
             return execute(request: urlRequest)
@@ -20,21 +20,21 @@ extension HTTPClient {
         }
     }
     
-    func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) async throws -> M.Output {
+    public func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) async throws -> M.Output {
         try responseMapper.map(response: await execute(request: request))
     }
     
-    func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {
+    public func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {
         execute(request: request)
             .flatMap(responseMapper.map)
             .eraseToAnyPublisher()
     }
     
-    func execute<M: ResponseMapper>(request: Request, responseMapper: M) async throws -> M.Output {
+    public func execute<M: ResponseMapper>(request: Request, responseMapper: M) async throws -> M.Output {
         try responseMapper.map(response: await execute(request: request))
     }
     
-    func execute<M: ResponseMapper>(request: Request, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {
+    public func execute<M: ResponseMapper>(request: Request, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {
         execute(request: request)
             .flatMap(responseMapper.map)
             .eraseToAnyPublisher()
