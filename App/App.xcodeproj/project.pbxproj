@@ -42,6 +42,9 @@
 		8FD4F1A52BC6B28F009A5BC1 /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A42BC6B28F009A5BC1 /* UIControl+Combine.swift */; };
 		8FD4F1B22BC6CD85009A5BC1 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD4F1B12BC6CD85009A5BC1 /* Nuke */; };
 		8FD4F1B42BC6CD85009A5BC1 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD4F1B32BC6CD85009A5BC1 /* NukeExtensions */; };
+		8FD4F1B62BC6D255009A5BC1 /* HTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */; };
+		8FD4F1B72BC6D255009A5BC1 /* HTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FD4F1BA2BC6D7F0009A5BC1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8FD4F1B92BC6D7F0009A5BC1 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8FD4F1B72BC6D255009A5BC1 /* HTTP.framework in Embed Frameworks */,
 				8F0B184F2BBF3BF700910CAD /* Domain.framework in Embed Frameworks */,
 				8F0B184D2BBF3BF700910CAD /* Data.framework in Embed Frameworks */,
 			);
@@ -111,6 +115,8 @@
 		8FD4F19E2BC6A331009A5BC1 /* AddUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCell.swift; sourceTree = "<group>"; };
 		8FD4F1A22BC6AEA8009A5BC1 /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
 		8FD4F1A42BC6B28F009A5BC1 /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
+		8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD4F1B92BC6D7F0009A5BC1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD4F1B62BC6D255009A5BC1 /* HTTP.framework in Frameworks */,
 				8F0B184E2BBF3BF700910CAD /* Domain.framework in Frameworks */,
 				8F0B184C2BBF3BF700910CAD /* Data.framework in Frameworks */,
 				8F0B18482BBF3BE200910CAD /* Container in Frameworks */,
@@ -146,6 +153,7 @@
 		8F0B18492BBF3BF700910CAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */,
 				8F0B184A2BBF3BF700910CAD /* Data.framework */,
 				8F0B184B2BBF3BF700910CAD /* Domain.framework */,
 			);
@@ -198,13 +206,12 @@
 		8F763C972BB6EA7B00B48DB4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8FD4F1B82BC6D7CA009A5BC1 /* Resources */,
 				8F5C76D42BC5378E00B07ABF /* Utils */,
 				8F5C76E62BC5411F00B07ABF /* Extensions */,
 				8F897BA02BC3FECE001903E5 /* Views */,
 				8F763C982BB6EA7B00B48DB4 /* AppDelegate.swift */,
 				8F763C9A2BB6EA7B00B48DB4 /* SceneDelegate.swift */,
-				8F763CA12BB6EA7B00B48DB4 /* Assets.xcassets */,
-				8F763CA32BB6EA7B00B48DB4 /* LaunchScreen.storyboard */,
 				8F763CA62BB6EA7B00B48DB4 /* Info.plist */,
 				8F897B8B2BC3F36C001903E5 /* AppCoordinator.swift */,
 			);
@@ -253,6 +260,7 @@
 		8F897BA02BC3FECE001903E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8F763CA32BB6EA7B00B48DB4 /* LaunchScreen.storyboard */,
 				8F897B8E2BC3F8A5001903E5 /* Repos */,
 				8F897B8D2BC3F8A0001903E5 /* Users */,
 				8F897BA12BC3FEEC001903E5 /* ViewController.swift */,
@@ -271,6 +279,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8FD4F1B82BC6D7CA009A5BC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F763CA12BB6EA7B00B48DB4 /* Assets.xcassets */,
+				8FD4F1B92BC6D7F0009A5BC1 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +303,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8FD4F1BD2BC6DD14009A5BC1 /* PBXTargetDependency */,
 			);
 			name = App;
 			packageProductDependencies = (
@@ -363,11 +381,13 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 8F763C8C2BB6EA7A00B48DB4;
 			packageReferences = (
 				8F0B18462BBF3BE200910CAD /* XCRemoteSwiftPackageReference "Container" */,
 				8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */,
+				8FD4F1BB2BC6DD09009A5BC1 /* XCRemoteSwiftPackageReference "xcstrings-tool" */,
 			);
 			productRefGroup = 8F763C962BB6EA7B00B48DB4 /* Products */;
 			projectDirPath = "";
@@ -387,6 +407,7 @@
 			files = (
 				8F763CA22BB6EA7B00B48DB4 /* Assets.xcassets in Resources */,
 				8F763D3B2BB6EEEC00B48DB4 /* Config.xcconfig in Resources */,
+				8FD4F1BA2BC6D7F0009A5BC1 /* Localizable.xcstrings in Resources */,
 				8F763CA52BB6EA7B00B48DB4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +487,10 @@
 			isa = PBXTargetDependency;
 			target = 8F763C942BB6EA7A00B48DB4 /* App */;
 			targetProxy = 8F763CB62BB6EA7C00B48DB4 /* PBXContainerItemProxy */;
+		};
+		8FD4F1BD2BC6DD14009A5BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8FD4F1BC2BC6DD14009A5BC1 /* XCStringsToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -768,6 +793,14 @@
 				minimumVersion = 12.5.0;
 			};
 		};
+		8FD4F1BB2BC6DD09009A5BC1 /* XCRemoteSwiftPackageReference "xcstrings-tool" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/liamnichols/xcstrings-tool";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -785,6 +818,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeExtensions;
+		};
+		8FD4F1BC2BC6DD14009A5BC1 /* XCStringsToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FD4F1BB2BC6DD09009A5BC1 /* XCRemoteSwiftPackageReference "xcstrings-tool" */;
+			productName = "plugin:XCStringsToolPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

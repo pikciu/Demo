@@ -16,6 +16,7 @@ final class UsersViewController: ViewController<UsersView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = String(localized: .localizable.users)
         setupTableView()
         bind()
     }
@@ -61,7 +62,7 @@ extension UsersViewController: UITableViewDelegate {
         guard case .user(let user) = dataSource.itemIdentifier(for: indexPath) else {
             return nil
         }
-        let deleteAction = UIContextualAction(style: .destructive, title: "TODO") { [weak viewModel] action, view, completion in
+        let deleteAction = UIContextualAction(style: .destructive, title: String(localized: .localizable.delete)) { [weak viewModel] action, view, completion in
             viewModel?.input.delete(user: user)
             completion(true)
         }

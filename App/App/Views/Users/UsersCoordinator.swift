@@ -17,7 +17,11 @@ final class UsersCoordinator {
             userRemover: Container.resolve()
         )
         let usersViewController = UsersViewController(viewModel: usersViewModel)
-        usersViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        usersViewController.tabBarItem = UITabBarItem(
+            title: String(localized: .localizable.users),
+            image: UIImage(systemName: "person.2.fill"),
+            tag: 0
+        )
         navigationController.viewControllers = [usersViewController]
     }
 }

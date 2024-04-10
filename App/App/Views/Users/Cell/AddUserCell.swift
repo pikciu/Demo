@@ -4,11 +4,18 @@ import Domain
 
 final class AddUserCell: TableViewCell, Configurable {
     
-    private var cancellables = Set<AnyCancellable>(minimumCapacity: 3)
+    private var cancellables = Set<AnyCancellable>(minimumCapacity: 4)
     private let textField = UITextField()
     
     override func setupAppearance() {
         textField.borderStyle = .roundedRect
+        textField.autocorrectionType = .no
+        textField.returnKeyType = .search
+        textField.autocapitalizationType = .none
+    }
+    
+    override func localizeInterface() {
+        textField.placeholder = String(localized: .localizable.nickname)
     }
     
     override func setupAutoLayout() {
@@ -40,5 +47,18 @@ final class AddUserCell: TableViewCell, Configurable {
         
         viewModel.output.text.assign(to: \.text, on: textField)
             .store(in: &cancellables)
+        
+        textField.publisher(for: .editingDidEndOnExit)
+            .sink(with: viewModel) { $0.input.addUser() }
+            .store(in: &cancellables)
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing {
+            textField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
     }
 }

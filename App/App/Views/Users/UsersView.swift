@@ -6,6 +6,10 @@ final class UsersView: View {
     let editButton = UIBarButtonItem(systemItem: .edit)
     let doneButton = UIBarButtonItem(systemItem: .done)
     
+    override func setupAppearance() {
+        tableView.keyboardDismissMode = .interactive
+    }
+    
     override func setupAutoLayout() {
         add(subviews: [tableView])
         
