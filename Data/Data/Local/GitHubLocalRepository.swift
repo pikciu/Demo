@@ -27,4 +27,13 @@ final class GitHubLocalRepository: Domain.GitHubLocalRepository {
             realm.add(user, update: .all)
         }
     }
+    
+    func delete(userID: Int) throws {
+        let realm = try Realm(configuration: configuration)
+        try realm.write {
+            if let user = realm.object(ofType: UserRealm.self, forPrimaryKey: userID) {
+                realm.delete(user)
+            }
+        }
+    }
 }

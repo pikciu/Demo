@@ -30,6 +30,7 @@
 		8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */; };
 		8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */; };
 		8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */; };
+		8FD4F1AF2BC6CBE0009A5BC1 /* UserRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
 		8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
+		8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			children = (
 				8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */,
 				8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */,
+				8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				8F0B182C2BBF351900910CAD /* User.swift in Sources */,
 				8F5C76DF2BC53B7C00B07ABF /* PublisherExtensions.swift in Sources */,
 				8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */,
+				8FD4F1AF2BC6CBE0009A5BC1 /* UserRemover.swift in Sources */,
 				8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */,
 				8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */,
 				8F0B18292BBF349A00910CAD /* GitHubLocalRepository.swift in Sources */,

@@ -20,8 +20,6 @@
 		8F5C76E52BC5406F00B07ABF /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76E42BC5406F00B07ABF /* View.swift */; };
 		8F5C76E82BC5412A00B07ABF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76E72BC5412A00B07ABF /* UIViewExtensions.swift */; };
 		8F5C76EC2BC5450600B07ABF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76EB2BC5450600B07ABF /* TableViewCell.swift */; };
-		8F5C76EF2BC6900900B07ABF /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 8F5C76EE2BC6900900B07ABF /* Nuke */; };
-		8F5C76F12BC6900900B07ABF /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 8F5C76F02BC6900900B07ABF /* NukeExtensions */; };
 		8F5C76F32BC6903A00B07ABF /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76F22BC6903A00B07ABF /* NSLayoutConstraintExtensions.swift */; };
 		8F5C76F52BC695CA00B07ABF /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76F42BC695CA00B07ABF /* UIImageViewExtensions.swift */; };
 		8F763C992BB6EA7B00B48DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763C982BB6EA7B00B48DB4 /* AppDelegate.swift */; };
@@ -42,6 +40,8 @@
 		8FD4F19F2BC6A331009A5BC1 /* AddUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F19E2BC6A331009A5BC1 /* AddUserCell.swift */; };
 		8FD4F1A32BC6AEA8009A5BC1 /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A22BC6AEA8009A5BC1 /* UsersDataSource.swift */; };
 		8FD4F1A52BC6B28F009A5BC1 /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A42BC6B28F009A5BC1 /* UIControl+Combine.swift */; };
+		8FD4F1B22BC6CD85009A5BC1 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD4F1B12BC6CD85009A5BC1 /* Nuke */; };
+		8FD4F1B42BC6CD85009A5BC1 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD4F1B32BC6CD85009A5BC1 /* NukeExtensions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,8 +121,8 @@
 				8F0B184E2BBF3BF700910CAD /* Domain.framework in Frameworks */,
 				8F0B184C2BBF3BF700910CAD /* Data.framework in Frameworks */,
 				8F0B18482BBF3BE200910CAD /* Container in Frameworks */,
-				8F5C76EF2BC6900900B07ABF /* Nuke in Frameworks */,
-				8F5C76F12BC6900900B07ABF /* NukeExtensions in Frameworks */,
+				8FD4F1B22BC6CD85009A5BC1 /* Nuke in Frameworks */,
+				8FD4F1B42BC6CD85009A5BC1 /* NukeExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,8 +290,8 @@
 			name = App;
 			packageProductDependencies = (
 				8F0B18472BBF3BE200910CAD /* Container */,
-				8F5C76EE2BC6900900B07ABF /* Nuke */,
-				8F5C76F02BC6900900B07ABF /* NukeExtensions */,
+				8FD4F1B12BC6CD85009A5BC1 /* Nuke */,
+				8FD4F1B32BC6CD85009A5BC1 /* NukeExtensions */,
 			);
 			productName = App;
 			productReference = 8F763C952BB6EA7B00B48DB4 /* App.app */;
@@ -367,7 +367,7 @@
 			mainGroup = 8F763C8C2BB6EA7A00B48DB4;
 			packageReferences = (
 				8F0B18462BBF3BE200910CAD /* XCRemoteSwiftPackageReference "Container" */,
-				8F5C76ED2BC6900900B07ABF /* XCRemoteSwiftPackageReference "Nuke" */,
+				8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 8F763C962BB6EA7B00B48DB4 /* Products */;
 			projectDirPath = "";
@@ -760,7 +760,7 @@
 				minimumVersion = 1.2.0;
 			};
 		};
-		8F5C76ED2BC6900900B07ABF /* XCRemoteSwiftPackageReference "Nuke" */ = {
+		8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
@@ -776,14 +776,14 @@
 			package = 8F0B18462BBF3BE200910CAD /* XCRemoteSwiftPackageReference "Container" */;
 			productName = Container;
 		};
-		8F5C76EE2BC6900900B07ABF /* Nuke */ = {
+		8FD4F1B12BC6CD85009A5BC1 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8F5C76ED2BC6900900B07ABF /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = 8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
 		};
-		8F5C76F02BC6900900B07ABF /* NukeExtensions */ = {
+		8FD4F1B32BC6CD85009A5BC1 /* NukeExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8F5C76ED2BC6900900B07ABF /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = 8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeExtensions;
 		};
 /* End XCSwiftPackageProductDependency section */

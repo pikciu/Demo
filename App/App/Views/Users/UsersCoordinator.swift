@@ -13,7 +13,8 @@ final class UsersCoordinator {
     func start() {
         let usersViewModel = UsersViewModel(
             flowController: self,
-            usersProvider: Container.resolve()
+            usersProvider: Container.resolve(),
+            userRemover: Container.resolve()
         )
         let usersViewController = UsersViewController(viewModel: usersViewModel)
         usersViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)

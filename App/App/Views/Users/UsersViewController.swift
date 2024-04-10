@@ -61,7 +61,8 @@ extension UsersViewController: UITableViewDelegate {
         guard case .user(let user) = dataSource.itemIdentifier(for: indexPath) else {
             return nil
         }
-        let deleteAction = UIContextualAction(style: .destructive, title: "TODO") { action, view, completion in
+        let deleteAction = UIContextualAction(style: .destructive, title: "TODO") { [weak viewModel] action, view, completion in
+            viewModel?.input.delete(user: user)
             completion(true)
         }
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])

@@ -4,9 +4,11 @@ public final class UsersViewModel: ViewModel {
     
     public struct Input {
         private let isEditing: CurrentValueSubject<Bool, Never>
+        private let userRemover: UserRemover
         
-        init(isEditing: CurrentValueSubject<Bool, Never>) {
+        init(isEditing: CurrentValueSubject<Bool, Never>, userRemover: UserRemover) {
             self.isEditing = isEditing
+            self.userRemover = userRemover
         }
         
         public func edit() {
@@ -15,6 +17,10 @@ public final class UsersViewModel: ViewModel {
         
         public func endEditing() {
             isEditing.send(false)
+        }
+        
+        public func delete(user: User) {
+            userRemover.delete(user: user)
         }
     }
     
@@ -25,9 +31,13 @@ public final class UsersViewModel: ViewModel {
     
     private let flowController: UsersFlowController
     private let usersProvider: UsersProvider
+    private let userRemover: UserRemover
     private let isEditing = CurrentValueSubject<Bool, Never>(false)
     
-    public private(set) lazy var input = Input(isEditing: isEditing)
+    public private(set) lazy var input = Input(
+        isEditing: isEditing,
+        userRemover: userRemover
+    )
     
     public private(set) lazy var output = Output(
         snapshot: usersProvider.users.removeDuplicates()
@@ -37,8 +47,9 @@ public final class UsersViewModel: ViewModel {
         isEditing: isEditing.eraseToAnyPublisher()
     )
     
-    public init(flowController: UsersFlowController, usersProvider: UsersProvider) {
+    public init(flowController: UsersFlowController, usersProvider: UsersProvider, userRemover: UserRemover) {
         self.flowController = flowController
         self.usersProvider = usersProvider
+        self.userRemover = userRemover
     }
 }
