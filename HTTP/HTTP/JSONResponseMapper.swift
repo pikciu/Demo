@@ -9,6 +9,11 @@ public struct JSONResponseMapper<T: Decodable>: ResponseMapper {
     }
     
     public func map(response: Response) throws -> T {
-        try decoder.decode(T.self, from: response.data)
+        do {
+            return try decoder.decode(T.self, from: response.data)
+        } catch {
+            debugPrint(error)
+            throw error
+        }
     }
 }

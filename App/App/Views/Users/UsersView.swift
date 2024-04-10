@@ -3,6 +3,8 @@ import UIKit
 final class UsersView: View {
     
     let tableView = UITableView(frame: .zero, style: .plain)
+    let editButton = UIBarButtonItem(systemItem: .edit)
+    let doneButton = UIBarButtonItem(systemItem: .done)
     
     override func setupAutoLayout() {
         add(subviews: [tableView])

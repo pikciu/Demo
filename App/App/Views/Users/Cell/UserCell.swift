@@ -6,8 +6,8 @@ final class UserCell: TableViewCell, Configurable {
     
     func configure(with user: User) {
         var userContent = UserContentConfiguration()
-        userContent.name = user.name
         userContent.login = user.login
+        userContent.name = user.name
         userContent.avatarURL = user.avatarURL
         contentConfiguration = userContent
     }
@@ -18,8 +18,8 @@ private final class UserContentView: View, UIContentView {
     private var imageTask: Cancellable?
     
     let avatarImageView = UIImageView()
-    let nameLabel = UILabel()
     let loginLabel = UILabel()
+    let nameLabel = UILabel()
     
     var configuration: any UIContentConfiguration {
         didSet {
@@ -33,11 +33,17 @@ private final class UserContentView: View, UIContentView {
         apply(configuration: configuration)
     }
     
+    override func setupAppearance() {
+        avatarImageView.contentMode = .scaleAspectFill
+        avatarImageView.clipsToBounds = true
+        avatarImageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+    }
+    
     override func setupAutoLayout() {
         add(subviews: [
             avatarImageView,
-            nameLabel,
-            loginLabel
+            loginLabel,
+            nameLabel
         ])
         
         let padding = 15.0
@@ -49,15 +55,15 @@ private final class UserContentView: View, UIContentView {
             avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor)
                 .withPriority(.defaultHigh),
             
-            nameLabel.topAnchor.constraint(greaterThanOrEqualTo: avatarImageView.topAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: padding),
-            nameLabel.bottomAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
+            loginLabel.topAnchor.constraint(greaterThanOrEqualTo: avatarImageView.topAnchor),
+            loginLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: padding),
+            loginLabel.bottomAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
+            loginLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             
-            loginLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 2),
-            loginLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            loginLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor),
-            loginLabel.bottomAnchor.constraint(lessThanOrEqualTo: avatarImageView.bottomAnchor),
+            nameLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 2),
+            nameLabel.leadingAnchor.constraint(equalTo: loginLabel.leadingAnchor),
+            nameLabel.trailingAnchor.constraint(equalTo: loginLabel.trailingAnchor),
+            nameLabel.bottomAnchor.constraint(lessThanOrEqualTo: avatarImageView.bottomAnchor),
         ])
     }
     
@@ -65,16 +71,16 @@ private final class UserContentView: View, UIContentView {
         guard let configuration = configuration as? UserContentConfiguration else {
             return
         }
-        nameLabel.text = configuration.name
         loginLabel.text = configuration.login
+        nameLabel.text = configuration.name
         imageTask = avatarImageView.loadImage(with: configuration.avatarURL)
     }
 }
 
 private struct UserContentConfiguration: UIContentConfiguration {
     
-    var name = ""
     var login = ""
+    var name: String?
     var avatarURL: URL?
     
     func makeContentView() -> any UIView & UIContentView {

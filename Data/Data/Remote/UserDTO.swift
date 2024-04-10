@@ -3,7 +3,7 @@ import Domain
 struct UserDTO: Decodable {
     let id: Int
     let login: String
-    let name: String
+    let name: String?
     let avatarURL: URL
     let linkURL: URL
     

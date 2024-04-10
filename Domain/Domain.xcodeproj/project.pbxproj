@@ -27,6 +27,9 @@
 		8F763D372BB6EED900B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D362BB6EED900B48DB4 /* Config.xcconfig */; };
 		8F897B9D2BC3FDD2001903E5 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */; };
 		8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */; };
+		8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */; };
+		8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */; };
+		8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		8F763D362BB6EED900B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
 		8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFlowController.swift; sourceTree = "<group>"; };
+		8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
+		8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,7 @@
 				8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */,
 				8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */,
 				8F5C76E02BC53EE700B07ABF /* UsersSnapshot.swift */,
-				8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */,
+				8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */,
+				8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 		8F763CD42BB6EAFE00B48DB4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				8FD4F1A92BC6B6C0009A5BC1 /* Providers */,
 				8F5C76DD2BC53B6500B07ABF /* Extensions */,
 				8F897B9B2BC3FDC0001903E5 /* Views */,
 				8F0B18432BBF3AA800910CAD /* Utils */,
@@ -178,6 +186,15 @@
 				8F5C76CD2BC532BC00B07ABF /* ViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8FD4F1A92BC6B6C0009A5BC1 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */,
+				8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +318,9 @@
 				8F5C76E32BC53F0400B07ABF /* UsersProvider.swift in Sources */,
 				8F0B182C2BBF351900910CAD /* User.swift in Sources */,
 				8F5C76DF2BC53B7C00B07ABF /* PublisherExtensions.swift in Sources */,
+				8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */,
+				8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */,
+				8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */,
 				8F0B18292BBF349A00910CAD /* GitHubLocalRepository.swift in Sources */,
 				8F0B18262BBF347E00910CAD /* GitHubRemoteRepository.swift in Sources */,
 				8F5C76E12BC53EE700B07ABF /* UsersSnapshot.swift in Sources */,

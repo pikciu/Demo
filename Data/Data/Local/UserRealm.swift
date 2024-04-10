@@ -4,11 +4,11 @@ import Domain
 final class UserRealm: Object {
     @Persisted(primaryKey: true) var id: Int
     @Persisted var login: String
-    @Persisted var name: String
+    @Persisted var name: String?
     @Persisted var avatarURL: String
     @Persisted var linkURL: String
     
-    convenience init(id: Int, login: String, name: String, avatarURL: String, linkURL: String) {
+    convenience init(id: Int, login: String, name: String?, avatarURL: String, linkURL: String) {
         self.init()
         self.id = id
         self.login = login
