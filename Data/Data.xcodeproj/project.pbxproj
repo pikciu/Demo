@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0B182E2BBF35C500910CAD /* GitHubRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B182D2BBF35C500910CAD /* GitHubRemoteRepository.swift */; };
+		8F0B18312BBF35D500910CAD /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0B18302BBF35D500910CAD /* Domain.framework */; };
+		8F0B18352BBF35DA00910CAD /* HTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0B18342BBF35DA00910CAD /* HTTP.framework */; };
+		8F0B18382BBF362B00910CAD /* GitHubLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18372BBF362B00910CAD /* GitHubLocalRepository.swift */; };
+		8F0B183B2BBF365E00910CAD /* Container in Frameworks */ = {isa = PBXBuildFile; productRef = 8F0B183A2BBF365E00910CAD /* Container */; };
+		8F0B183D2BBF367000910CAD /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B183C2BBF367000910CAD /* DataModule.swift */; };
+		8F0B18402BBF376900910CAD /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B183F2BBF376900910CAD /* UserRequest.swift */; };
+		8F0B18422BBF379E00910CAD /* GitHubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18412BBF379E00910CAD /* GitHubEndpoint.swift */; };
+		8F0B18582BBF438C00910CAD /* ResultsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18572BBF438C00910CAD /* ResultsMapper.swift */; };
+		8F0B185E2BC3ED5700910CAD /* seed.realm in Resources */ = {isa = PBXBuildFile; fileRef = 8F0B185D2BC3ED5700910CAD /* seed.realm */; };
+		8F0B18602BC3ED6C00910CAD /* RealmConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */; };
 		8F763CFB2BB6EB1100B48DB4 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CFA2BB6EB1100B48DB4 /* Data.docc */; };
 		8F763D012BB6EB1100B48DB4 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F763CF62BB6EB1100B48DB4 /* Data.framework */; };
 		8F763D062BB6EB1100B48DB4 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763D052BB6EB1100B48DB4 /* DataTests.swift */; };
 		8F763D072BB6EB1100B48DB4 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CF92BB6EB1100B48DB4 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F763D352BB6EECC00B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D342BB6EECC00B48DB4 /* Config.xcconfig */; };
+		8F779AB62BBF32A3005C5316 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8F779AB52BBF32A3005C5316 /* Realm */; };
+		8F779AB82BBF32A3005C5316 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F779AB72BBF32A3005C5316 /* RealmSwift */; };
+		8FA3C40E2BBF2C0E003C8E58 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */; };
+		8FA3C4112BBF2F1A003C8E58 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +40,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F0B182D2BBF35C500910CAD /* GitHubRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRemoteRepository.swift; sourceTree = "<group>"; };
+		8F0B18302BBF35D500910CAD /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0B18342BBF35DA00910CAD /* HTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0B18372BBF362B00910CAD /* GitHubLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubLocalRepository.swift; sourceTree = "<group>"; };
+		8F0B183C2BBF367000910CAD /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
+		8F0B183F2BBF376900910CAD /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		8F0B18412BBF379E00910CAD /* GitHubEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEndpoint.swift; sourceTree = "<group>"; };
+		8F0B18572BBF438C00910CAD /* ResultsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsMapper.swift; sourceTree = "<group>"; };
+		8F0B185D2BC3ED5700910CAD /* seed.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.realm; sourceTree = "<group>"; };
+		8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfigurationProvider.swift; sourceTree = "<group>"; };
 		8F763CF62BB6EB1100B48DB4 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CF92BB6EB1100B48DB4 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		8F763CFA2BB6EB1100B48DB4 /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
 		8F763D002BB6EB1100B48DB4 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763D052BB6EB1100B48DB4 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		8F763D342BB6EECC00B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
+		8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0B18312BBF35D500910CAD /* Domain.framework in Frameworks */,
+				8F779AB82BBF32A3005C5316 /* RealmSwift in Frameworks */,
+				8F0B18352BBF35DA00910CAD /* HTTP.framework in Frameworks */,
+				8F779AB62BBF32A3005C5316 /* Realm in Frameworks */,
+				8F0B183B2BBF365E00910CAD /* Container in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F0B182F2BBF35D500910CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F0B18342BBF35DA00910CAD /* HTTP.framework */,
+				8F0B18302BBF35D500910CAD /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F0B183E2BBF376200910CAD /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				8F0B183F2BBF376900910CAD /* UserRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		8F763CEC2BB6EB1100B48DB4 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +108,7 @@
 				8F763CF82BB6EB1100B48DB4 /* Data */,
 				8F763D042BB6EB1100B48DB4 /* DataTests */,
 				8F763CF72BB6EB1100B48DB4 /* Products */,
+				8F0B182F2BBF35D500910CAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,8 +124,11 @@
 		8F763CF82BB6EB1100B48DB4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8FA3C40C2BBF2BBF003C8E58 /* Remote */,
+				8FA3C40B2BBF2BBB003C8E58 /* Local */,
 				8F763CF92BB6EB1100B48DB4 /* Data.h */,
 				8F763CFA2BB6EB1100B48DB4 /* Data.docc */,
+				8F0B183C2BBF367000910CAD /* DataModule.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -86,6 +139,29 @@
 				8F763D052BB6EB1100B48DB4 /* DataTests.swift */,
 			);
 			path = DataTests;
+			sourceTree = "<group>";
+		};
+		8FA3C40B2BBF2BBB003C8E58 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				8F0B185D2BC3ED5700910CAD /* seed.realm */,
+				8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */,
+				8F0B18372BBF362B00910CAD /* GitHubLocalRepository.swift */,
+				8F0B18572BBF438C00910CAD /* ResultsMapper.swift */,
+				8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		8FA3C40C2BBF2BBF003C8E58 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				8F0B183E2BBF376200910CAD /* Requests */,
+				8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */,
+				8F0B182D2BBF35C500910CAD /* GitHubRemoteRepository.swift */,
+				8F0B18412BBF379E00910CAD /* GitHubEndpoint.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +192,11 @@
 			dependencies = (
 			);
 			name = Data;
+			packageProductDependencies = (
+				8F779AB52BBF32A3005C5316 /* Realm */,
+				8F779AB72BBF32A3005C5316 /* RealmSwift */,
+				8F0B183A2BBF365E00910CAD /* Container */,
+			);
 			productName = Data;
 			productReference = 8F763CF62BB6EB1100B48DB4 /* Data.framework */;
 			productType = "com.apple.product-type.framework";
@@ -165,6 +246,10 @@
 				Base,
 			);
 			mainGroup = 8F763CEC2BB6EB1100B48DB4;
+			packageReferences = (
+				8F779AB42BBF32A3005C5316 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8F0B18392BBF365E00910CAD /* XCRemoteSwiftPackageReference "Container" */,
+			);
 			productRefGroup = 8F763CF72BB6EB1100B48DB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0B185E2BC3ED5700910CAD /* seed.realm in Resources */,
 				8F763D352BB6EECC00B48DB4 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA3C4112BBF2F1A003C8E58 /* UserRealm.swift in Sources */,
+				8FA3C40E2BBF2C0E003C8E58 /* UserDTO.swift in Sources */,
+				8F0B18602BC3ED6C00910CAD /* RealmConfigurationProvider.swift in Sources */,
+				8F0B182E2BBF35C500910CAD /* GitHubRemoteRepository.swift in Sources */,
+				8F0B18422BBF379E00910CAD /* GitHubEndpoint.swift in Sources */,
 				8F763CFB2BB6EB1100B48DB4 /* Data.docc in Sources */,
+				8F0B18382BBF362B00910CAD /* GitHubLocalRepository.swift in Sources */,
+				8F0B183D2BBF367000910CAD /* DataModule.swift in Sources */,
+				8F0B18582BBF438C00910CAD /* ResultsMapper.swift in Sources */,
+				8F0B18402BBF376900910CAD /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +444,6 @@
 		8F763D0B2BB6EB1100B48DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -379,7 +473,6 @@
 		8F763D0C2BB6EB1100B48DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -409,6 +502,7 @@
 		8F763D0E2BB6EB1100B48DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -422,6 +516,7 @@
 		8F763D0F2BB6EB1100B48DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -463,6 +558,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F0B18392BBF365E00910CAD /* XCRemoteSwiftPackageReference "Container" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pikciu/Container.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		8F779AB42BBF32A3005C5316 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.49.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F0B183A2BBF365E00910CAD /* Container */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F0B18392BBF365E00910CAD /* XCRemoteSwiftPackageReference "Container" */;
+			productName = Container;
+		};
+		8F779AB52BBF32A3005C5316 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F779AB42BBF32A3005C5316 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		8F779AB72BBF32A3005C5316 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F779AB42BBF32A3005C5316 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F763CED2BB6EB1100B48DB4 /* Project object */;
 }
