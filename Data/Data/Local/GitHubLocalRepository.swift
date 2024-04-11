@@ -11,12 +11,7 @@ final class GitHubLocalRepository: Domain.GitHubLocalRepository {
     }
     
     func users() -> AnyPublisher<[Domain.User], Error> {
-        do {
-            _ = try Realm(configuration: configuration)
-        } catch {
-            debugPrint(error)
-        }
-        return Realm.asyncOpen(configuration: configuration)
+        Realm.asyncOpen(configuration: configuration)
             .flatMap { realm in
                 realm.objects(UserRealm.self)
                     .collectionPublisher
