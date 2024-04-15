@@ -2,7 +2,7 @@ import Combine
 import Domain
 import RealmSwift
 
-final class GitHubLocalRepository: Domain.GitHubLocalRepository {
+final class GitHubUserLocalRepository: UserLocalRepository {
     
     let configuration: Realm.Configuration
     

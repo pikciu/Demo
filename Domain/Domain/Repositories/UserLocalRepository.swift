@@ -1,6 +1,6 @@
 import Combine
 
-public protocol GitHubLocalRepository {
+public protocol UserLocalRepository {
     
     func users() -> AnyPublisher<[User], Error>
     func save(user: User) throws

@@ -2,7 +2,7 @@ import Combine
 
 public final class UsersProvider {
     
-    let repository: GitHubLocalRepository
+    let repository: UserLocalRepository
     
     var users: AnyPublisher<[User], Never> {
         repository.users()
@@ -11,7 +11,7 @@ public final class UsersProvider {
             .eraseToAnyPublisher()
     }
     
-    init(repository: GitHubLocalRepository) {
+    init(repository: UserLocalRepository) {
         self.repository = repository
     }
 }

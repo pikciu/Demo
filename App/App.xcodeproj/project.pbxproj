@@ -30,12 +30,16 @@
 		8F763CBA2BB6EA7C00B48DB4 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CB92BB6EA7C00B48DB4 /* AppUITests.swift */; };
 		8F763CBC2BB6EA7C00B48DB4 /* AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CBB2BB6EA7C00B48DB4 /* AppUITestsLaunchTests.swift */; };
 		8F763D3B2BB6EEEC00B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */; };
+		8F8602002BCD47DB00EBA08C /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8601FF2BCD47DB00EBA08C /* Resources.framework */; };
+		8F8602012BCD47DB00EBA08C /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8601FF2BCD47DB00EBA08C /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F897B8C2BC3F36C001903E5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B8B2BC3F36C001903E5 /* AppCoordinator.swift */; };
 		8F897B902BC3F8AF001903E5 /* UsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B8F2BC3F8AF001903E5 /* UsersCoordinator.swift */; };
 		8F897B922BC3F8C2001903E5 /* ReposCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B912BC3F8C2001903E5 /* ReposCoordinator.swift */; };
 		8F897B942BC3F8DE001903E5 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B932BC3F8DE001903E5 /* ReposViewController.swift */; };
 		8F897B962BC3F900001903E5 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B952BC3F900001903E5 /* UsersViewController.swift */; };
 		8F897BA22BC3FEEC001903E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897BA12BC3FEEC001903E5 /* ViewController.swift */; };
+		8FA752922BCD50CD00A15083 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA752912BCD50CD00A15083 /* RepoCell.swift */; };
+		8FA752942BCD510C00A15083 /* RepoCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA752932BCD510C00A15083 /* RepoCellProvider.swift */; };
 		8FD4F19C2BC69EF7009A5BC1 /* UIBarButtonItem+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F19B2BC69EF7009A5BC1 /* UIBarButtonItem+Combine.swift */; };
 		8FD4F19F2BC6A331009A5BC1 /* AddUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F19E2BC6A331009A5BC1 /* AddUserCell.swift */; };
 		8FD4F1A32BC6AEA8009A5BC1 /* UsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A22BC6AEA8009A5BC1 /* UsersDataSource.swift */; };
@@ -44,7 +48,6 @@
 		8FD4F1B42BC6CD85009A5BC1 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD4F1B32BC6CD85009A5BC1 /* NukeExtensions */; };
 		8FD4F1B62BC6D255009A5BC1 /* HTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */; };
 		8FD4F1B72BC6D255009A5BC1 /* HTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8FD4F1BA2BC6D7F0009A5BC1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8FD4F1B92BC6D7F0009A5BC1 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 			files = (
 				8FD4F1B72BC6D255009A5BC1 /* HTTP.framework in Embed Frameworks */,
 				8F0B184F2BBF3BF700910CAD /* Domain.framework in Embed Frameworks */,
+				8F8602012BCD47DB00EBA08C /* Resources.framework in Embed Frameworks */,
 				8F0B184D2BBF3BF700910CAD /* Data.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -105,18 +109,20 @@
 		8F763CB92BB6EA7C00B48DB4 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		8F763CBB2BB6EA7C00B48DB4 /* AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8F763D3A2BB6EEEC00B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
+		8F8601FF2BCD47DB00EBA08C /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F897B8B2BC3F36C001903E5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8F897B8F2BC3F8AF001903E5 /* UsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCoordinator.swift; sourceTree = "<group>"; };
 		8F897B912BC3F8C2001903E5 /* ReposCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposCoordinator.swift; sourceTree = "<group>"; };
 		8F897B932BC3F8DE001903E5 /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		8F897B952BC3F900001903E5 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		8F897BA12BC3FEEC001903E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FA752912BCD50CD00A15083 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		8FA752932BCD510C00A15083 /* RepoCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellProvider.swift; sourceTree = "<group>"; };
 		8FD4F19B2BC69EF7009A5BC1 /* UIBarButtonItem+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Combine.swift"; sourceTree = "<group>"; };
 		8FD4F19E2BC6A331009A5BC1 /* AddUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCell.swift; sourceTree = "<group>"; };
 		8FD4F1A22BC6AEA8009A5BC1 /* UsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSource.swift; sourceTree = "<group>"; };
 		8FD4F1A42BC6B28F009A5BC1 /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
 		8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FD4F1B92BC6D7F0009A5BC1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 			files = (
 				8FD4F1B62BC6D255009A5BC1 /* HTTP.framework in Frameworks */,
 				8F0B184E2BBF3BF700910CAD /* Domain.framework in Frameworks */,
+				8F8602002BCD47DB00EBA08C /* Resources.framework in Frameworks */,
 				8F0B184C2BBF3BF700910CAD /* Data.framework in Frameworks */,
 				8F0B18482BBF3BE200910CAD /* Container in Frameworks */,
 				8FD4F1B22BC6CD85009A5BC1 /* Nuke in Frameworks */,
@@ -153,6 +160,7 @@
 		8F0B18492BBF3BF700910CAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F8601FF2BCD47DB00EBA08C /* Resources.framework */,
 				8FD4F1B52BC6D255009A5BC1 /* HTTP.framework */,
 				8F0B184A2BBF3BF700910CAD /* Data.framework */,
 				8F0B184B2BBF3BF700910CAD /* Domain.framework */,
@@ -253,6 +261,8 @@
 			children = (
 				8F897B912BC3F8C2001903E5 /* ReposCoordinator.swift */,
 				8F897B932BC3F8DE001903E5 /* ReposViewController.swift */,
+				8FA752912BCD50CD00A15083 /* RepoCell.swift */,
+				8FA752932BCD510C00A15083 /* RepoCellProvider.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -283,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				8F763CA12BB6EA7B00B48DB4 /* Assets.xcassets */,
-				8FD4F1B92BC6D7F0009A5BC1 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -303,7 +312,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8FD4F1BD2BC6DD14009A5BC1 /* PBXTargetDependency */,
 			);
 			name = App;
 			packageProductDependencies = (
@@ -387,7 +395,6 @@
 			packageReferences = (
 				8F0B18462BBF3BE200910CAD /* XCRemoteSwiftPackageReference "Container" */,
 				8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */,
-				8FD4F1BB2BC6DD09009A5BC1 /* XCRemoteSwiftPackageReference "xcstrings-tool" */,
 			);
 			productRefGroup = 8F763C962BB6EA7B00B48DB4 /* Products */;
 			projectDirPath = "";
@@ -407,7 +414,6 @@
 			files = (
 				8F763CA22BB6EA7B00B48DB4 /* Assets.xcassets in Resources */,
 				8F763D3B2BB6EEEC00B48DB4 /* Config.xcconfig in Resources */,
-				8FD4F1BA2BC6D7F0009A5BC1 /* Localizable.xcstrings in Resources */,
 				8F763CA52BB6EA7B00B48DB4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,9 +445,11 @@
 				8F5C76D82BC5383800B07ABF /* UsersCellProvider.swift in Sources */,
 				8F5C76F52BC695CA00B07ABF /* UIImageViewExtensions.swift in Sources */,
 				8F897B922BC3F8C2001903E5 /* ReposCoordinator.swift in Sources */,
+				8FA752922BCD50CD00A15083 /* RepoCell.swift in Sources */,
 				8F897B8C2BC3F36C001903E5 /* AppCoordinator.swift in Sources */,
 				8F897B942BC3F8DE001903E5 /* ReposViewController.swift in Sources */,
 				8FD4F19F2BC6A331009A5BC1 /* AddUserCell.swift in Sources */,
+				8FA752942BCD510C00A15083 /* RepoCellProvider.swift in Sources */,
 				8FD4F1A32BC6AEA8009A5BC1 /* UsersDataSource.swift in Sources */,
 				8F897B962BC3F900001903E5 /* UsersViewController.swift in Sources */,
 				8F5C76DC2BC53A0B00B07ABF /* Reusable.swift in Sources */,
@@ -487,10 +495,6 @@
 			isa = PBXTargetDependency;
 			target = 8F763C942BB6EA7A00B48DB4 /* App */;
 			targetProxy = 8F763CB62BB6EA7C00B48DB4 /* PBXContainerItemProxy */;
-		};
-		8FD4F1BD2BC6DD14009A5BC1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 8FD4F1BC2BC6DD14009A5BC1 /* XCStringsToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -793,14 +797,6 @@
 				minimumVersion = 12.5.0;
 			};
 		};
-		8FD4F1BB2BC6DD09009A5BC1 /* XCRemoteSwiftPackageReference "xcstrings-tool" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/liamnichols/xcstrings-tool";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -818,11 +814,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8FD4F1B02BC6CD85009A5BC1 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeExtensions;
-		};
-		8FD4F1BC2BC6DD14009A5BC1 /* XCStringsToolPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8FD4F1BB2BC6DD09009A5BC1 /* XCRemoteSwiftPackageReference "xcstrings-tool" */;
-			productName = "plugin:XCStringsToolPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

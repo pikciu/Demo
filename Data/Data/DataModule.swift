@@ -11,7 +11,9 @@ public struct DataModule: Module {
             RealmConfigurationProvider().realmConfiguration()
         }
         
-        container.registerUnique(Domain.GitHubLocalRepository.self) {  GitHubLocalRepository(configuration: $0.resolve()) }
-        container.registerUnique(Domain.GitHubRemoteRepository.self) { GitHubRemoteRepository(httpClient: $0.resolve()) }
+        container.registerWeak(UserLocalRepository.self) {  GitHubUserLocalRepository(configuration: $0.resolve()) }
+        container.registerWeak(UserRemoteRepository.self) { GitHubUserRemoteRepository(httpClient: $0.resolve()) }
+        container.registerWeak(RepoLocalRepository.self) { GitHubRepoLocalRepository(configuration: $0.resolve()) }
+        container.registerWeak(RepoRemoteRepository.self) { GitHubRepoRemoteRepository(httpClient: $0.resolve()) }
     }
 }

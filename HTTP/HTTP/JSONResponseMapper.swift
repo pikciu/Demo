@@ -4,7 +4,7 @@ public struct JSONResponseMapper<T: Decodable>: ResponseMapper {
     
     let decoder: JSONDecoder
     
-    public init(decoder: JSONDecoder = JSONDecoder()) {
+    public init(decoder: JSONDecoder) {
         self.decoder = decoder
     }
     

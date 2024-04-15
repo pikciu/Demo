@@ -1,4 +1,5 @@
 import UIKit
+import Domain
 
 final class ReposCoordinator {
     
@@ -9,7 +10,8 @@ final class ReposCoordinator {
     }
     
     func start() {
-        let reposViewController = ReposViewController()
+        let reposViewModel = FavoriteReposViewModel()
+        let reposViewController = ReposViewController(viewModel: reposViewModel)
         reposViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         navigationController.viewControllers = [reposViewController]
     }

@@ -2,8 +2,6 @@ import UIKit
 
 class TableViewCell: UITableViewCell, Reusable {
     
-    
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setup()

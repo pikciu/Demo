@@ -1,6 +1,6 @@
 import Combine
 
-public protocol GitHubRemoteRepository {
+public protocol UserRemoteRepository {
     
     func user(name: String) -> AnyPublisher<User, Error>
 }

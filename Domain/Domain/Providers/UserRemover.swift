@@ -1,10 +1,10 @@
 import Foundation
 
-public final class UserRemover {
+public struct UserRemover {
     
-    let repository: GitHubLocalRepository
+    let repository: UserLocalRepository
     
-    init(repository: GitHubLocalRepository) {
+    init(repository: UserLocalRepository) {
         self.repository = repository
     }
     

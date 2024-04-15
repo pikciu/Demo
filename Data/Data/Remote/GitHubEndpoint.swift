@@ -17,4 +17,8 @@ struct GitHubEndpoint {
     static func user(name: String) -> GitHubEndpoint {
         GitHubEndpoint(path: "/users/\(name)", queryItems: [])
     }
+    
+    static func repos(user: String) -> GitHubEndpoint {
+        GitHubEndpoint(path: "/users/\(user)/repos", queryItems: [])
+    }
 }

@@ -3,13 +3,9 @@ import Combine
 public final class UsersViewModel: ViewModel {
     
     public struct Input {
-        private let isEditing: CurrentValueSubject<Bool, Never>
-        private let userRemover: UserRemover
-        
-        init(isEditing: CurrentValueSubject<Bool, Never>, userRemover: UserRemover) {
-            self.isEditing = isEditing
-            self.userRemover = userRemover
-        }
+        let isEditing: CurrentValueSubject<Bool, Never>
+        let userRemover: UserRemover
+        let flowController: UsersFlowController
         
         public func edit() {
             isEditing.send(true)
@@ -21,6 +17,10 @@ public final class UsersViewModel: ViewModel {
         
         public func delete(user: User) {
             userRemover.delete(user: user)
+        }
+        
+        public func showDetails(user: User) {
+            flowController.showRepos(user: user)
         }
     }
     
@@ -36,7 +36,8 @@ public final class UsersViewModel: ViewModel {
     
     public private(set) lazy var input = Input(
         isEditing: isEditing,
-        userRemover: userRemover
+        userRemover: userRemover,
+        flowController: flowController
     )
     
     public private(set) lazy var output = Output(

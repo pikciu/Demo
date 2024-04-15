@@ -2,7 +2,7 @@ import Combine
 import Domain
 import HTTP
 
-final class GitHubRemoteRepository: Domain.GitHubRemoteRepository {
+final class GitHubUserRemoteRepository: UserRemoteRepository {
     
     let httpClient: HTTPClient
     
@@ -11,7 +11,7 @@ final class GitHubRemoteRepository: Domain.GitHubRemoteRepository {
     }
     
     func user(name: String) -> AnyPublisher<User, Error> {
-        httpClient.execute(request: UserRequest(name: name), responseMapper: JSONResponseMapper())
+        httpClient.execute(request: UserRequest(name: name), responseMapper: JSONResponseMapper.gitHub())
             .map(UserDTOMapper().map)
             .mapError { $0 }
             .eraseToAnyPublisher()

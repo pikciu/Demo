@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F0B18262BBF347E00910CAD /* GitHubRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18252BBF347E00910CAD /* GitHubRemoteRepository.swift */; };
-		8F0B18292BBF349A00910CAD /* GitHubLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18282BBF349A00910CAD /* GitHubLocalRepository.swift */; };
+		8F0B18262BBF347E00910CAD /* UserRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18252BBF347E00910CAD /* UserRemoteRepository.swift */; };
+		8F0B18292BBF349A00910CAD /* UserLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18282BBF349A00910CAD /* UserLocalRepository.swift */; };
 		8F0B182C2BBF351900910CAD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B182B2BBF351900910CAD /* User.swift */; };
 		8F0B18452BBF3AAF00910CAD /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18442BBF3AAF00910CAD /* Mapper.swift */; };
 		8F0B185A2BC3E56800910CAD /* TwoWayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */; };
@@ -25,8 +25,20 @@
 		8F763CE22BB6EAFE00B48DB4 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */; };
 		8F763CE32BB6EAFE00B48DB4 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CD52BB6EAFE00B48DB4 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F763D372BB6EED900B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D362BB6EED900B48DB4 /* Config.xcconfig */; };
+		8F8601BD2BCD170800EBA08C /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */; };
+		8F8601BF2BCD179400EBA08C /* UserReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */; };
+		8F8601C12BCD18D000EBA08C /* FavoriteReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */; };
+		8F8601C52BCD1CEB00EBA08C /* RepoRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601C42BCD1CEB00EBA08C /* RepoRemoteRepository.swift */; };
+		8F8601C72BCD1D1C00EBA08C /* RepoLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601C62BCD1D1C00EBA08C /* RepoLocalRepository.swift */; };
+		8F8601C92BCD1D3900EBA08C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601C82BCD1D3900EBA08C /* Repo.swift */; };
+		8F8601D22BCD303D00EBA08C /* ArrayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601D12BCD303D00EBA08C /* ArrayMapper.swift */; };
+		8F8601D92BCD36AC00EBA08C /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601D82BCD36AC00EBA08C /* Owner.swift */; };
+		8F8601DF2BCD3D5F00EBA08C /* ReposProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601DE2BCD3D5F00EBA08C /* ReposProvider.swift */; };
+		8F8601E12BCD3E4C00EBA08C /* ReposUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601E02BCD3E4C00EBA08C /* ReposUpdater.swift */; };
+		8F8602042BCD47E700EBA08C /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8602032BCD47E700EBA08C /* Resources.framework */; };
 		8F897B9D2BC3FDD2001903E5 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */; };
 		8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */; };
+		8FA752902BCD4F6A00A15083 /* ReposSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */; };
 		8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */; };
 		8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */; };
 		8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */; };
@@ -44,8 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F0B18252BBF347E00910CAD /* GitHubRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRemoteRepository.swift; sourceTree = "<group>"; };
-		8F0B18282BBF349A00910CAD /* GitHubLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubLocalRepository.swift; sourceTree = "<group>"; };
+		8F0B18252BBF347E00910CAD /* UserRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteRepository.swift; sourceTree = "<group>"; };
+		8F0B18282BBF349A00910CAD /* UserLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalRepository.swift; sourceTree = "<group>"; };
 		8F0B182B2BBF351900910CAD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8F0B18442BBF3AAF00910CAD /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayMapper.swift; sourceTree = "<group>"; };
@@ -62,8 +74,20 @@
 		8F763CDC2BB6EAFE00B48DB4 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		8F763D362BB6EED900B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
+		8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
+		8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposViewModel.swift; sourceTree = "<group>"; };
+		8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteReposViewModel.swift; sourceTree = "<group>"; };
+		8F8601C42BCD1CEB00EBA08C /* RepoRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRemoteRepository.swift; sourceTree = "<group>"; };
+		8F8601C62BCD1D1C00EBA08C /* RepoLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoLocalRepository.swift; sourceTree = "<group>"; };
+		8F8601C82BCD1D3900EBA08C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		8F8601D12BCD303D00EBA08C /* ArrayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMapper.swift; sourceTree = "<group>"; };
+		8F8601D82BCD36AC00EBA08C /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		8F8601DE2BCD3D5F00EBA08C /* ReposProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposProvider.swift; sourceTree = "<group>"; };
+		8F8601E02BCD3E4C00EBA08C /* ReposUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposUpdater.swift; sourceTree = "<group>"; };
+		8F8602032BCD47E700EBA08C /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFlowController.swift; sourceTree = "<group>"; };
+		8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposSnapshot.swift; sourceTree = "<group>"; };
 		8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
 		8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
@@ -75,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8602042BCD47E700EBA08C /* Resources.framework in Frameworks */,
 				8F5C76D32BC536B200B07ABF /* Container in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,8 +118,10 @@
 		8F0B18272BBF348900910CAD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				8F0B18252BBF347E00910CAD /* GitHubRemoteRepository.swift */,
-				8F0B18282BBF349A00910CAD /* GitHubLocalRepository.swift */,
+				8F0B18252BBF347E00910CAD /* UserRemoteRepository.swift */,
+				8F0B18282BBF349A00910CAD /* UserLocalRepository.swift */,
+				8F8601C42BCD1CEB00EBA08C /* RepoRemoteRepository.swift */,
+				8F8601C62BCD1D1C00EBA08C /* RepoLocalRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -103,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				8F0B182B2BBF351900910CAD /* User.swift */,
+				8F8601C82BCD1D3900EBA08C /* Repo.swift */,
+				8F8601D82BCD36AC00EBA08C /* Owner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +143,7 @@
 				8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */,
 				8F0B185B2BC3E79F00910CAD /* URLMapper.swift */,
 				8F5C76E92BC544C500B07ABF /* Configurable.swift */,
+				8F8601D12BCD303D00EBA08C /* ArrayMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,6 +175,7 @@
 				8F763CD42BB6EAFE00B48DB4 /* Domain */,
 				8F763CE02BB6EAFE00B48DB4 /* DomainTests */,
 				8F763CD32BB6EAFE00B48DB4 /* Products */,
+				8F8602022BCD47E700EBA08C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,9 +212,29 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
+		8F8601BB2BCD16FB00EBA08C /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */,
+				8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */,
+				8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */,
+				8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		8F8602022BCD47E700EBA08C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F8602032BCD47E700EBA08C /* Resources.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F897B9B2BC3FDC0001903E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8F8601BB2BCD16FB00EBA08C /* Repos */,
 				8F5C76CC2BC405BF00B07ABF /* Users */,
 				8F5C76CD2BC532BC00B07ABF /* ViewModel.swift */,
 			);
@@ -196,6 +247,8 @@
 				8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */,
 				8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */,
 				8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */,
+				8F8601DE2BCD3D5F00EBA08C /* ReposProvider.swift */,
+				8F8601E02BCD3E4C00EBA08C /* ReposUpdater.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -316,22 +369,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8601C12BCD18D000EBA08C /* FavoriteReposViewModel.swift in Sources */,
 				8F5C76EA2BC544C500B07ABF /* Configurable.swift in Sources */,
+				8F8601D22BCD303D00EBA08C /* ArrayMapper.swift in Sources */,
 				8F5C76CE2BC532BC00B07ABF /* ViewModel.swift in Sources */,
+				8F8601D92BCD36AC00EBA08C /* Owner.swift in Sources */,
 				8F5C76E32BC53F0400B07ABF /* UsersProvider.swift in Sources */,
 				8F0B182C2BBF351900910CAD /* User.swift in Sources */,
+				8FA752902BCD4F6A00A15083 /* ReposSnapshot.swift in Sources */,
 				8F5C76DF2BC53B7C00B07ABF /* PublisherExtensions.swift in Sources */,
 				8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */,
+				8F8601C92BCD1D3900EBA08C /* Repo.swift in Sources */,
+				8F8601DF2BCD3D5F00EBA08C /* ReposProvider.swift in Sources */,
 				8FD4F1AF2BC6CBE0009A5BC1 /* UserRemover.swift in Sources */,
 				8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */,
+				8F8601C72BCD1D1C00EBA08C /* RepoLocalRepository.swift in Sources */,
 				8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */,
-				8F0B18292BBF349A00910CAD /* GitHubLocalRepository.swift in Sources */,
-				8F0B18262BBF347E00910CAD /* GitHubRemoteRepository.swift in Sources */,
+				8F0B18292BBF349A00910CAD /* UserLocalRepository.swift in Sources */,
+				8F0B18262BBF347E00910CAD /* UserRemoteRepository.swift in Sources */,
 				8F5C76E12BC53EE700B07ABF /* UsersSnapshot.swift in Sources */,
 				8F0B185A2BC3E56800910CAD /* TwoWayMapper.swift in Sources */,
 				8F763CD72BB6EAFE00B48DB4 /* Domain.docc in Sources */,
 				8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */,
 				8F897B9D2BC3FDD2001903E5 /* UsersViewModel.swift in Sources */,
+				8F8601E12BCD3E4C00EBA08C /* ReposUpdater.swift in Sources */,
+				8F8601C52BCD1CEB00EBA08C /* RepoRemoteRepository.swift in Sources */,
+				8F8601BD2BCD170800EBA08C /* ReposViewModel.swift in Sources */,
+				8F8601BF2BCD179400EBA08C /* UserReposViewModel.swift in Sources */,
 				8F0B185C2BC3E79F00910CAD /* URLMapper.swift in Sources */,
 				8F5C76D02BC534D000B07ABF /* DomainModule.swift in Sources */,
 				8F0B18452BBF3AAF00910CAD /* Mapper.swift in Sources */,

@@ -69,4 +69,11 @@ extension UsersViewController: UITableViewDelegate {
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard case .user(let user) = dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+        viewModel.input.showDetails(user: user)
+    }
 }

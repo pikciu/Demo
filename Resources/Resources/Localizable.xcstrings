@@ -1,7 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "delete" : {
+    "Delete" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -18,7 +18,24 @@
         }
       }
     },
-    "nickname" : {
+    "Favorites" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorites"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ulubione"
+          }
+        }
+      }
+    },
+    "Nickname" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -35,7 +52,7 @@
         }
       }
     },
-    "users" : {
+    "Users" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {

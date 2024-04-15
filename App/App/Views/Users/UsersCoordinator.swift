@@ -29,6 +29,12 @@ final class UsersCoordinator {
 extension UsersCoordinator: UsersFlowController {
     
     func showRepos(user: User) {
-        
+        let reposViewModel = UserReposViewModel(
+            user: user,
+            reposUpdater: Container.resolve(),
+            reposProvider: Container.resolve()
+        )
+        let reposViewController = ReposViewController(viewModel: reposViewModel)
+        navigationController.pushViewController(reposViewController, animated: true)
     }
 }
