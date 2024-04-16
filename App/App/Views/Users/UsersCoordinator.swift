@@ -1,6 +1,7 @@
 import UIKit
 import Domain
 import Container
+import Resources
 
 final class UsersCoordinator {
     
@@ -17,10 +18,11 @@ final class UsersCoordinator {
             userRemover: Container.resolve()
         )
         let usersViewController = UsersViewController(viewModel: usersViewModel)
+        
         usersViewController.tabBarItem = UITabBarItem(
             title: String(localized: .localizable.users),
-            image: UIImage(systemName: "person.2.fill"),
-            tag: 0
+            image: .symbol(.person2),
+            selectedImage: .symbol(.person2.fill)
         )
         navigationController.viewControllers = [usersViewController]
     }

@@ -9,7 +9,7 @@ public final class FavoriteReposViewModel: ReposViewModel {
     
     public struct Output: ReposViewModelOutput {
         public let title: String
-        public let snapshot: AnyPublisher<ReposSnapshot, Never>
+        public let snapshot: AnyPublisher<Snapshot<ReposSnapshot>, Never>
     }
     
     public private(set) lazy var input: ReposViewModelInput = Input()

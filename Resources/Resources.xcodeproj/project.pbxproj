@@ -10,6 +10,7 @@
 		8F8601F12BCD454600EBA08C /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F8601F02BCD454600EBA08C /* Resources.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F8601F82BCD456100EBA08C /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F8601F72BCD456100EBA08C /* Config.xcconfig */; };
 		8F8601FA2BCD45A800EBA08C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8F8601F92BCD45A800EBA08C /* Localizable.xcstrings */; };
+		8FA752962BCE794300A15083 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA752952BCE794300A15083 /* Symbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		8F8601F02BCD454600EBA08C /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
 		8F8601F72BCD456100EBA08C /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
 		8F8601F92BCD45A800EBA08C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		8FA752952BCE794300A15083 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			children = (
 				8F8601F02BCD454600EBA08C /* Resources.h */,
 				8F8601F92BCD45A800EBA08C /* Localizable.xcstrings */,
+				8FA752952BCE794300A15083 /* Symbol.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -100,6 +103,7 @@
 				TargetAttributes = {
 					8F8601EC2BCD454600EBA08C = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -141,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA752962BCE794300A15083 /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -305,6 +311,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XCSTRINGS_TOOL_ACCESS_LEVEL = PUBLIC;
 			};
@@ -314,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -336,6 +345,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XCSTRINGS_TOOL_ACCESS_LEVEL = PUBLIC;
 			};

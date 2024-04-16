@@ -12,7 +12,11 @@ final class ReposCoordinator {
     func start() {
         let reposViewModel = FavoriteReposViewModel()
         let reposViewController = ReposViewController(viewModel: reposViewModel)
-        reposViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        reposViewController.tabBarItem = UITabBarItem(
+            title: String(localized: .localizable.favorites),
+            image: .symbol(.heart),
+            selectedImage: .symbol(.heart.fill)
+        )
         navigationController.viewControllers = [reposViewController]
     }
 }

@@ -39,6 +39,9 @@
 		8F897B9D2BC3FDD2001903E5 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */; };
 		8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */; };
 		8FA752902BCD4F6A00A15083 /* ReposSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */; };
+		8FA752992BCE903900A15083 /* Publisher+Enumerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */; };
+		8FA7529B2BCE914100A15083 /* PublisherTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7529A2BCE914100A15083 /* PublisherTransform.swift */; };
+		8FA7529D2BCE944F00A15083 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7529C2BCE944F00A15083 /* Snapshot.swift */; };
 		8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */; };
 		8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */; };
 		8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */; };
@@ -88,6 +91,9 @@
 		8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFlowController.swift; sourceTree = "<group>"; };
 		8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposSnapshot.swift; sourceTree = "<group>"; };
+		8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Enumerated.swift"; sourceTree = "<group>"; };
+		8FA7529A2BCE914100A15083 /* PublisherTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherTransform.swift; sourceTree = "<group>"; };
+		8FA7529C2BCE944F00A15083 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
 		8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
 		8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 				8F0B185B2BC3E79F00910CAD /* URLMapper.swift */,
 				8F5C76E92BC544C500B07ABF /* Configurable.swift */,
 				8F8601D12BCD303D00EBA08C /* ArrayMapper.swift */,
+				8FA7529A2BCE914100A15083 /* PublisherTransform.swift */,
+				8FA7529C2BCE944F00A15083 /* Snapshot.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			children = (
 				8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */,
 				8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */,
+				8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,17 +395,20 @@
 				8F8601C72BCD1D1C00EBA08C /* RepoLocalRepository.swift in Sources */,
 				8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */,
 				8F0B18292BBF349A00910CAD /* UserLocalRepository.swift in Sources */,
+				8FA752992BCE903900A15083 /* Publisher+Enumerated.swift in Sources */,
 				8F0B18262BBF347E00910CAD /* UserRemoteRepository.swift in Sources */,
 				8F5C76E12BC53EE700B07ABF /* UsersSnapshot.swift in Sources */,
 				8F0B185A2BC3E56800910CAD /* TwoWayMapper.swift in Sources */,
 				8F763CD72BB6EAFE00B48DB4 /* Domain.docc in Sources */,
 				8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */,
 				8F897B9D2BC3FDD2001903E5 /* UsersViewModel.swift in Sources */,
+				8FA7529D2BCE944F00A15083 /* Snapshot.swift in Sources */,
 				8F8601E12BCD3E4C00EBA08C /* ReposUpdater.swift in Sources */,
 				8F8601C52BCD1CEB00EBA08C /* RepoRemoteRepository.swift in Sources */,
 				8F8601BD2BCD170800EBA08C /* ReposViewModel.swift in Sources */,
 				8F8601BF2BCD179400EBA08C /* UserReposViewModel.swift in Sources */,
 				8F0B185C2BC3E79F00910CAD /* URLMapper.swift in Sources */,
+				8FA7529B2BCE914100A15083 /* PublisherTransform.swift in Sources */,
 				8F5C76D02BC534D000B07ABF /* DomainModule.swift in Sources */,
 				8F0B18452BBF3AAF00910CAD /* Mapper.swift in Sources */,
 			);

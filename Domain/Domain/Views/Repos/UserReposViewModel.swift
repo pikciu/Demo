@@ -8,8 +8,8 @@ public final class UserReposViewModel: ReposViewModel {
     }
     
     public struct Output: ReposViewModelOutput {
-        public var title: String
-        public var snapshot: AnyPublisher<ReposSnapshot, Never>
+        public let title: String
+        public let snapshot: AnyPublisher<Snapshot<ReposSnapshot>, Never>
     }
     
     private var cancellables = Set<AnyCancellable>(minimumCapacity: 1)
@@ -21,7 +21,7 @@ public final class UserReposViewModel: ReposViewModel {
         title: user.name ?? user.login,
         snapshot: reposProvider.repos(user: user.login)
             .map(ReposSnapshotMapper().map)
-            .eraseToAnyPublisher()
+            .apply(SnapshotTransform())
     )
     
     public init(user: User, reposUpdater: ReposUpdater, reposProvider: ReposProvider) {

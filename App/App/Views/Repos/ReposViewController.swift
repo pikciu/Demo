@@ -24,7 +24,7 @@ final class ReposViewController: ViewController<UITableView> {
     }
     
     private func bind() {
-        viewModel.output.snapshot.sink(with: dataSource) { $0.apply($1) }
+        viewModel.output.snapshot.sink(with: dataSource) { $0.apply($1.data, animatingDifferences: $1.animate) }
             .store(in: &cancellables)
     }
     

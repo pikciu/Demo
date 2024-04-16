@@ -22,7 +22,7 @@ final class UsersViewController: ViewController<UsersView> {
     }
     
     private func bind() {
-        viewModel.output.snapshot.sink(with: dataSource) { $0.apply($1) }
+        viewModel.output.snapshot.sink(with: dataSource) { $0.apply($1.data, animatingDifferences: $1.animate) }
             .store(in: &cancellables)
         
         viewModel.output.isEditing.sink(with: self) { $0.setMode(isEditing: $1) }

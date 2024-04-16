@@ -25,7 +25,7 @@ public final class UsersViewModel: ViewModel {
     }
     
     public struct Output {
-        public let snapshot: AnyPublisher<UsersSnapshot, Never>
+        public let snapshot: AnyPublisher<Snapshot<UsersSnapshot>, Never>
         public let isEditing: AnyPublisher<Bool, Never>
     }
     
@@ -44,7 +44,7 @@ public final class UsersViewModel: ViewModel {
         snapshot: usersProvider.users.removeDuplicates()
             .combineLatest(isEditing)
             .map(UsersSnapshotMapper().map)
-            .eraseToAnyPublisher(),
+            .apply(SnapshotTransform()),
         isEditing: isEditing.eraseToAnyPublisher()
     )
     
