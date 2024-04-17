@@ -13,7 +13,6 @@
 		8F0B18452BBF3AAF00910CAD /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18442BBF3AAF00910CAD /* Mapper.swift */; };
 		8F0B185A2BC3E56800910CAD /* TwoWayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */; };
 		8F0B185C2BC3E79F00910CAD /* URLMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B185B2BC3E79F00910CAD /* URLMapper.swift */; };
-		8F5C76CE2BC532BC00B07ABF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76CD2BC532BC00B07ABF /* ViewModel.swift */; };
 		8F5C76D02BC534D000B07ABF /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76CF2BC534D000B07ABF /* DomainModule.swift */; };
 		8F5C76D32BC536B200B07ABF /* Container in Frameworks */ = {isa = PBXBuildFile; productRef = 8F5C76D22BC536B200B07ABF /* Container */; };
 		8F5C76DF2BC53B7C00B07ABF /* PublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */; };
@@ -25,6 +24,9 @@
 		8F763CE22BB6EAFE00B48DB4 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */; };
 		8F763CE32BB6EAFE00B48DB4 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CD52BB6EAFE00B48DB4 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F763D372BB6EED900B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D362BB6EED900B48DB4 /* Config.xcconfig */; };
+		8F78F3962BCEBD79006A6B04 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78F3952BCEBD79006A6B04 /* NSAttributedStringExtensions.swift */; };
+		8F78F3982BCEC0B8006A6B04 /* FavoriteReposProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78F3972BCEC0B8006A6B04 /* FavoriteReposProvider.swift */; };
+		8F78F39A2BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78F3992BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift */; };
 		8F8601BD2BCD170800EBA08C /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */; };
 		8F8601BF2BCD179400EBA08C /* UserReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */; };
 		8F8601C12BCD18D000EBA08C /* FavoriteReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */; };
@@ -42,6 +44,7 @@
 		8FA752992BCE903900A15083 /* Publisher+Enumerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */; };
 		8FA7529B2BCE914100A15083 /* PublisherTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7529A2BCE914100A15083 /* PublisherTransform.swift */; };
 		8FA7529D2BCE944F00A15083 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7529C2BCE944F00A15083 /* Snapshot.swift */; };
+		8FC909AE2BCEA81D006485D4 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC909AD2BCEA81D006485D4 /* RepoViewModel.swift */; };
 		8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */; };
 		8FD4F1A72BC6B455009A5BC1 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */; };
 		8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */; };
@@ -65,7 +68,6 @@
 		8F0B18442BBF3AAF00910CAD /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayMapper.swift; sourceTree = "<group>"; };
 		8F0B185B2BC3E79F00910CAD /* URLMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMapper.swift; sourceTree = "<group>"; };
-		8F5C76CD2BC532BC00B07ABF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8F5C76CF2BC534D000B07ABF /* DomainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModule.swift; sourceTree = "<group>"; };
 		8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtensions.swift; sourceTree = "<group>"; };
 		8F5C76E02BC53EE700B07ABF /* UsersSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSnapshot.swift; sourceTree = "<group>"; };
@@ -77,6 +79,9 @@
 		8F763CDC2BB6EAFE00B48DB4 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		8F763D362BB6EED900B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
+		8F78F3952BCEBD79006A6B04 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		8F78F3972BCEC0B8006A6B04 /* FavoriteReposProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteReposProvider.swift; sourceTree = "<group>"; };
+		8F78F3992BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepoLocalRepository.swift; sourceTree = "<group>"; };
 		8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
 		8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposViewModel.swift; sourceTree = "<group>"; };
 		8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteReposViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 		8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Enumerated.swift"; sourceTree = "<group>"; };
 		8FA7529A2BCE914100A15083 /* PublisherTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherTransform.swift; sourceTree = "<group>"; };
 		8FA7529C2BCE944F00A15083 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		8FC909AD2BCEA81D006485D4 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
 		8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
 		8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				8F0B18282BBF349A00910CAD /* UserLocalRepository.swift */,
 				8F8601C42BCD1CEB00EBA08C /* RepoRemoteRepository.swift */,
 				8F8601C62BCD1D1C00EBA08C /* RepoLocalRepository.swift */,
+				8F78F3992BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */,
 				8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */,
 				8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */,
+				8F78F3952BCEBD79006A6B04 /* NSAttributedStringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */,
 				8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */,
 				8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */,
+				8FC909AD2BCEA81D006485D4 /* RepoViewModel.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -245,7 +254,6 @@
 			children = (
 				8F8601BB2BCD16FB00EBA08C /* Repos */,
 				8F5C76CC2BC405BF00B07ABF /* Users */,
-				8F5C76CD2BC532BC00B07ABF /* ViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 				8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */,
 				8F8601DE2BCD3D5F00EBA08C /* ReposProvider.swift */,
 				8F8601E02BCD3E4C00EBA08C /* ReposUpdater.swift */,
+				8F78F3972BCEC0B8006A6B04 /* FavoriteReposProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -381,7 +390,6 @@
 				8F8601C12BCD18D000EBA08C /* FavoriteReposViewModel.swift in Sources */,
 				8F5C76EA2BC544C500B07ABF /* Configurable.swift in Sources */,
 				8F8601D22BCD303D00EBA08C /* ArrayMapper.swift in Sources */,
-				8F5C76CE2BC532BC00B07ABF /* ViewModel.swift in Sources */,
 				8F8601D92BCD36AC00EBA08C /* Owner.swift in Sources */,
 				8F5C76E32BC53F0400B07ABF /* UsersProvider.swift in Sources */,
 				8F0B182C2BBF351900910CAD /* User.swift in Sources */,
@@ -390,6 +398,7 @@
 				8FD4F1A12BC6A957009A5BC1 /* AddUserViewModel.swift in Sources */,
 				8F8601C92BCD1D3900EBA08C /* Repo.swift in Sources */,
 				8F8601DF2BCD3D5F00EBA08C /* ReposProvider.swift in Sources */,
+				8FC909AE2BCEA81D006485D4 /* RepoViewModel.swift in Sources */,
 				8FD4F1AF2BC6CBE0009A5BC1 /* UserRemover.swift in Sources */,
 				8FD4F1AD2BC6B6FA009A5BC1 /* UserCreator.swift in Sources */,
 				8F8601C72BCD1D1C00EBA08C /* RepoLocalRepository.swift in Sources */,
@@ -401,12 +410,15 @@
 				8F0B185A2BC3E56800910CAD /* TwoWayMapper.swift in Sources */,
 				8F763CD72BB6EAFE00B48DB4 /* Domain.docc in Sources */,
 				8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */,
+				8F78F39A2BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift in Sources */,
+				8F78F3982BCEC0B8006A6B04 /* FavoriteReposProvider.swift in Sources */,
 				8F897B9D2BC3FDD2001903E5 /* UsersViewModel.swift in Sources */,
 				8FA7529D2BCE944F00A15083 /* Snapshot.swift in Sources */,
 				8F8601E12BCD3E4C00EBA08C /* ReposUpdater.swift in Sources */,
 				8F8601C52BCD1CEB00EBA08C /* RepoRemoteRepository.swift in Sources */,
 				8F8601BD2BCD170800EBA08C /* ReposViewModel.swift in Sources */,
 				8F8601BF2BCD179400EBA08C /* UserReposViewModel.swift in Sources */,
+				8F78F3962BCEBD79006A6B04 /* NSAttributedStringExtensions.swift in Sources */,
 				8F0B185C2BC3E79F00910CAD /* URLMapper.swift in Sources */,
 				8FA7529B2BCE914100A15083 /* PublisherTransform.swift in Sources */,
 				8F5C76D02BC534D000B07ABF /* DomainModule.swift in Sources */,

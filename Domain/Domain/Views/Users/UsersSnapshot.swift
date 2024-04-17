@@ -40,7 +40,7 @@ struct UsersSnapshotMapper: Mapper {
         let section = UsersSection()
         snapshot.appendSections([section])
         if isEditing {
-            addUserViewModel.input.setText("")
+            addUserViewModel.setText("")
             snapshot.appendItems([.addUser(addUserViewModel)], toSection: section)
         }
         let items = users.map { UserItem.user($0) }

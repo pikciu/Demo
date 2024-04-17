@@ -34,7 +34,8 @@ extension UsersCoordinator: UsersFlowController {
         let reposViewModel = UserReposViewModel(
             user: user,
             reposUpdater: Container.resolve(),
-            reposProvider: Container.resolve()
+            reposProvider: Container.resolve(),
+            favoriteRepoProvider: Container.resolve()
         )
         let reposViewController = ReposViewController(viewModel: reposViewModel)
         navigationController.pushViewController(reposViewController, animated: true)

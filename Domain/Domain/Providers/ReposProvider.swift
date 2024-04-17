@@ -4,6 +4,13 @@ public struct ReposProvider {
     
     let repository: RepoLocalRepository
     
+    var repos: AnyPublisher<[Repo], Never> {
+        repository.repos()
+            .replaceError(with: [])
+            .removeDuplicates()
+            .eraseToAnyPublisher()
+    }
+    
     public init(repository: RepoLocalRepository) {
         self.repository = repository
     }

@@ -7,6 +7,6 @@ final class UsersDataSource: UITableViewDiffableDataSource<UsersSection, UserIte
         guard case .addUser(let viewModel) = itemIdentifier(for: indexPath) else {
             return
         }
-        viewModel.input.addUser()
+        viewModel.addUser()
     }
 }

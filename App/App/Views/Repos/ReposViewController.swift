@@ -4,7 +4,7 @@ import Combine
 
 final class ReposViewController: ViewController<UITableView> {
     
-    typealias DataSource = UITableViewDiffableDataSource<ReposSection, Repo>
+    typealias DataSource = UITableViewDiffableDataSource<ReposSection, RepoViewModel>
     
     private var cancellables = Set<AnyCancellable>(minimumCapacity: 1)
     private let viewModel: ReposViewModel
@@ -18,13 +18,13 @@ final class ReposViewController: ViewController<UITableView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = viewModel.output.title
+        title = viewModel.title
         setupTableView()
         bind()
     }
     
     private func bind() {
-        viewModel.output.snapshot.sink(with: dataSource) { $0.apply($1.data, animatingDifferences: $1.animate) }
+        viewModel.snapshot.sink(with: dataSource) { $0.apply($1.data, animatingDifferences: $1.animate) }
             .store(in: &cancellables)
     }
     

@@ -20,8 +20,6 @@ public struct Repo: Hashable {
     public let language: String?
     public let isFork: Bool
     
-    public let isFavorite: Bool
-    
     public init(
         id: Int,
         name: String,
@@ -39,8 +37,7 @@ public struct Repo: Hashable {
         size: Measurement<UnitInformationStorage>,
         hasWiki: Bool,
         language: String?,
-        isFork: Bool,
-        isFavorite: Bool
+        isFork: Bool
     ) {
         self.id = id
         self.name = name
@@ -59,6 +56,5 @@ public struct Repo: Hashable {
         self.hasWiki = hasWiki
         self.language = language
         self.isFork = isFork
-        self.isFavorite = isFavorite
     }
 }

@@ -1,48 +1,22 @@
 import Combine
 import Container
 
-public final class AddUserViewModel: ViewModel {
-    public struct Input {
-        private let textSubject: CurrentValueSubject<String, Never>
-        private let addUserSubject: PassthroughSubject<Void, Never>
-        
-        init(
-            textSubject: CurrentValueSubject<String, Never>,
-            addUserSubject: PassthroughSubject<Void, Never>
-        ) {
-            self.textSubject = textSubject
-            self.addUserSubject = addUserSubject
-        }
-        
-        public func setText(_ text: String) {
-            textSubject.send(text)
-        }
-        
-        public func addUser() {
-            addUserSubject.send()
-        }
-    }
-    public struct Output {
-        public let isError: AnyPublisher<Bool, Never>
-        public let text: AnyPublisher<String?, Never>
-    }
-    
-    public private(set) lazy var input = Input(
-        textSubject: textSubject,
-        addUserSubject: addUserSubject
-    )
-    public private(set) lazy var output = Output(
-        isError: isErrorSubject.removeDuplicates()
-            .eraseToAnyPublisher(),
-        text: textSubject.removeDuplicates()
-            .map { $0 }
-            .eraseToAnyPublisher()
-    )
+public final class AddUserViewModel {
     
     private var cancellables = Set<AnyCancellable>(minimumCapacity: 2)
     private let textSubject = CurrentValueSubject<String, Never>("")
     private let addUserSubject = PassthroughSubject<Void, Never>()
     private let isErrorSubject = CurrentValueSubject<Bool, Never>(false)
+    
+    public var isError: AnyPublisher<Bool, Never> {
+        isErrorSubject.eraseToAnyPublisher()
+    }
+    
+    public var text: AnyPublisher<String?, Never> {
+        textSubject.removeDuplicates()
+            .map { $0 }
+            .eraseToAnyPublisher()
+    }
     
     init() {
         addUserSubject.withLatestFrom(textSubject)
@@ -54,6 +28,14 @@ public final class AddUserViewModel: ViewModel {
         
         textSubject.sink(with: isErrorSubject) { $0.send(false) }
             .store(in: &cancellables)
+    }
+    
+    public func setText(_ text: String) {
+        textSubject.send(text)
+    }
+    
+    public func addUser() {
+        addUserSubject.send()
     }
     
     private func handle(success: Bool) {

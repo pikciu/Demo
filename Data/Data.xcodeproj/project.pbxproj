@@ -25,6 +25,7 @@
 		8F763D062BB6EB1100B48DB4 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763D052BB6EB1100B48DB4 /* DataTests.swift */; };
 		8F763D072BB6EB1100B48DB4 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CF92BB6EB1100B48DB4 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F763D352BB6EECC00B48DB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8F763D342BB6EECC00B48DB4 /* Config.xcconfig */; };
+		8F78F39C2BCFC0D2006A6B04 /* FavoriteRepoLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78F39B2BCFC0D2006A6B04 /* FavoriteRepoLocalRepository.swift */; };
 		8F8601CB2BCD270600EBA08C /* GitHubRepoRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601CA2BCD270600EBA08C /* GitHubRepoRemoteRepository.swift */; };
 		8F8601CD2BCD278E00EBA08C /* ReposRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601CC2BCD278E00EBA08C /* ReposRequest.swift */; };
 		8F8601D02BCD27C300EBA08C /* RepoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601CF2BCD27C300EBA08C /* RepoDTO.swift */; };
@@ -34,6 +35,8 @@
 		8F8601DD2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8601DC2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift */; };
 		8FA3C40E2BBF2C0E003C8E58 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */; };
 		8FA3C4112BBF2F1A003C8E58 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */; };
+		8FA752A02BCE95F300A15083 /* FavoriteRepoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7529F2BCE95F300A15083 /* FavoriteRepoRealm.swift */; };
+		8FC909AA2BCE9798006485D4 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC909A92BCE9798006485D4 /* RealmRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,7 @@
 		8F763D002BB6EB1100B48DB4 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763D052BB6EB1100B48DB4 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		8F763D342BB6EECC00B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
+		8F78F39B2BCFC0D2006A6B04 /* FavoriteRepoLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepoLocalRepository.swift; sourceTree = "<group>"; };
 		8F8601CA2BCD270600EBA08C /* GitHubRepoRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepoRemoteRepository.swift; sourceTree = "<group>"; };
 		8F8601CC2BCD278E00EBA08C /* ReposRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposRequest.swift; sourceTree = "<group>"; };
 		8F8601CF2BCD27C300EBA08C /* RepoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDTO.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		8F8601DC2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepoLocalRepository.swift; sourceTree = "<group>"; };
 		8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		8FA7529F2BCE95F300A15083 /* FavoriteRepoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepoRealm.swift; sourceTree = "<group>"; };
+		8FC909A92BCE9798006485D4 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 				8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */,
 				8F8601D62BCD350D00EBA08C /* RepoRealm.swift */,
 				8F8601DA2BCD377200EBA08C /* OwnerRealm.swift */,
+				8FA7529F2BCE95F300A15083 /* FavoriteRepoRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 				8F0B18572BBF438C00910CAD /* ResultsMapper.swift */,
 				8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */,
 				8F8601DC2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift */,
+				8FC909A92BCE9798006485D4 /* RealmRepository.swift */,
+				8F78F39B2BCFC0D2006A6B04 /* FavoriteRepoLocalRepository.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -322,10 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FA3C4112BBF2F1A003C8E58 /* UserRealm.swift in Sources */,
+				8FA752A02BCE95F300A15083 /* FavoriteRepoRealm.swift in Sources */,
 				8FA3C40E2BBF2C0E003C8E58 /* UserDTO.swift in Sources */,
 				8F8601DD2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift in Sources */,
 				8F0B18602BC3ED6C00910CAD /* RealmConfigurationProvider.swift in Sources */,
 				8F8601CB2BCD270600EBA08C /* GitHubRepoRemoteRepository.swift in Sources */,
+				8F78F39C2BCFC0D2006A6B04 /* FavoriteRepoLocalRepository.swift in Sources */,
 				8F0B182E2BBF35C500910CAD /* GitHubUserRemoteRepository.swift in Sources */,
 				8F0B18422BBF379E00910CAD /* GitHubEndpoint.swift in Sources */,
 				8F8601D42BCD319200EBA08C /* JSONResponseMapper+GitHub.swift in Sources */,
@@ -333,6 +344,7 @@
 				8F763CFB2BB6EB1100B48DB4 /* Data.docc in Sources */,
 				8F8601CD2BCD278E00EBA08C /* ReposRequest.swift in Sources */,
 				8F0B18382BBF362B00910CAD /* GitHubUserLocalRepository.swift in Sources */,
+				8FC909AA2BCE9798006485D4 /* RealmRepository.swift in Sources */,
 				8F0B183D2BBF367000910CAD /* DataModule.swift in Sources */,
 				8F8601D72BCD350D00EBA08C /* RepoRealm.swift in Sources */,
 				8F0B18582BBF438C00910CAD /* ResultsMapper.swift in Sources */,

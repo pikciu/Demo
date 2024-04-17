@@ -15,5 +15,6 @@ public struct DataModule: Module {
         container.registerWeak(UserRemoteRepository.self) { GitHubUserRemoteRepository(httpClient: $0.resolve()) }
         container.registerWeak(RepoLocalRepository.self) { GitHubRepoLocalRepository(configuration: $0.resolve()) }
         container.registerWeak(RepoRemoteRepository.self) { GitHubRepoRemoteRepository(httpClient: $0.resolve()) }
+        container.registerWeak(Domain.FavoriteRepoLocalRepository.self) { FavoriteRepoLocalRepository(configuration: $0.resolve()) }
     }
 }

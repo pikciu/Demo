@@ -2,7 +2,7 @@ import Combine
 import Domain
 import RealmSwift
 
-final class GitHubUserLocalRepository: UserLocalRepository {
+final class GitHubUserLocalRepository: UserLocalRepository, RealmRepository {
     
     let configuration: Realm.Configuration
     
@@ -11,29 +11,23 @@ final class GitHubUserLocalRepository: UserLocalRepository {
     }
     
     func users() -> AnyPublisher<[Domain.User], Error> {
-        Realm.asyncOpen(configuration: configuration)
-            .flatMap { realm in
-                realm.objects(UserRealm.self)
-                    .collectionPublisher
-                    .tryMap(ResultsMapper(UserRealmMapper()).map)
-            }
+        objects(UserRealm.self)
+            .tryMap(ResultsMapper(UserRealmMapper()).map)
             .eraseToAnyPublisher()
     }
     
     func save(user: Domain.User) throws {
-        let realm = try Realm(configuration: configuration)
-        try realm.write {
+        try write { realm in
             let user = UserRealmMapper().back(from: user)
             realm.add(user, update: .all)
         }
     }
     
     func delete(userID: Int) throws {
-        let realm = try Realm(configuration: configuration)
-        try realm.write {
-            if let user = realm.object(ofType: UserRealm.self, forPrimaryKey: userID) {
-                realm.delete(user)
-            }
+        try using { realm in
+            realm.object(ofType: UserRealm.self, forPrimaryKey: userID)
+        } write: { realm, user in
+            realm.delete(user)
         }
     }
 }

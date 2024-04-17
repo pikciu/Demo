@@ -1,6 +1,7 @@
 import UIKit
 import Domain
 import Resources
+import Combine
 
 final class RepoCell: TableViewCell, Configurable {
     
@@ -8,7 +9,7 @@ final class RepoCell: TableViewCell, Configurable {
     private let infoLabel = UILabel()
     private let favoriteButton = UIButton(configuration: .plain())
     private lazy var stackView = UIStackView(arrangedSubviews: [nameLabel, infoLabel])
-    private let infoMapper = RepoInfoMapper()
+    private var cancellables = Set<AnyCancellable>(minimumCapacity: 2)
     
     override func setupAppearance() {
         automaticallyUpdatesBackgroundConfiguration = false
@@ -40,46 +41,22 @@ final class RepoCell: TableViewCell, Configurable {
         ])
     }
     
-    func configure(with repo: Repo) {
-        nameLabel.text = repo.name
-        infoLabel.attributedText = infoMapper.map(from: repo)
+    func configure(with viewModel: RepoViewModel) {
+        cancellables.removeAll(keepingCapacity: true)
+        nameLabel.text = viewModel.name
+        infoLabel.attributedText = viewModel.info
+        
+        viewModel.heart.sink(with: self) { $0.setImage(symbol: $1) }
+            .store(in: &cancellables)
+        
+        favoriteButton.publisher(for: .touchUpInside)
+            .sink { _ in viewModel.toggleFavorite() }
+            .store(in: &cancellables)
+    }
+    
+    private func setImage(symbol: Symbol) {
         var config = favoriteButton.configuration
-        config?.image = repo.isFavorite ? .symbol(.heart.fill) : .symbol(.heart)
+        config?.image = symbol.image
         favoriteButton.configuration = config
-    }
-}
-
-struct RepoInfoMapper: Mapper {
-    
-    func map(from repo: Repo) -> NSAttributedString {
-        let text = NSMutableAttributedString()
-        if let eye = UIImage.symbol(.eye) {
-            text.append(NSTextAttachment(image: eye))
-            text.append(string(for: repo.watchers))
-        }
-        if let branch = UIImage.symbol(.branch) {
-            text.append(NSTextAttachment(image: branch))
-            text.append(string(for: repo.forks))
-        }
-        if let star = UIImage.symbol(.star) {
-            text.append(NSTextAttachment(image: star))
-            text.append(" \(repo.stars)")
-        }
-        return text
-    }
-    
-    private func string(for value: Int) -> String {
-        " \(value)".padding(toLength: 10, withPad: " ", startingAt: 0)
-    }
-}
-
-extension NSMutableAttributedString {
-    
-    func append(_ attachment: NSTextAttachment) {
-        append(NSAttributedString(attachment: attachment))
-    }
-    
-    func append(_ string: String) {
-        append(NSAttributedString(string: string))
     }
 }

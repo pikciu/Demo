@@ -63,8 +63,7 @@ struct RepoDTOMapper: Mapper {
             size: Measurement(value: Double(repo.sizeKB), unit: .kilobytes),
             hasWiki: repo.hasWiki,
             language: repo.language,
-            isFork: repo.isFork,
-            isFavorite: false
+            isFork: repo.isFork
         )
     }
 }

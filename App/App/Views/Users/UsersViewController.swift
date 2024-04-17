@@ -22,16 +22,16 @@ final class UsersViewController: ViewController<UsersView> {
     }
     
     private func bind() {
-        viewModel.output.snapshot.sink(with: dataSource) { $0.apply($1.data, animatingDifferences: $1.animate) }
+        viewModel.snapshot.sink(with: dataSource) { $0.apply($1.data, animatingDifferences: $1.animate) }
             .store(in: &cancellables)
         
-        viewModel.output.isEditing.sink(with: self) { $0.setMode(isEditing: $1) }
+        viewModel.isEditing.sink(with: self) { $0.setMode(isEditing: $1) }
             .store(in: &cancellables)
         
-        ui.editButton.publisher.sink(with: viewModel) { $0.input.edit() }
+        ui.editButton.publisher.sink(with: viewModel) { $0.edit() }
             .store(in: &cancellables)
         
-        ui.doneButton.publisher.sink(with: viewModel) { $0.input.endEditing() }
+        ui.doneButton.publisher.sink(with: viewModel) { $0.endEditing() }
             .store(in: &cancellables)
     }
     
@@ -63,7 +63,7 @@ extension UsersViewController: UITableViewDelegate {
             return nil
         }
         let deleteAction = UIContextualAction(style: .destructive, title: String(localized: .localizable.delete)) { [weak viewModel] action, view, completion in
-            viewModel?.input.delete(user: user)
+            viewModel?.delete(user: user)
             completion(true)
         }
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
@@ -74,6 +74,6 @@ extension UsersViewController: UITableViewDelegate {
         guard case .user(let user) = dataSource.itemIdentifier(for: indexPath) else {
             return
         }
-        viewModel.input.showDetails(user: user)
+        viewModel.showDetails(user: user)
     }
 }

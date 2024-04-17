@@ -38,18 +38,18 @@ final class AddUserCell: TableViewCell, Configurable {
     func configure(with viewModel: AddUserViewModel) {
         textField.publisher(for: .editingChanged)
             .compactMap(\.text)
-            .sink(with: viewModel) { $0.input.setText($1) }
+            .sink(with: viewModel) { $0.setText($1) }
             .store(in: &cancellables)
         
-        viewModel.output.isError.map { $0 ? UIColor.systemPink : UIColor.systemBackground }
+        viewModel.isError.map { $0 ? UIColor.systemPink : UIColor.systemBackground }
             .assign(to: \.backgroundColor, on: textField)
             .store(in: &cancellables)
         
-        viewModel.output.text.assign(to: \.text, on: textField)
+        viewModel.text.assign(to: \.text, on: textField)
             .store(in: &cancellables)
         
         textField.publisher(for: .editingDidEndOnExit)
-            .sink(with: viewModel) { $0.input.addUser() }
+            .sink(with: viewModel) { $0.addUser() }
             .store(in: &cancellables)
     }
     
