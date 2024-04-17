@@ -19,7 +19,6 @@
 		8F5C76E12BC53EE700B07ABF /* UsersSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76E02BC53EE700B07ABF /* UsersSnapshot.swift */; };
 		8F5C76E32BC53F0400B07ABF /* UsersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */; };
 		8F5C76EA2BC544C500B07ABF /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C76E92BC544C500B07ABF /* Configurable.swift */; };
-		8F763CD72BB6EAFE00B48DB4 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CD62BB6EAFE00B48DB4 /* Domain.docc */; };
 		8F763CDD2BB6EAFE00B48DB4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F763CD22BB6EAFE00B48DB4 /* Domain.framework */; };
 		8F763CE22BB6EAFE00B48DB4 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */; };
 		8F763CE32BB6EAFE00B48DB4 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CD52BB6EAFE00B48DB4 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,7 +74,6 @@
 		8F5C76E92BC544C500B07ABF /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		8F763CD22BB6EAFE00B48DB4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CD52BB6EAFE00B48DB4 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
-		8F763CD62BB6EAFE00B48DB4 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		8F763CDC2BB6EAFE00B48DB4 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CE12BB6EAFE00B48DB4 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		8F763D362BB6EED900B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
@@ -130,11 +128,11 @@
 		8F0B18272BBF348900910CAD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				8F0B18252BBF347E00910CAD /* UserRemoteRepository.swift */,
-				8F0B18282BBF349A00910CAD /* UserLocalRepository.swift */,
-				8F8601C42BCD1CEB00EBA08C /* RepoRemoteRepository.swift */,
-				8F8601C62BCD1D1C00EBA08C /* RepoLocalRepository.swift */,
 				8F78F3992BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift */,
+				8F8601C62BCD1D1C00EBA08C /* RepoLocalRepository.swift */,
+				8F8601C42BCD1CEB00EBA08C /* RepoRemoteRepository.swift */,
+				8F0B18282BBF349A00910CAD /* UserLocalRepository.swift */,
+				8F0B18252BBF347E00910CAD /* UserRemoteRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -142,9 +140,9 @@
 		8F0B182A2BBF351400910CAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8F0B182B2BBF351900910CAD /* User.swift */,
-				8F8601C82BCD1D3900EBA08C /* Repo.swift */,
 				8F8601D82BCD36AC00EBA08C /* Owner.swift */,
+				8F8601C82BCD1D3900EBA08C /* Repo.swift */,
+				8F0B182B2BBF351900910CAD /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,13 +150,13 @@
 		8F0B18432BBF3AA800910CAD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8F0B18442BBF3AAF00910CAD /* Mapper.swift */,
-				8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */,
-				8F0B185B2BC3E79F00910CAD /* URLMapper.swift */,
-				8F5C76E92BC544C500B07ABF /* Configurable.swift */,
 				8F8601D12BCD303D00EBA08C /* ArrayMapper.swift */,
+				8F5C76E92BC544C500B07ABF /* Configurable.swift */,
+				8F0B18442BBF3AAF00910CAD /* Mapper.swift */,
 				8FA7529A2BCE914100A15083 /* PublisherTransform.swift */,
 				8FA7529C2BCE944F00A15083 /* Snapshot.swift */,
+				8F0B18592BC3E56800910CAD /* TwoWayMapper.swift */,
+				8F0B185B2BC3E79F00910CAD /* URLMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -166,10 +164,10 @@
 		8F5C76CC2BC405BF00B07ABF /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */,
+				8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */,
 				8F897B9E2BC3FDE6001903E5 /* UsersFlowController.swift */,
 				8F5C76E02BC53EE700B07ABF /* UsersSnapshot.swift */,
-				8FD4F1A02BC6A957009A5BC1 /* AddUserViewModel.swift */,
+				8F897B9C2BC3FDD2001903E5 /* UsersViewModel.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -177,10 +175,10 @@
 		8F5C76DD2BC53B6500B07ABF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */,
 				8FD4F1A62BC6B455009A5BC1 /* Combine+WithLatestFrom.swift */,
-				8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */,
 				8F78F3952BCEBD79006A6B04 /* NSAttributedStringExtensions.swift */,
+				8FA752982BCE903900A15083 /* Publisher+Enumerated.swift */,
+				8F5C76DE2BC53B7C00B07ABF /* PublisherExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,15 +206,14 @@
 		8F763CD42BB6EAFE00B48DB4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				8FD4F1A92BC6B6C0009A5BC1 /* Providers */,
-				8F5C76DD2BC53B6500B07ABF /* Extensions */,
-				8F897B9B2BC3FDC0001903E5 /* Views */,
-				8F0B18432BBF3AA800910CAD /* Utils */,
-				8F0B182A2BBF351400910CAD /* Models */,
-				8F0B18272BBF348900910CAD /* Repositories */,
 				8F763CD52BB6EAFE00B48DB4 /* Domain.h */,
-				8F763CD62BB6EAFE00B48DB4 /* Domain.docc */,
 				8F5C76CF2BC534D000B07ABF /* DomainModule.swift */,
+				8F5C76DD2BC53B6500B07ABF /* Extensions */,
+				8F0B182A2BBF351400910CAD /* Models */,
+				8FD4F1A92BC6B6C0009A5BC1 /* Providers */,
+				8F0B18272BBF348900910CAD /* Repositories */,
+				8F0B18432BBF3AA800910CAD /* Utils */,
+				8F897B9B2BC3FDC0001903E5 /* Views */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -232,11 +229,11 @@
 		8F8601BB2BCD16FB00EBA08C /* Repos */ = {
 			isa = PBXGroup;
 			children = (
-				8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */,
-				8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */,
 				8F8601C02BCD18D000EBA08C /* FavoriteReposViewModel.swift */,
 				8FA7528F2BCD4F6A00A15083 /* ReposSnapshot.swift */,
+				8F8601BC2BCD170800EBA08C /* ReposViewModel.swift */,
 				8FC909AD2BCEA81D006485D4 /* RepoViewModel.swift */,
+				8F8601BE2BCD179400EBA08C /* UserReposViewModel.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -261,12 +258,12 @@
 		8FD4F1A92BC6B6C0009A5BC1 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */,
-				8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */,
-				8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */,
+				8F78F3972BCEC0B8006A6B04 /* FavoriteReposProvider.swift */,
 				8F8601DE2BCD3D5F00EBA08C /* ReposProvider.swift */,
 				8F8601E02BCD3E4C00EBA08C /* ReposUpdater.swift */,
-				8F78F3972BCEC0B8006A6B04 /* FavoriteReposProvider.swift */,
+				8FD4F1AC2BC6B6FA009A5BC1 /* UserCreator.swift */,
+				8FD4F1AE2BC6CBE0009A5BC1 /* UserRemover.swift */,
+				8F5C76E22BC53F0400B07ABF /* UsersProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -408,7 +405,6 @@
 				8F0B18262BBF347E00910CAD /* UserRemoteRepository.swift in Sources */,
 				8F5C76E12BC53EE700B07ABF /* UsersSnapshot.swift in Sources */,
 				8F0B185A2BC3E56800910CAD /* TwoWayMapper.swift in Sources */,
-				8F763CD72BB6EAFE00B48DB4 /* Domain.docc in Sources */,
 				8F897B9F2BC3FDE6001903E5 /* UsersFlowController.swift in Sources */,
 				8F78F39A2BCFC099006A6B04 /* FavoriteRepoLocalRepository.swift in Sources */,
 				8F78F3982BCEC0B8006A6B04 /* FavoriteReposProvider.swift in Sources */,

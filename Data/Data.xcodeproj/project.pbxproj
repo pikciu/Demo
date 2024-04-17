@@ -20,7 +20,6 @@
 		8F0B18602BC3ED6C00910CAD /* RealmConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */; };
 		8F3ED7152BC83E48009646E4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8F3ED7142BC83E48009646E4 /* Realm */; };
 		8F3ED7172BC83E48009646E4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F3ED7162BC83E48009646E4 /* RealmSwift */; };
-		8F763CFB2BB6EB1100B48DB4 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8F763CFA2BB6EB1100B48DB4 /* Data.docc */; };
 		8F763D012BB6EB1100B48DB4 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F763CF62BB6EB1100B48DB4 /* Data.framework */; };
 		8F763D062BB6EB1100B48DB4 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F763D052BB6EB1100B48DB4 /* DataTests.swift */; };
 		8F763D072BB6EB1100B48DB4 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F763CF92BB6EB1100B48DB4 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,7 +61,6 @@
 		8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfigurationProvider.swift; sourceTree = "<group>"; };
 		8F763CF62BB6EB1100B48DB4 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763CF92BB6EB1100B48DB4 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		8F763CFA2BB6EB1100B48DB4 /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
 		8F763D002BB6EB1100B48DB4 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F763D052BB6EB1100B48DB4 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		8F763D342BB6EECC00B48DB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
@@ -116,8 +114,8 @@
 		8F0B183E2BBF376200910CAD /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				8F0B183F2BBF376900910CAD /* UserRequest.swift */,
 				8F8601CC2BCD278E00EBA08C /* ReposRequest.swift */,
+				8F0B183F2BBF376900910CAD /* UserRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -145,11 +143,10 @@
 		8F763CF82BB6EB1100B48DB4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8FA3C40C2BBF2BBF003C8E58 /* Remote */,
-				8FA3C40B2BBF2BBB003C8E58 /* Local */,
 				8F763CF92BB6EB1100B48DB4 /* Data.h */,
-				8F763CFA2BB6EB1100B48DB4 /* Data.docc */,
 				8F0B183C2BBF367000910CAD /* DataModule.swift */,
+				8FA3C40B2BBF2BBB003C8E58 /* Local */,
+				8FA3C40C2BBF2BBF003C8E58 /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -165,8 +162,8 @@
 		8F8601CE2BCD27B700EBA08C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */,
 				8F8601CF2BCD27C300EBA08C /* RepoDTO.swift */,
+				8FA3C40D2BBF2C0E003C8E58 /* UserDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,10 +171,10 @@
 		8F8601D52BCD350400EBA08C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */,
-				8F8601D62BCD350D00EBA08C /* RepoRealm.swift */,
-				8F8601DA2BCD377200EBA08C /* OwnerRealm.swift */,
 				8FA7529F2BCE95F300A15083 /* FavoriteRepoRealm.swift */,
+				8F8601DA2BCD377200EBA08C /* OwnerRealm.swift */,
+				8F8601D62BCD350D00EBA08C /* RepoRealm.swift */,
+				8FA3C4102BBF2F1A003C8E58 /* UserRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,14 +182,14 @@
 		8FA3C40B2BBF2BBB003C8E58 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				8F8601D52BCD350400EBA08C /* Models */,
 				8F0B185D2BC3ED5700910CAD /* seed.realm */,
-				8F0B18372BBF362B00910CAD /* GitHubUserLocalRepository.swift */,
-				8F0B18572BBF438C00910CAD /* ResultsMapper.swift */,
-				8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */,
-				8F8601DC2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift */,
-				8FC909A92BCE9798006485D4 /* RealmRepository.swift */,
 				8F78F39B2BCFC0D2006A6B04 /* FavoriteRepoLocalRepository.swift */,
+				8F8601DC2BCD3A8800EBA08C /* GitHubRepoLocalRepository.swift */,
+				8F0B18372BBF362B00910CAD /* GitHubUserLocalRepository.swift */,
+				8F0B185F2BC3ED6C00910CAD /* RealmConfigurationProvider.swift */,
+				8FC909A92BCE9798006485D4 /* RealmRepository.swift */,
+				8F0B18572BBF438C00910CAD /* ResultsMapper.swift */,
+				8F8601D52BCD350400EBA08C /* Models */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -200,12 +197,12 @@
 		8FA3C40C2BBF2BBF003C8E58 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				8F8601CE2BCD27B700EBA08C /* Models */,
-				8F0B183E2BBF376200910CAD /* Requests */,
-				8F0B182D2BBF35C500910CAD /* GitHubUserRemoteRepository.swift */,
 				8F0B18412BBF379E00910CAD /* GitHubEndpoint.swift */,
 				8F8601CA2BCD270600EBA08C /* GitHubRepoRemoteRepository.swift */,
+				8F0B182D2BBF35C500910CAD /* GitHubUserRemoteRepository.swift */,
 				8F8601D32BCD319200EBA08C /* JSONResponseMapper+GitHub.swift */,
+				8F8601CE2BCD27B700EBA08C /* Models */,
+				8F0B183E2BBF376200910CAD /* Requests */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -341,7 +338,6 @@
 				8F0B18422BBF379E00910CAD /* GitHubEndpoint.swift in Sources */,
 				8F8601D42BCD319200EBA08C /* JSONResponseMapper+GitHub.swift in Sources */,
 				8F8601DB2BCD377200EBA08C /* OwnerRealm.swift in Sources */,
-				8F763CFB2BB6EB1100B48DB4 /* Data.docc in Sources */,
 				8F8601CD2BCD278E00EBA08C /* ReposRequest.swift in Sources */,
 				8F0B18382BBF362B00910CAD /* GitHubUserLocalRepository.swift in Sources */,
 				8FC909AA2BCE9798006485D4 /* RealmRepository.swift in Sources */,

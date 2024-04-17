@@ -1,6 +1,6 @@
 import Combine
 
-public final class UsersProvider {
+public struct UsersProvider {
     
     let repository: UserLocalRepository
     
@@ -9,9 +9,5 @@ public final class UsersProvider {
             .map { $0.sorted() }
             .replaceError(with: [])
             .eraseToAnyPublisher()
-    }
-    
-    init(repository: UserLocalRepository) {
-        self.repository = repository
     }
 }

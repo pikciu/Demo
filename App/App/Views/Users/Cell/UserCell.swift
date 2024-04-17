@@ -26,7 +26,7 @@ private final class UserContentView: View, UIContentView {
     let loginLabel = UILabel()
     let nameLabel = UILabel()
     
-    var configuration: any UIContentConfiguration {
+    var configuration: UIContentConfiguration {
         didSet {
             apply(configuration: configuration)
         }
