@@ -10,10 +10,10 @@ final class GitHubUserRemoteRepository: UserRemoteRepository {
         self.httpClient = httpClient
     }
     
-    func user(name: String) -> AnyPublisher<User, Error> {
-        httpClient.execute(request: UserRequest(name: name), responseMapper: JSONResponseMapper.gitHub())
-            .map(UserDTOMapper().map)
-            .mapError { $0 }
-            .eraseToAnyPublisher()
+    func user(name: String) async throws -> User {
+        try await httpClient.execute(
+            request: UserRequest(name: name),
+            responseMapper: GitHubResponseMapper(UserDTOMapper())
+        )
     }
 }

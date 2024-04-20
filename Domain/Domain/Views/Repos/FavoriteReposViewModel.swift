@@ -1,23 +1,35 @@
 import Resources
 import Combine
+import SwiftUI
 
 public final class FavoriteReposViewModel: ReposViewModel {
     
-    private let reposProvider: ReposProvider
+    private var cancellables = Set<AnyCancellable>(minimumCapacity: 1)
     private let favoriteRepoProvider: FavoriteReposProvider
     
     public var title: String {
         String(localized: .localizable.favorites)
     }
     
-    public var snapshot: AnyPublisher<Snapshot<ReposSnapshot>, Never> {
-        reposProvider.repos.combineLatest(favoriteRepoProvider.favoriteRepos)
-            .map(FavoriteReposSnapshotMapper(favoriteRepoProvider: favoriteRepoProvider).map)
-            .apply(SnapshotTransform())
+    @Published public var repos = [RepoItem]()
+    
+    public init(repoItemsProvider: RepoItemsProvider, favoriteRepoProvider: FavoriteReposProvider) {
+        self.favoriteRepoProvider = favoriteRepoProvider
+        
+        repoItemsProvider.favoriteRepoItems
+            .sink(with: self) { vm, repos in
+                withAnimation {
+                    vm.repos = repos
+                }
+            }
+            .store(in: &cancellables)
     }
     
-    public init(reposProvider: ReposProvider, favoriteRepoProvider: FavoriteReposProvider) {
-        self.reposProvider = reposProvider
-        self.favoriteRepoProvider = favoriteRepoProvider
+    public func update() async { 
+        
+    }
+    
+    public func toggleFavorite(repo: RepoItem) {
+        favoriteRepoProvider.toggleFavorite(repo: repo.id, isFavorite: repo.isFavorite)
     }
 }

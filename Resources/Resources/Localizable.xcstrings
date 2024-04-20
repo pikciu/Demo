@@ -35,19 +35,39 @@
         }
       }
     },
-    "Nickname" : {
+    "User not found" : {
+
+    },
+    "Username" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nickname"
+            "value" : "Username"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nickname"
+            "value" : "Username"
+          }
+        }
+      }
+    },
+    "UserNotFound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User not found"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie znaleziono użytkownika"
           }
         }
       }

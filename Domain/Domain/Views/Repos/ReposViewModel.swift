@@ -1,6 +1,9 @@
 import Combine
 
-public protocol ReposViewModel {
+public protocol ReposViewModel: ObservableObject {
     var title: String { get }
-    var snapshot: AnyPublisher<Snapshot<ReposSnapshot>, Never> { get }
+    var repos: [RepoItem] { get }
+    
+    func update() async
+    func toggleFavorite(repo: RepoItem)
 }

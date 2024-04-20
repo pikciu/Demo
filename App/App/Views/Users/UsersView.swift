@@ -1,23 +1,42 @@
-import UIKit
+import SwiftUI
+import Domain
+import Resources
 
-final class UsersView: View {
+struct UsersView: View {
     
-    let tableView = UITableView(frame: .zero, style: .plain)
-    let editButton = UIBarButtonItem(systemItem: .edit)
-    let doneButton = UIBarButtonItem(systemItem: .done)
+    @StateObject var viewModel: UsersViewModel
+    @EnvironmentObject var navigation: Navigation
+    @State var selectedUser: User?
     
-    override func setupAppearance() {
-        tableView.keyboardDismissMode = .interactive
-    }
-    
-    override func setupAutoLayout() {
-        add(subviews: [tableView])
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-        ])
+    var body: some View {
+        List(viewModel.users, id: \.self, selection: $selectedUser) { user in
+            UserView(user: user)
+                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                    Button(role: .destructive) {
+                        viewModel.delete(user: user)
+                    } label: {
+                        Image.symbol(.trash)
+                    }
+                }
+        }
+        .onChange(of: selectedUser) { user in
+            if let user {
+                navigation.push(.repos(user))
+                selectedUser = nil
+            }
+        }
+        .popup(isPresented: $viewModel.isEditing) {
+            AddUserView(text: $viewModel.text, isError: viewModel.isError) {
+                await viewModel.addUser()
+            }
+        }
+        .navigationTitle(Text(.localizable.users))
+        .toolbar {
+            Button {
+                viewModel.isEditing = true
+            } label: {
+                Image(symbol: .plus)
+            }
+        }
     }
 }

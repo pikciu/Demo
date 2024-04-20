@@ -7,7 +7,7 @@ public struct DomainModule: Module {
         container.registerUnique(UserCreator.self) { UserCreator(localRepository: $0.resolve(), remoteRepository: $0.resolve()) }
         container.registerUnique(UserRemover.self) { UserRemover(repository: $0.resolve()) }
         container.registerUnique(ReposUpdater.self) { ReposUpdater(localRepository: $0.resolve(), remoteRepository: $0.resolve()) }
-        container.registerUnique(ReposProvider.self) { ReposProvider(repository: $0.resolve()) }
-        container.registerWeak(FavoriteReposProvider.self) { FavoriteReposProvider(repository: $0.resolve()) }
+        container.registerUnique(RepoItemsProvider.self) { RepoItemsProvider(favoriteRepoRepository: $0.resolve(), repoRepository: $0.resolve()) }
+        container.registerWeak(FavoriteReposProvider.self) { FavoriteReposProvider(favoriteRepoRepository: $0.resolve()) }
     }
 }
