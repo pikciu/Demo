@@ -1,0 +1,4 @@
+#include "../Config.xcconfig"
+
+MARKETING_VERSION = 0.1.0
+DEVELOPMENT_TEAM = 99R4D8SSEQ

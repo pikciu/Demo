@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "container",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pikciu/Container.git",
+      "state" : {
+        "revision" : "51e239f5072be8bfdf8520fc50142a6414ef82f3",
+        "version" : "1.4.0"
+      }
+    }
+  ],
+  "version" : 2
+}
