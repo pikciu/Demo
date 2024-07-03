@@ -1,22 +1,13 @@
 {
-  "originHash" : "c2a7ff4aaee510ea37a36f3c89baae57d1dc6e00b356d64db8e8feb0b4b16655",
+  "originHash" : "ae94d77b3cab58245ed9263e61d40af9694885616f7792aa7c3480acc2cc933c",
   "pins" : [
     {
-      "identity" : "realm-core",
+      "identity" : "swiftlintplugins",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/realm/realm-core.git",
+      "location" : "https://github.com/SimplyDanny/SwiftLintPlugins.git",
       "state" : {
-        "revision" : "4d815c6e6883bfdcb67cf755d0f0f29a4b399ea7",
-        "version" : "14.5.2"
-      }
-    },
-    {
-      "identity" : "realm-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pikciu/realm-swift.git",
-      "state" : {
-        "branch" : "issue-8427/copy_seed_file_path",
-        "revision" : "cc12225fed88dce2cdf31f8893146cd28ddb44cd"
+        "revision" : "b8431a26655378581890d56b95a0b59aba9f62da",
+        "version" : "0.55.1"
       }
     }
   ],

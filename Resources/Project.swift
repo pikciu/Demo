@@ -3,6 +3,9 @@ import ProjectDescriptionHelpers
 
 let project = Project(
     name: "Resources",
+    packages: [
+        Plugins.Packages.swfitLint,
+    ],
     settings: .frameworkSettings,
     targets: [
         .target(

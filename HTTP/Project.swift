@@ -3,6 +3,9 @@ import ProjectDescriptionHelpers
 
 let project = Project(
     name: "HTTP",
+    packages: [
+        Plugins.Packages.swfitLint,
+    ],
     settings: .frameworkSettings,
     targets: [
         .target(
@@ -13,7 +16,7 @@ let project = Project(
             infoPlist: nil,
             sources: ["Sources/**"],
             dependencies: [
-                
+                Plugins.Dependencies.swfitLint,
             ]
         ),
         .target(
@@ -24,7 +27,8 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "HTTP")
+                .target(name: "HTTP"),
+                Plugins.Dependencies.swfitLint,
             ]
         )
     ]

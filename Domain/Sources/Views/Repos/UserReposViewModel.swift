@@ -14,7 +14,12 @@ public final class UserReposViewModel: ReposViewModel {
     
     @Published public var repos = [RepoItem]()
     
-    public init(user: User, reposUpdater: ReposUpdater, favoriteRepoProvider: FavoriteReposProvider, repoItemsProvider: RepoItemsProvider) {
+    public init(
+        user: User,
+        reposUpdater: ReposUpdater,
+        favoriteRepoProvider: FavoriteReposProvider,
+        repoItemsProvider: RepoItemsProvider
+    ) {
         self.user = user
         self.reposUpdater = reposUpdater
         self.favoriteRepoProvider = favoriteRepoProvider

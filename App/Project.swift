@@ -4,6 +4,9 @@ import ProjectDescriptionHelpers
 let project = Project(
     name: "App",
     options: .options(defaultKnownRegions: ["en", "pl"]),
+    packages: [
+        Plugins.Packages.swfitLint,
+    ],
     settings: .settings(base: ["GENERATE_INFOPLIST_FILE" : "YES"]),
     targets: [
         .target(
@@ -17,7 +20,8 @@ let project = Project(
             dependencies: [
                 .project(target: "Data", path: "../Data"),
                 .project(target: "Domain", path: "../Domain"),
-                .project(target: "HTTP", path: "../HTTP")
+                .project(target: "HTTP", path: "../HTTP"),
+                Plugins.Dependencies.swfitLint,
             ],
             settings: .settings(
                 base: [

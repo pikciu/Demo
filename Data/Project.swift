@@ -4,6 +4,7 @@ import ProjectDescriptionHelpers
 let project = Project(
     name: "Data",
     packages: [
+        Plugins.Packages.swfitLint,
     ],
     settings: .frameworkSettings,
     targets: [
@@ -19,6 +20,7 @@ let project = Project(
                 .project(target: "Domain", path: "../Domain"),
                 .project(target: "HTTP", path: "../HTTP"),
                 .external(name: "RealmSwift"),
+                Plugins.Dependencies.swfitLint,
             ]
         ),
         .target(

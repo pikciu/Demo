@@ -24,7 +24,9 @@ extension RealmRepository {
         }
     }
     
-    func objects<T: RealmFetchable>(_ type: T.Type) -> Publishers.FlatMap<RealmPublishers.Value<Results<T>>, RealmPublishers.AsyncOpenPublisher> {
+    func objects<T: RealmFetchable>(
+        _ type: T.Type
+    ) -> Publishers.FlatMap<RealmPublishers.Value<Results<T>>, RealmPublishers.AsyncOpenPublisher> {
         Realm.asyncOpen(configuration: configuration)
             .flatMap { realm in
                 realm.objects(type).collectionPublisher

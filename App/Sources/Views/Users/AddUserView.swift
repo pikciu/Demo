@@ -25,7 +25,6 @@ struct AddUserView: View {
                     .padding(8)
                     .background(textFieldBackground)
                     
-                    
                     Text(.localizable.userNotFound)
                         .font(.footnote)
                         .foregroundStyle(.red)

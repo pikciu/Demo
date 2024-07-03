@@ -25,7 +25,10 @@ extension HTTPClient {
         try responseMapper.map(response: await execute(request: request))
     }
     
-    public func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {
+    public func execute<M: ResponseMapper>(
+        request: URLRequest,
+        responseMapper: M
+    ) -> AnyPublisher<M.Output, HTTPError> {
         execute(request: request)
             .flatMap(responseMapper.map)
             .eraseToAnyPublisher()

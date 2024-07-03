@@ -3,6 +3,9 @@ import ProjectDescriptionHelpers
 
 let project = Project(
     name: "Domain",
+    packages: [
+        Plugins.Packages.swfitLint,
+    ],
     settings: .frameworkSettings,
     targets: [
         .target(
@@ -14,7 +17,8 @@ let project = Project(
             sources: ["Sources/**"],
             dependencies: [
                 .external(name: "Container"),
-                .project(target: "Resources", path: "../Resources")
+                .project(target: "Resources", path: "../Resources"),
+                Plugins.Dependencies.swfitLint,
             ]
         ),
         .target(

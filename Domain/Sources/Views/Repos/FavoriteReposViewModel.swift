@@ -17,9 +17,9 @@ public final class FavoriteReposViewModel: ReposViewModel {
         self.favoriteRepoProvider = favoriteRepoProvider
         
         repoItemsProvider.favoriteRepoItems
-            .sink(with: self) { vm, repos in
+            .sink(with: self) { viewModel, repos in
                 withAnimation {
-                    vm.repos = repos
+                    viewModel.repos = repos
                 }
             }
             .store(in: &cancellables)
