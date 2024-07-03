@@ -7,7 +7,7 @@ let project = Project(
     packages: [
         Plugins.Packages.swfitLint,
     ],
-    settings: .settings(base: ["GENERATE_INFOPLIST_FILE" : "YES"]),
+    settings: .settings(base: ["GENERATE_INFOPLIST_FILE": "YES"]),
     targets: [
         .target(
             name: "App",
@@ -25,8 +25,8 @@ let project = Project(
             ],
             settings: .settings(
                 base: [
-                    "INFOPLIST_KEY_UILaunchScreen_Generation" : "YES",
-                    "GENERATE_INFOPLIST_FILE" : "NO",
+                    "INFOPLIST_KEY_UILaunchScreen_Generation": "YES",
+                    "GENERATE_INFOPLIST_FILE": "NO",
                 ],
                 configurations: [
                     .debug(name: "Debug", xcconfig: "App.xcconfig"),
@@ -42,7 +42,7 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "App")
+                .target(name: "App"),
             ]
         ),
         .target(
@@ -53,8 +53,8 @@ let project = Project(
             infoPlist: nil,
             sources: ["UITests/**"],
             dependencies: [
-                .target(name: "App")
+                .target(name: "App"),
             ]
-        )
+        ),
     ]
 )

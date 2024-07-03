@@ -2,7 +2,7 @@ import Combine
 import Foundation
 
 extension URLSession: HTTPClient {
-    
+
     public func execute(request: URLRequest) async throws -> Response {
         let response = try Response(await data(for: request))
         if response.isSuccessful {
@@ -11,7 +11,7 @@ extension URLSession: HTTPClient {
             throw HTTPError.serverError(response)
         }
     }
-    
+
     public func execute(request: URLRequest) -> AnyPublisher<Response, HTTPError> {
         dataTaskPublisher(for: request)
             .mapError(HTTPError.urlError)

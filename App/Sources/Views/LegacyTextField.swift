@@ -30,30 +30,31 @@ struct LegacyTextField: UIViewRepresentable {
             self.text = text
             self.onSubmit = onSubmit
         }
-        
+
         @objc func textFieldTextDidChange(_ textField: UITextField) {
             text.wrappedValue = textField.text ?? ""
         }
-        
+
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             onSubmit()
             return false
         }
     }
-    
+
     private final class TextField: UITextField {
-        
+
         let configuration: (UITextField) -> Void
-        
+
         init(configuration: @escaping (UITextField) -> Void) {
             self.configuration = configuration
             super.init(frame: .zero)
         }
-        
+
+        @available(*, unavailable)
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
-        
+
         override func didMoveToWindow() {
             super.didMoveToWindow()
             if window != nil {

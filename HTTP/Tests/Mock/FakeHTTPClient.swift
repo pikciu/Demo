@@ -1,15 +1,15 @@
-import HTTP
 import Combine
 import Foundation
+import HTTP
 
 final class FakeHTTPClient: HTTPClient {
-    
+
     var result: Result<Response, HTTPError>?
-    
+
     func execute(request: URLRequest) async throws -> Response {
         try result!.get()
     }
-    
+
     func execute(request: URLRequest) -> AnyPublisher<Response, HTTPError> {
         switch result {
         case .success(let response):

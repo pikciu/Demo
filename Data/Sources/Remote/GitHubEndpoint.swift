@@ -1,10 +1,10 @@
 import Foundation
 
 struct GitHubEndpoint {
-    
+
     let path: String
     let queryItems: [URLQueryItem]
-    
+
     var url: URL {
         var components = URLComponents()
         components.scheme = "https"
@@ -13,11 +13,11 @@ struct GitHubEndpoint {
         components.queryItems = queryItems
         return components.url!
     }
-    
+
     static func user(name: String) -> GitHubEndpoint {
         GitHubEndpoint(path: "/users/\(name)", queryItems: [])
     }
-    
+
     static func repos(user: String) -> GitHubEndpoint {
         GitHubEndpoint(path: "/users/\(user)/repos", queryItems: [])
     }

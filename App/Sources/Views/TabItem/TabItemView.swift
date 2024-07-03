@@ -1,13 +1,13 @@
-import SwiftUI
 import Container
 import Domain
+import SwiftUI
 
 struct TabItemView: View {
-    
+
     let tabItem: TabItem
     @StateObject var navigation = Navigation()
     @EnvironmentObject var tabState: TabState
-    
+
     var body: some View {
         NavigationStack(path: $navigation.stack) {
             content.environmentObject(navigation)
@@ -28,7 +28,7 @@ struct TabItemView: View {
         }
         .tag(tabItem)
     }
-    
+
     @ViewBuilder
     private var content: some View {
         switch tabItem {

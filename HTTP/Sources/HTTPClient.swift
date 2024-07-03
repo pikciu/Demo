@@ -7,11 +7,11 @@ public protocol HTTPClient: AnyObject {
 }
 
 extension HTTPClient {
-    
+
     public func execute(request: Request) async throws -> Response {
         try await execute(request: request.urlRequest())
     }
-    
+
     public func execute(request: Request) -> AnyPublisher<Response, HTTPError> {
         do {
             let urlRequest = try request.urlRequest()
@@ -20,11 +20,11 @@ extension HTTPClient {
             return Fail(error: HTTPError.requestError(request, error)).eraseToAnyPublisher()
         }
     }
-    
+
     public func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) async throws -> M.Output {
         try responseMapper.map(response: await execute(request: request))
     }
-    
+
     public func execute<M: ResponseMapper>(
         request: URLRequest,
         responseMapper: M
@@ -33,15 +33,14 @@ extension HTTPClient {
             .flatMap(responseMapper.map)
             .eraseToAnyPublisher()
     }
-    
+
     public func execute<M: ResponseMapper>(request: Request, responseMapper: M) async throws -> M.Output {
         try responseMapper.map(response: await execute(request: request))
     }
-    
+
     public func execute<M: ResponseMapper>(request: Request, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {
         execute(request: request)
             .flatMap(responseMapper.map)
             .eraseToAnyPublisher()
     }
 }
-

@@ -20,8 +20,7 @@ let project = Project(
 //                .pre(tool: "swiftgen", arguments: [], name: "SwiftGen") // Strings catalogs not supported yet
 //            ],
             dependencies: [
-                
             ]
-        )
+        ),
     ]
 )

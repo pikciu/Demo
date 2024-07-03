@@ -1,8 +1,8 @@
-import HTTP
 import Foundation
+import HTTP
 
 extension JSONResponseMapper {
-    
+
     static func gitHub() -> JSONResponseMapper {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

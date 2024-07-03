@@ -1,0 +1,4 @@
+--typeblanklines preserve
+--disable unusedArguments
+--disable hoistPatternLet
+--disable extensionAccessControl

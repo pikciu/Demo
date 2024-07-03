@@ -7,7 +7,7 @@ struct UserDTO: Decodable {
     let name: String?
     let avatarURL: URL
     let linkURL: URL
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case login
@@ -18,7 +18,7 @@ struct UserDTO: Decodable {
 }
 
 struct UserDTOMapper: Mapper {
-    
+
     func map(from user: UserDTO) -> User {
         User(
             id: user.id,

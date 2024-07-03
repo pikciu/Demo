@@ -1,10 +1,10 @@
-import SwiftUI
 import Domain
+import SwiftUI
 
 struct UserView: View {
-    
+
     let user: User
-    
+
     var body: some View {
         HStack {
             AsyncImage(url: user.avatarURL) { image in
@@ -13,7 +13,7 @@ struct UserView: View {
                 ProgressView()
             }
             .frame(width: 50, height: 50)
-            
+
             VStack(alignment: .leading) {
                 Text(user.login)
                 if let name = user.name {

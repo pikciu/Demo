@@ -30,6 +30,6 @@ let project = Project(
                 .target(name: "HTTP"),
                 Plugins.Dependencies.swfitLint,
             ]
-        )
+        ),
     ]
 )

@@ -2,7 +2,7 @@ import Domain
 import Foundation
 
 struct RepoDTO: Decodable {
-    
+
     let id: Int
     let name: String
     let fullName: String
@@ -20,7 +20,7 @@ struct RepoDTO: Decodable {
     let hasWiki: Bool
     let language: String?
     let isFork: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -43,9 +43,9 @@ struct RepoDTO: Decodable {
 }
 
 struct RepoDTOMapper: Mapper {
-    
+
     let ownerMapper = OwnerMapper()
-    
+
     func map(from repo: RepoDTO) -> Repo {
         Repo(
             id: repo.id,
@@ -70,7 +70,7 @@ struct RepoDTOMapper: Mapper {
 }
 
 struct OwnerMapper: Mapper {
-    
+
     func map(from user: UserDTO) -> Owner {
         Owner(id: user.id, login: user.login, avatarURL: user.avatarURL)
     }

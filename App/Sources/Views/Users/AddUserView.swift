@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct AddUserView: View {
-    
+
     @Binding var text: String
     let isError: Bool
-    
+
     let onSubmit: () async -> Void
-    
+
     var body: some View {
         VStack {
-            Spacer() 
+            Spacer()
             VStack {
                 VStack(alignment: .leading, spacing: 2) {
                     LegacyTextField(text: $text) { textField in
@@ -24,7 +24,7 @@ struct AddUserView: View {
                     }
                     .padding(8)
                     .background(textFieldBackground)
-                    
+
                     Text(.localizable.userNotFound)
                         .font(.footnote)
                         .foregroundStyle(.red)
@@ -38,7 +38,7 @@ struct AddUserView: View {
         }
         .transition(.move(edge: .bottom))
     }
-    
+
     @ViewBuilder
     private var textFieldBackground: some View {
         ZStack {

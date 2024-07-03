@@ -1,7 +1,7 @@
 import Foundation
 
 public struct Repo: Hashable {
-    
+
     public let id: Int
     public let name: String
     public let fullName: String
@@ -19,7 +19,7 @@ public struct Repo: Hashable {
     public let hasWiki: Bool
     public let language: String?
     public let isFork: Bool
-    
+
     public init(
         id: Int,
         name: String,

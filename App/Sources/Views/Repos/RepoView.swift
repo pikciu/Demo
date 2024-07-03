@@ -1,12 +1,12 @@
-import SwiftUI
 import Domain
 import Resources
+import SwiftUI
 
 struct RepoView: View {
-    
+
     let repo: RepoItem
     let toggleFavorite: () -> Void
-    
+
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 6) {
@@ -26,7 +26,7 @@ struct RepoView: View {
             .buttonStyle(.borderless)
         }
     }
-    
+
     @ViewBuilder
     private func couter(symbol: Symbol, count: Int) -> some View {
         Text("\(symbol.image) \(count)")

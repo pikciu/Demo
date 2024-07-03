@@ -1,9 +1,9 @@
-import RealmSwift
 import Domain
 import Foundation
+import RealmSwift
 
 final class RepoRealm: Object {
-    
+
     @Persisted(primaryKey: true) var id: Int
     @Persisted var name: String
     @Persisted var fullName: String
@@ -21,7 +21,7 @@ final class RepoRealm: Object {
     @Persisted var hasWiki: Bool
     @Persisted var language: String?
     @Persisted var isFork: Bool
-    
+
     convenience init(
         id: Int,
         name: String,
@@ -63,12 +63,12 @@ final class RepoRealm: Object {
 }
 
 struct RepoRealmMapper: TwoWayMapper {
-    
+
     struct MissingOwner: Error {}
-    
+
     let ownerMapper = OwnerRealmMapper()
     let urlMapper = URLMapper()
-    
+
     func map(from repo: RepoRealm) throws -> Repo {
         guard let owner = repo.owner else {
             throw MissingOwner()
@@ -80,7 +80,7 @@ struct RepoRealmMapper: TwoWayMapper {
             description: repo.info,
             owner: ownerMapper.map(from: owner),
             linkURL: urlMapper.map(from: repo.linkURL),
-            stars: repo.stars, 
+            stars: repo.stars,
             watchers: repo.watchers,
             forks: repo.forks,
             openIssues: repo.openIssues,
@@ -93,7 +93,7 @@ struct RepoRealmMapper: TwoWayMapper {
             isFork: repo.isFork
         )
     }
-    
+
     func back(from repo: Repo) -> RepoRealm {
         RepoRealm(
             id: repo.id,
@@ -102,9 +102,9 @@ struct RepoRealmMapper: TwoWayMapper {
             info: repo.description,
             owner: ownerMapper.back(from: repo.owner),
             linkURL: urlMapper.back(from: repo.linkURL),
-            stars: repo.stars, 
+            stars: repo.stars,
             watchers: repo.watchers,
-            forks: repo.forks, 
+            forks: repo.forks,
             openIssues: repo.openIssues,
             createdAt: repo.createdAt,
             updatedAt: repo.updatedAt,

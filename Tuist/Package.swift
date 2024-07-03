@@ -3,10 +3,10 @@ import PackageDescription
 
 #if TUIST
 
-import ProjectDescription
-import ProjectDescriptionHelpers
+    import ProjectDescription
+    import ProjectDescriptionHelpers
 
-let packageSettings = PackageSettings()
+    let packageSettings = PackageSettings()
 
 #endif
 

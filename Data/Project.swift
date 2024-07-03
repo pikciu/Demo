@@ -31,8 +31,8 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "Data")
+                .target(name: "Data"),
             ]
-        )
+        ),
     ]
 )

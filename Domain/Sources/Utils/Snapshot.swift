@@ -6,7 +6,7 @@ public struct Snapshot<D> {
 }
 
 struct SnapshotTransform<P: Publisher>: PublisherTransform {
-    
+
     func transform(upstream: P) -> AnyPublisher<Snapshot<P.Output>, P.Failure> {
         upstream.scan(nil as Snapshot<P.Output>?) { result, next in
             if result == nil {

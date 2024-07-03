@@ -1,14 +1,14 @@
 import Combine
 
 public protocol ResponseMapper {
-    
+
     associatedtype Output
-    
+
     func map(response: Response) throws -> Output
 }
 
 extension ResponseMapper {
-    
+
     func map(response: Response) -> AnyPublisher<Output, HTTPError> {
         do {
             let output = try map(response: response)

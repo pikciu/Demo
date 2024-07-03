@@ -1,5 +1,5 @@
-import RealmSwift
 import Domain
+import RealmSwift
 
 final class UserRealm: Object {
     @Persisted(primaryKey: true) var id: Int
@@ -7,7 +7,7 @@ final class UserRealm: Object {
     @Persisted var name: String?
     @Persisted var avatarURL: String
     @Persisted var linkURL: String
-    
+
     convenience init(id: Int, login: String, name: String?, avatarURL: String, linkURL: String) {
         self.init()
         self.id = id
@@ -19,9 +19,9 @@ final class UserRealm: Object {
 }
 
 struct UserRealmMapper: TwoWayMapper {
-    
+
     let urlMapper = URLMapper()
-    
+
     func map(from user: UserRealm) throws -> Domain.User {
         try Domain.User(
             id: user.id,
@@ -31,7 +31,7 @@ struct UserRealmMapper: TwoWayMapper {
             linkURL: urlMapper.map(from: user.linkURL)
         )
     }
-    
+
     func back(from user: Domain.User) -> UserRealm {
         UserRealm(
             id: user.id,

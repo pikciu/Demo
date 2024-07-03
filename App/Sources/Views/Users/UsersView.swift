@@ -1,13 +1,13 @@
-import SwiftUI
 import Domain
 import Resources
+import SwiftUI
 
 struct UsersView: View {
-    
+
     @StateObject var viewModel: UsersViewModel
     @EnvironmentObject var navigation: Navigation
     @State var selectedUser: User?
-    
+
     var body: some View {
         List(viewModel.users, id: \.self, selection: $selectedUser) { user in
             UserView(user: user)

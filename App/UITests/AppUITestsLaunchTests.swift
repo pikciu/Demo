@@ -1,10 +1,3 @@
-//
-//  AppUITestsLaunchTests.swift
-//  AppUITests
-//
-//  Created by Tomasz Pikć on 29/03/2024.
-//
-
 import XCTest
 
 final class AppUITestsLaunchTests: XCTestCase {

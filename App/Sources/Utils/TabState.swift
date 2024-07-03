@@ -2,7 +2,7 @@ import Combine
 import Foundation
 
 final class TabState: ObservableObject {
-    
+
     @Published var selectedTab: TabItem = .users {
         didSet {
             if selectedTab == oldValue {
@@ -11,6 +11,6 @@ final class TabState: ObservableObject {
             }
         }
     }
-    
+
     @Published var shouldPopToRoot = [TabItem: UUID]()
 }

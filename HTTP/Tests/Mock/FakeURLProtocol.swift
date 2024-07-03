@@ -2,17 +2,17 @@ import Foundation
 import HTTP
 
 final class FakeURLProtocol: URLProtocol {
-    
+
     static var results = [URLRequest: Result<Response, Error>]()
-    
+
     override class func canInit(with request: URLRequest) -> Bool {
         true
     }
-    
+
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         request
     }
-    
+
     override func startLoading() {
         if let result = FakeURLProtocol.results[request] {
             switch result {
@@ -25,8 +25,6 @@ final class FakeURLProtocol: URLProtocol {
         }
         client?.urlProtocolDidFinishLoading(self)
     }
-    
-    override func stopLoading() {
-        
-    }
+
+    override func stopLoading() {}
 }

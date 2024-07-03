@@ -1,12 +1,5 @@
-//
-//  DataTests.swift
-//  DataTests
-//
-//  Created by Tomasz Pikć on 29/03/2024.
-//
-
-import XCTest
 @testable import Data
+import XCTest
 
 final class DataTests: XCTestCase {
 
@@ -28,7 +21,7 @@ final class DataTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

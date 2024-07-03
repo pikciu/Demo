@@ -4,7 +4,7 @@ import SwiftUI
 enum TabItem: CaseIterable {
     case users
     case favoriteRepos
-    
+
     var title: LocalizedStringResource {
         switch self {
         case .users:
@@ -13,7 +13,7 @@ enum TabItem: CaseIterable {
             return .localizable.favorites
         }
     }
-    
+
     var icon: Image {
         switch self {
         case .users:

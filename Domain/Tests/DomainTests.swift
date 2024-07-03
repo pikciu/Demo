@@ -5,8 +5,8 @@
 //  Created by Tomasz Pikć on 29/03/2024.
 //
 
-import XCTest
 @testable import Domain
+import XCTest
 
 final class DomainTests: XCTestCase {
 
@@ -28,7 +28,7 @@ final class DomainTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

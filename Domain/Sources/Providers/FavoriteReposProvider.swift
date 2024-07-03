@@ -1,13 +1,13 @@
 import Combine
 
 public final class FavoriteReposProvider {
-    
+
     private let favoriteRepoRepository: FavoriteRepoLocalRepository
-    
+
     init(favoriteRepoRepository: FavoriteRepoLocalRepository) {
         self.favoriteRepoRepository = favoriteRepoRepository
     }
-    
+
     func toggleFavorite(repo: Repo, isFavorite: Bool) {
         do {
             if isFavorite {
@@ -19,7 +19,7 @@ public final class FavoriteReposProvider {
             debugPrint(error)
         }
     }
-    
+
     deinit {
         debugPrint(self)
     }

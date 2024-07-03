@@ -6,7 +6,7 @@ struct PublisherResult<O, E: Error> {
 }
 
 extension Publisher {
-    
+
     func untilCompleted() async -> PublisherResult<Output, Failure> {
         var outputs = [Output]()
         var cancellable: Cancellable?
