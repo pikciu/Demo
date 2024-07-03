@@ -4,7 +4,6 @@ import ProjectDescriptionHelpers
 let project = Project(
     name: "Data",
     packages: [
-        .package(url: "https://github.com/pikciu/realm-swift.git", .branch("issue-8427/copy_seed_file_path")),
     ],
     settings: .frameworkSettings,
     targets: [
@@ -19,7 +18,7 @@ let project = Project(
             dependencies: [
                 .project(target: "Domain", path: "../Domain"),
                 .project(target: "HTTP", path: "../HTTP"),
-                .package(product: "RealmSwift"),
+                .external(name: "RealmSwift"),
             ]
         ),
         .target(

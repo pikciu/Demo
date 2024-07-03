@@ -2,8 +2,6 @@
 
 import Foundation
 
-private final class BundleFinder { }
-
 extension LocalizedStringResource {
     
     public struct Localizable {
@@ -15,7 +13,7 @@ extension LocalizedStringResource {
         public let users = localized("Users")
         
         private static func localized(_ key: String.LocalizationValue) -> LocalizedStringResource {
-            LocalizedStringResource(key, table: "Localizable", bundle: .forClass(BundleFinder.self))
+            LocalizedStringResource(key, table: "Localizable", bundle: .atURL(Bundle.module.bundleURL))
         }
     }
     
