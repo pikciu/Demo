@@ -22,7 +22,7 @@ extension HTTPClient {
     }
 
     public func execute<M: ResponseMapper>(request: URLRequest, responseMapper: M) async throws -> M.Output {
-        try responseMapper.map(response: await execute(request: request))
+        try await responseMapper.map(response: execute(request: request))
     }
 
     public func execute<M: ResponseMapper>(
@@ -35,7 +35,7 @@ extension HTTPClient {
     }
 
     public func execute<M: ResponseMapper>(request: Request, responseMapper: M) async throws -> M.Output {
-        try responseMapper.map(response: await execute(request: request))
+        try await responseMapper.map(response: execute(request: request))
     }
 
     public func execute<M: ResponseMapper>(request: Request, responseMapper: M) -> AnyPublisher<M.Output, HTTPError> {

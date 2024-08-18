@@ -2,9 +2,9 @@ import SwiftUI
 
 extension View {
 
-    func popup<PopupView: View>(
+    func popup(
         isPresented: Binding<Bool>,
-        popupView: @escaping () -> PopupView
+        popupView: @escaping () -> some View
     ) -> some View {
         modifier(PopupModifier(isPresented: isPresented, popupView: popupView))
     }

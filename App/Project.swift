@@ -3,7 +3,10 @@ import ProjectDescriptionHelpers
 
 let project = Project(
     name: "App",
-    options: .options(defaultKnownRegions: ["en", "pl"]),
+    options: .options(
+        automaticSchemesOptions: .disabled,
+        defaultKnownRegions: ["Base", "en", "pl"]
+    ),
     packages: [
         Plugins.Packages.swfitLint,
     ],
@@ -56,5 +59,6 @@ let project = Project(
                 .target(name: "App"),
             ]
         ),
-    ]
+    ],
+    schemes: []
 )

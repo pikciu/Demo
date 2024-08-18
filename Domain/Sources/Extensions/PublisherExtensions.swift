@@ -8,12 +8,12 @@ extension Publisher {
         receiveValue: @escaping (T, Output) -> Void
     ) -> Cancellable {
         sink { [weak object] completion in
-            guard let object = object else {
+            guard let object else {
                 return
             }
             receiveCompletion(object, completion)
         } receiveValue: { [weak object] output in
-            guard let object = object else {
+            guard let object else {
                 return
             }
             receiveValue(object, output)
@@ -45,7 +45,7 @@ extension Publisher where Failure == Never {
 
     public func sink<T: AnyObject>(with object: T, receiveValue: @escaping (T, Output) -> Void) -> Cancellable {
         sink { [weak object] value in
-            guard let object = object else {
+            guard let object else {
                 return
             }
             receiveValue(object, value)
@@ -54,7 +54,7 @@ extension Publisher where Failure == Never {
 
     public func sink<T: AnyObject>(with object: T, receiveValue: @escaping (T) -> Void) -> Cancellable {
         sink { [weak object] _ in
-            guard let object = object else {
+            guard let object else {
                 return
             }
             receiveValue(object)

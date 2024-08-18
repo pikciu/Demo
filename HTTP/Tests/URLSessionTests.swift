@@ -13,12 +13,12 @@ final class URLSessionTests: XCTestCase {
         return URLSession(configuration: configuration)
     }()
 
-    override class func setUp() {
+    override static func setUp() {
         super.setUp()
         URLProtocol.registerClass(FakeURLProtocol.self)
     }
 
-    override class func tearDown() {
+    override static func tearDown() {
         super.tearDown()
         URLProtocol.unregisterClass(FakeURLProtocol.self)
     }

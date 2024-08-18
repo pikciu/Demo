@@ -13,11 +13,11 @@ final class FakeHTTPClient: HTTPClient {
     func execute(request: URLRequest) -> AnyPublisher<Response, HTTPError> {
         switch result {
         case .success(let response):
-            return Just(response).setFailureType(to: HTTPError.self).eraseToAnyPublisher()
+            Just(response).setFailureType(to: HTTPError.self).eraseToAnyPublisher()
         case .failure(let error):
-            return Fail(error: error).eraseToAnyPublisher()
+            Fail(error: error).eraseToAnyPublisher()
         case nil:
-            return Empty().eraseToAnyPublisher()
+            Empty().eraseToAnyPublisher()
         }
     }
 }

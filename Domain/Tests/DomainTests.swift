@@ -1,10 +1,3 @@
-//
-//  DomainTests.swift
-//  DomainTests
-//
-//  Created by Tomasz Pikć on 29/03/2024.
-//
-
 @testable import Domain
 import XCTest
 

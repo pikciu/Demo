@@ -8,18 +8,18 @@ enum TabItem: CaseIterable {
     var title: LocalizedStringResource {
         switch self {
         case .users:
-            return .localizable.users
+            .localizable.users
         case .favoriteRepos:
-            return .localizable.favorites
+            .localizable.favorites
         }
     }
 
     var icon: Image {
         switch self {
         case .users:
-            return .symbol(.person2)
+            .symbol(.person2)
         case .favoriteRepos:
-            return .symbol(.heart)
+            .symbol(.heart)
         }
     }
 }

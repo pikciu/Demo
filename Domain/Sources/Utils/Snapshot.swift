@@ -10,9 +10,9 @@ struct SnapshotTransform<P: Publisher>: PublisherTransform {
     func transform(upstream: P) -> AnyPublisher<Snapshot<P.Output>, P.Failure> {
         upstream.scan(nil as Snapshot<P.Output>?) { result, next in
             if result == nil {
-                return Snapshot(data: next, animate: false)
+                Snapshot(data: next, animate: false)
             } else {
-                return Snapshot(data: next, animate: true)
+                Snapshot(data: next, animate: true)
             }
         }
         .compactMap { $0 }

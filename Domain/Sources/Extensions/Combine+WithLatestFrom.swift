@@ -26,7 +26,7 @@ extension Publisher {
         _ other: Other,
         resultSelector: @escaping (Output, Other.Output) -> Result
     ) -> Publishers.WithLatestFrom<Self, Other, Result> {
-        return .init(upstream: self, second: other, resultSelector: resultSelector)
+        .init(upstream: self, second: other, resultSelector: resultSelector)
     }
 
     ///  Upon an emission from self, emit the latest value from the
@@ -38,7 +38,7 @@ extension Publisher {
     func withLatestFrom<Other: Publisher>(
         _ other: Other
     ) -> Publishers.WithLatestFrom<Self, Other, Other.Output> {
-        return .init(upstream: self, second: other) { $1 }
+        .init(upstream: self, second: other) { $1 }
     }
 }
 
@@ -120,10 +120,10 @@ extension Publishers.WithLatestFrom {
                 .sink(
                     receiveCompletion: { [subscriber] in subscriber.receive(completion: $0) },
                     receiveValue: { [weak self] value in
-                        guard let self = self else { return }
+                        guard let self else { return }
 
-                        guard let latest = self.latestValue else { return }
-                        _ = self.subscriber.receive(self.resultSelector(value, latest))
+                        guard let latest = latestValue else { return }
+                        _ = subscriber.receive(resultSelector(value, latest))
                     }
                 )
         }
