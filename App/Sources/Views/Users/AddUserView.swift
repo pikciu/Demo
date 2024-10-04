@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftUI_Utils
 
 struct AddUserView: View {
 
@@ -9,33 +10,31 @@ struct AddUserView: View {
 
     var body: some View {
         VStack {
-            Spacer()
-            VStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    LegacyTextField(text: $text) { textField in
-                        textField.returnKeyType = .search
-                        textField.placeholder = String(localized: .localizable.username)
-                        textField.overrideUserInterfaceStyle = .light
-                        textField.becomeFirstResponder()
-                    } onSubmit: {
-                        Task {
-                            await onSubmit()
-                        }
+            VStack(alignment: .leading, spacing: 2) {
+                LegacyTextField(text: $text) { textField in
+                    textField.returnKeyType = .search
+                    textField.placeholder = String(localized: .localizable.username)
+                    textField.overrideUserInterfaceStyle = .light
+                    textField.becomeFirstResponder()
+                } onSubmit: { _ in
+                    Task {
+                        await onSubmit()
                     }
-                    .padding(8)
-                    .background(textFieldBackground)
-
-                    Text(.localizable.userNotFound)
-                        .font(.footnote)
-                        .foregroundStyle(.red)
-                        .opacity(isError ? 1 : 0)
                 }
-                .padding()
-                .animation(.easeInOut(duration: 0.2), value: isError)
+                .padding(8)
+                .background(textFieldBackground)
+
+                Text(.localizable.userNotFound)
+                    .font(.footnote)
+                    .foregroundStyle(.red)
+                    .opacity(isError ? 1 : 0)
             }
-            .background(.white)
-            .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 15, topTrailing: 15)))
+            .padding()
+            .safeAreaPadding(.bottom)
+            .animation(.easeInOut(duration: 0.2), value: isError)
         }
+        .background(.white)
+        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 15, topTrailing: 15)))
         .transition(.move(edge: .bottom))
     }
 

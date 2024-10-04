@@ -1,16 +1,18 @@
+import Observation
 import Combine
 
-public final class UsersViewModel: ObservableObject {
+@Observable
+public final class UsersViewModel {
 
     private var cancellables = Set<AnyCancellable>(minimumCapacity: 1)
     private let usersProvider: UsersProvider
     private let userRemover: UserRemover
     private let userCreator: UserCreator
 
-    @Published public var users = [User]()
-    @Published public var isEditing = false
-    @Published public var text = ""
-    @Published public var isError = false
+    public var users = [User]()
+    public var isEditing = false
+    public var text = ""
+    public var isError = false
 
     public init(usersProvider: UsersProvider, userRemover: UserRemover, userCreator: UserCreator) {
         self.usersProvider = usersProvider

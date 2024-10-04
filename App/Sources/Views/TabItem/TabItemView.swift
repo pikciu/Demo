@@ -5,18 +5,18 @@ import SwiftUI
 struct TabItemView: View {
 
     let tabItem: TabItem
-    @StateObject var navigation = Navigation()
-    @EnvironmentObject var tabState: TabState
+    @State var navigation = Navigation()
+    @Environment(TabState.self) var tabState
 
     var body: some View {
         NavigationStack(path: $navigation.stack) {
-            content.environmentObject(navigation)
+            content.environment(navigation)
                 .navigationDestination(for: AppRoute.self) { route in
-                    route.destination.environmentObject(navigation)
+                    route.destination.environment(navigation)
                 }
         }
-        .onChange(of: tabState.shouldPopToRoot) {
-            if $0[tabItem] != nil {
+        .onChange(of: tabState.shouldPopToRoot) { _, id in
+            if id[tabItem] != nil {
                 navigation.popToRoot()
             }
         }

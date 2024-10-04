@@ -1,9 +1,10 @@
-import Combine
+import Observation
 import Foundation
 
-final class TabState: ObservableObject {
+@Observable
+final class TabState {
 
-    @Published var selectedTab: TabItem = .users {
+    var selectedTab: TabItem = .users {
         didSet {
             if selectedTab == oldValue {
                 shouldPopToRoot.removeAll()
@@ -12,5 +13,5 @@ final class TabState: ObservableObject {
         }
     }
 
-    @Published var shouldPopToRoot = [TabItem: UUID]()
+    var shouldPopToRoot = [TabItem: UUID]()
 }

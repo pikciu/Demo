@@ -2,25 +2,21 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "Resources",
+    name: .resources,
     packages: [
-        Plugins.Packages.swfitLint,
+        Packages.swfitLint,
     ],
     settings: .frameworkSettings,
     targets: [
         .target(
-            name: "Resources",
+            name: .resources,
             destinations: .iOS,
             product: .framework,
             bundleId: .bundleID("resources"),
             infoPlist: nil,
-            sources: ["Sources/**"],
-            resources: ["Resources/**"],
-//            scripts: [
-//                .pre(tool: "swiftgen", arguments: [], name: "SwiftGen") // Strings catalogs not supported yet
-//            ],
-            dependencies: [
-            ]
+            sources: .default,
+            resources: .default,
+            dependencies: []
         ),
     ]
 )

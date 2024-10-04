@@ -4,8 +4,8 @@ import SwiftUI
 
 struct UsersView: View {
 
-    @StateObject var viewModel: UsersViewModel
-    @EnvironmentObject var navigation: Navigation
+    @State var viewModel: UsersViewModel
+    @Environment(Navigation.self) var navigation
     @State var selectedUser: User?
 
     var body: some View {
@@ -19,7 +19,7 @@ struct UsersView: View {
                     }
                 }
         }
-        .onChange(of: selectedUser) { user in
+        .onChange(of: selectedUser) { _, user in
             if let user {
                 navigation.push(.repos(user))
                 selectedUser = nil

@@ -2,21 +2,21 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "HTTP",
+    name: .http,
     packages: [
-        Plugins.Packages.swfitLint,
+        Packages.swfitLint,
     ],
     settings: .frameworkSettings,
     targets: [
         .target(
-            name: "HTTP",
+            name: .http,
             destinations: .iOS,
             product: .framework,
             bundleId: .bundleID("http"),
             infoPlist: nil,
-            sources: ["Sources/**"],
+            sources: .default,
             dependencies: [
-                Plugins.Dependencies.swfitLint,
+                Dependencies.swfitLint,
             ]
         ),
         .target(
@@ -27,8 +27,8 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "HTTP"),
-                Plugins.Dependencies.swfitLint,
+                Dependencies.http.target,
+                Dependencies.swfitLint,
             ]
         ),
     ]

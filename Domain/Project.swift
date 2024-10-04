@@ -2,23 +2,23 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "Domain",
+    name: .domain,
     packages: [
-        Plugins.Packages.swfitLint,
+        Packages.swfitLint,
     ],
     settings: .frameworkSettings,
     targets: [
         .target(
-            name: "Domain",
+            name: .domain,
             destinations: .iOS,
             product: .framework,
             bundleId: .bundleID("domain"),
             infoPlist: nil,
-            sources: ["Sources/**"],
+            sources: .default,
             dependencies: [
-                .external(name: "Container"),
-                .project(target: "Resources", path: "../Resources"),
-                Plugins.Dependencies.swfitLint,
+                Dependencies.container,
+                Dependencies.resources.project,
+                Dependencies.swfitLint,
             ]
         ),
         .target(
@@ -29,7 +29,7 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "Domain"),
+                Dependencies.domain.target,
             ]
         ),
     ]

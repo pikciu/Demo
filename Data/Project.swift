@@ -2,25 +2,26 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "Data",
+    name: .data,
     packages: [
-        Plugins.Packages.swfitLint,
+        Packages.swfitLint,
     ],
     settings: .frameworkSettings,
     targets: [
         .target(
-            name: "Data",
+            name: .data,
             destinations: .iOS,
             product: .framework,
             bundleId: .bundleID("data"),
             infoPlist: nil,
-            sources: ["Sources/**"],
-            resources: ["Resources/**"],
+            sources: .default,
+            resources: .default,
             dependencies: [
-                .project(target: "Domain", path: "../Domain"),
-                .project(target: "HTTP", path: "../HTTP"),
-                .external(name: "RealmSwift"),
-                Plugins.Dependencies.swfitLint,
+                Dependencies.domain.project,
+                Dependencies.http.project,
+                Dependencies.realmSwift,
+                Dependencies.realm,
+                Dependencies.swfitLint,
             ]
         ),
         .target(
@@ -31,7 +32,7 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "Data"),
+                Dependencies.data.target
             ]
         ),
     ]

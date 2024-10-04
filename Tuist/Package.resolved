@@ -1,4 +1,5 @@
 {
+  "originHash" : "94907f0c23fe5969bd9e9b7d62aa10bbfbcb13278151b2407b11af07f518149c",
   "pins" : [
     {
       "identity" : "container",
@@ -14,19 +15,28 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
       "state" : {
-        "revision" : "4d815c6e6883bfdcb67cf755d0f0f29a4b399ea7",
-        "version" : "14.5.2"
+        "revision" : "e474a8d2270a8b12ac63ac9504e4757e39814b99",
+        "version" : "14.13.0"
       }
     },
     {
       "identity" : "realm-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pikciu/realm-swift.git",
+      "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
-        "branch" : "issue-8427/copy_seed_file_path",
-        "revision" : "cc12225fed88dce2cdf31f8893146cd28ddb44cd"
+        "revision" : "863498d37a9f0e72caa65963da9641d8cdfc8228",
+        "version" : "10.54.0"
+      }
+    },
+    {
+      "identity" : "swiftui-utils",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pikciu/SwiftUI-Utils.git",
+      "state" : {
+        "revision" : "53777050a4e739910f6499dbe2fad7ebcff21d86",
+        "version" : "1.0.4"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

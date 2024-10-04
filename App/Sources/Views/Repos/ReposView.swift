@@ -6,7 +6,7 @@ struct ReposView<VM: ReposViewModel>: View {
 
     @StateObject var viewModel: VM
     @State var selectedRepo: Repo?
-    @EnvironmentObject var navigation: Navigation
+    @Environment(Navigation.self) var navigation
 
     var body: some View {
         List(viewModel.repos, selection: $selectedRepo) { repo in
@@ -14,7 +14,7 @@ struct ReposView<VM: ReposViewModel>: View {
                 viewModel.toggleFavorite(repo: repo)
             }
         }
-        .onChange(of: selectedRepo) { repo in
+        .onChange(of: selectedRepo) { _, repo in
             if let repo {
                 navigation.push(.repoDetails(repo))
                 selectedRepo = nil

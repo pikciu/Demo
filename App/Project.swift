@@ -2,38 +2,41 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "App",
+    name: .app,
     options: .options(
         automaticSchemesOptions: .disabled,
         defaultKnownRegions: ["Base", "en", "pl"]
     ),
     packages: [
-        Plugins.Packages.swfitLint,
+        Packages.swfitLint,
     ],
-    settings: .settings(base: ["GENERATE_INFOPLIST_FILE": "YES"]),
+    settings: .settings(
+        base: ["GENERATE_INFOPLIST_FILE": "YES"],
+        configurations: [
+            .debug(name: "Debug", xcconfig: "App.xcconfig"),
+            .release(name: "Release", xcconfig: "App.xcconfig"),
+        ]
+    ),
     targets: [
         .target(
-            name: "App",
+            name: .app,
             destinations: .iOS,
             product: .app,
             bundleId: .bundleID("app"),
             infoPlist: .file(path: "App-Info.plist"),
-            sources: ["Sources/**"],
-            resources: ["Resources/**"],
+            sources: .default,
+            resources: .default,
             dependencies: [
-                .project(target: "Data", path: "../Data"),
-                .project(target: "Domain", path: "../Domain"),
-                .project(target: "HTTP", path: "../HTTP"),
-                Plugins.Dependencies.swfitLint,
+                Dependencies.data.project,
+                Dependencies.domain.project,
+                Dependencies.http.project,
+                Dependencies.utils,
+                Dependencies.swfitLint,
             ],
             settings: .settings(
                 base: [
                     "INFOPLIST_KEY_UILaunchScreen_Generation": "YES",
                     "GENERATE_INFOPLIST_FILE": "NO",
-                ],
-                configurations: [
-                    .debug(name: "Debug", xcconfig: "App.xcconfig"),
-                    .release(name: "Release", xcconfig: "App.xcconfig"),
                 ]
             )
         ),
@@ -45,7 +48,7 @@ let project = Project(
             infoPlist: nil,
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "App"),
+                Dependencies.app.target
             ]
         ),
         .target(
@@ -56,7 +59,7 @@ let project = Project(
             infoPlist: nil,
             sources: ["UITests/**"],
             dependencies: [
-                .target(name: "App"),
+                Dependencies.app.target
             ]
         ),
     ],
